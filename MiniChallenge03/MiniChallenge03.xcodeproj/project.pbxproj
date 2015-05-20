@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		4B3CB0701B0511FC00F961B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CB06F1B0511FC00F961B3 /* AppDelegate.swift */; };
 		4B3CB0731B0511FC00F961B3 /* MiniChallenge03.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CB0711B0511FC00F961B3 /* MiniChallenge03.xcdatamodeld */; };
-		4B3CB0751B0511FC00F961B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CB0741B0511FC00F961B3 /* ViewController.swift */; };
 		4B3CB0781B0511FC00F961B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3CB0761B0511FC00F961B3 /* Main.storyboard */; };
 		4B3CB07A1B0511FC00F961B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3CB0791B0511FC00F961B3 /* Images.xcassets */; };
 		4B3CB07D1B0511FC00F961B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3CB07B1B0511FC00F961B3 /* LaunchScreen.xib */; };
 		4B3CB0891B0511FC00F961B3 /* MiniChallenge03Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CB0881B0511FC00F961B3 /* MiniChallenge03Tests.swift */; };
+		E6A1DB131B0D079C00A99CC0 /* MenuCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A1DB121B0D079C00A99CC0 /* MenuCollectionView.swift */; };
+		E6A1DB151B0D0A9900A99CC0 /* ParallaxViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A1DB141B0D0A9900A99CC0 /* ParallaxViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +32,14 @@
 		4B3CB06E1B0511FC00F961B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B3CB06F1B0511FC00F961B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B3CB0721B0511FC00F961B3 /* MiniChallenge03.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiniChallenge03.xcdatamodel; sourceTree = "<group>"; };
-		4B3CB0741B0511FC00F961B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B3CB0771B0511FC00F961B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B3CB0791B0511FC00F961B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4B3CB07C1B0511FC00F961B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4B3CB0821B0511FC00F961B3 /* MiniChallenge03Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniChallenge03Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3CB0871B0511FC00F961B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B3CB0881B0511FC00F961B3 /* MiniChallenge03Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge03Tests.swift; sourceTree = "<group>"; };
+		E6A1DB121B0D079C00A99CC0 /* MenuCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionView.swift; sourceTree = "<group>"; };
+		E6A1DB141B0D0A9900A99CC0 /* ParallaxViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				4B3CB06F1B0511FC00F961B3 /* AppDelegate.swift */,
-				4B3CB0741B0511FC00F961B3 /* ViewController.swift */,
+				E6A1DB121B0D079C00A99CC0 /* MenuCollectionView.swift */,
+				E6A1DB141B0D0A9900A99CC0 /* ParallaxViewCell.swift */,
 				4B3CB0761B0511FC00F961B3 /* Main.storyboard */,
 				4B3CB0791B0511FC00F961B3 /* Images.xcassets */,
 				4B3CB07B1B0511FC00F961B3 /* LaunchScreen.xib */,
@@ -215,8 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B3CB0751B0511FC00F961B3 /* ViewController.swift in Sources */,
 				4B3CB0701B0511FC00F961B3 /* AppDelegate.swift in Sources */,
+				E6A1DB151B0D0A9900A99CC0 /* ParallaxViewCell.swift in Sources */,
+				E6A1DB131B0D079C00A99CC0 /* MenuCollectionView.swift in Sources */,
 				4B3CB0731B0511FC00F961B3 /* MiniChallenge03.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +417,7 @@
 				4B3CB08E1B0511FC00F961B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B3CB08F1B0511FC00F961B3 /* Build configuration list for PBXNativeTarget "MiniChallenge03Tests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				4B3CB0911B0511FC00F961B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
