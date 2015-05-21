@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1Wq-f4-gbb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XSw-L3-9e0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -53,11 +53,12 @@
                                 </variation>
                                 <connections>
                                     <outlet property="imageView" destination="aJl-sA-MaV" id="kgQ-5s-Aub"/>
+                                    <segue destination="W8O-Gl-UZO" kind="show" id="KX4-Tq-Sah"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="Zcx-oL-ztS" customClass="headerReusableView" customModule="MiniChallenge03" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="305"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundHeader" translatesAutoresizingMaskIntoConstraints="NO" id="q8X-IM-jkc">
@@ -113,6 +114,40 @@
             </objects>
             <point key="canvasLocation" x="66" y="251"/>
         </scene>
+        <!--Cards View Controller-->
+        <scene sceneID="4Ch-MU-JdY">
+            <objects>
+                <collectionViewController id="W8O-Gl-UZO" customClass="CardsViewController" customModule="MiniChallenge03" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6IY-Lv-vMv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OMN-y7-kSg">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="guE-7h-xKf">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="W8O-Gl-UZO" id="rNT-wN-4ns"/>
+                            <outlet property="delegate" destination="W8O-Gl-UZO" id="iys-ag-nNj"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nf-Dv-JTn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781" y="251"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="KSF-Cd-Jxo">
             <objects>
@@ -167,8 +202,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="594" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wXk-IK-Hqd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="598" height="100"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wXk-IK-Hqd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="593" height="100"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -185,8 +220,8 @@
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="iy5-10-kIP"/>
                                                 <exclude reference="HT1-6E-bjD"/>
+                                                <exclude reference="iy5-10-kIP"/>
                                                 <exclude reference="oRO-Sj-J0E"/>
                                                 <exclude reference="xQe-Qd-FqK"/>
                                             </mask>
@@ -197,7 +232,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="XCL-3a-6l1" customClass="headerReusableView" customModule="MiniChallenge03" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="87"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="zyD-Bb-x32">
@@ -285,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6i-k6-X3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925" y="266"/>
+            <point key="canvasLocation" x="66" y="970"/>
         </scene>
     </scenes>
     <resources>
