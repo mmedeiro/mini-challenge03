@@ -10,8 +10,14 @@ import UIKit
 
 let reuseIdentifier = "menuImage"
 
-class MenuCollectionView: UICollectionViewController
+var kImageOriginHeight = CGFloat(100)
+
+class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
 {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var header : headerReusableView!
     
     var imagens = [String]()
     
@@ -19,37 +25,62 @@ class MenuCollectionView: UICollectionViewController
     {
         super.viewDidLoad()
        // self.collectionView!.registerClass(ParallaxViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
         imagens.append("calculo")
-
+        self.collectionView.contentInset = UIEdgeInsetsMake(-kImageOriginHeight, 0, 0, 0);
     }
 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
     }
-
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
     {
         return 1
     }
 
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return 14
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
-        let parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ParallaxViewCell
-        parallaxCell.imageView.image = UIImage(named: imagens[indexPath.row])!
         
+        let parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ParallaxViewCell
+        parallaxCell.imageView.image = UIImage(named: "calculo")!
         return parallaxCell
+        
     }
     
-    override func scrollViewDidScroll(scrollView: UIScrollView)
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView
     {
+        if(kind == UICollectionElementKindSectionHeader)
+        {
+            var view = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "header", forIndexPath: indexPath) as! headerReusableView
+            view.initialFrame = view.frame
+            header = view
+            return view
+        }
+        else
+        {
+            var view = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionFooter, withReuseIdentifier: "footer", forIndexPath: indexPath) as! UICollectionReusableView
+            return view
+        }
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView)
+    {
+        if(scrollView.contentOffset.y < 0)
+        {
+            header.setContentOffset(scrollView.contentOffset)
+        }
+        else if(scrollView.contentOffset.y < 20)
+        {
+            header.returnToContent()
+        }
+        
         if let visibleCells = collectionView!.visibleCells() as? [ParallaxViewCell]
         {
             for parallaxCell in visibleCells

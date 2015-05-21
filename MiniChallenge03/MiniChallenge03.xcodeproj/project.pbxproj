@@ -15,6 +15,7 @@
 		4B3CB0891B0511FC00F961B3 /* MiniChallenge03Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CB0881B0511FC00F961B3 /* MiniChallenge03Tests.swift */; };
 		E6A1DB131B0D079C00A99CC0 /* MenuCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A1DB121B0D079C00A99CC0 /* MenuCollectionView.swift */; };
 		E6A1DB151B0D0A9900A99CC0 /* ParallaxViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A1DB141B0D0A9900A99CC0 /* ParallaxViewCell.swift */; };
+		E6AF6DA71B0E58A2002AC7DC /* headerReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF6DA61B0E58A2002AC7DC /* headerReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		4B3CB0881B0511FC00F961B3 /* MiniChallenge03Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge03Tests.swift; sourceTree = "<group>"; };
 		E6A1DB121B0D079C00A99CC0 /* MenuCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionView.swift; sourceTree = "<group>"; };
 		E6A1DB141B0D0A9900A99CC0 /* ParallaxViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxViewCell.swift; sourceTree = "<group>"; };
+		E6AF6DA61B0E58A2002AC7DC /* headerReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				4B3CB06F1B0511FC00F961B3 /* AppDelegate.swift */,
 				E6A1DB121B0D079C00A99CC0 /* MenuCollectionView.swift */,
+				E6AF6DA61B0E58A2002AC7DC /* headerReusableView.swift */,
 				E6A1DB141B0D0A9900A99CC0 /* ParallaxViewCell.swift */,
 				4B3CB0761B0511FC00F961B3 /* Main.storyboard */,
 				4B3CB0791B0511FC00F961B3 /* Images.xcassets */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6AF6DA71B0E58A2002AC7DC /* headerReusableView.swift in Sources */,
 				4B3CB0701B0511FC00F961B3 /* AppDelegate.swift in Sources */,
 				E6A1DB151B0D0A9900A99CC0 /* ParallaxViewCell.swift in Sources */,
 				E6A1DB131B0D079C00A99CC0 /* MenuCollectionView.swift in Sources */,
