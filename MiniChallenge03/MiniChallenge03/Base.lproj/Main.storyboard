@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XSw-L3-9e0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1Wq-f4-gbb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -35,6 +35,8 @@
                                 </view>
                                 <constraints>
                                     <constraint firstItem="aJl-sA-MaV" firstAttribute="leading" secondItem="reC-a5-SGP" secondAttribute="leadingMargin" constant="-8" id="BPJ-0x-ztr"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="aJl-sA-MaV" secondAttribute="bottom" constant="-8" id="DBT-XB-E9w"/>
+                                    <constraint firstItem="aJl-sA-MaV" firstAttribute="leading" secondItem="reC-a5-SGP" secondAttribute="leading" id="DLC-To-zE5"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="aJl-sA-MaV" secondAttribute="trailing" constant="-7" id="EW6-ze-gqo"/>
                                     <constraint firstItem="aJl-sA-MaV" firstAttribute="leading" secondItem="reC-a5-SGP" secondAttribute="leadingMargin" constant="-8" id="M1d-AE-4vd"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="aJl-sA-MaV" secondAttribute="bottom" constant="-8" id="Oy5-io-giJ"/>
@@ -42,13 +44,24 @@
                                     <constraint firstItem="aJl-sA-MaV" firstAttribute="top" secondItem="reC-a5-SGP" secondAttribute="topMargin" constant="-8" id="ZGA-Eo-ofe"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="aJl-sA-MaV" secondAttribute="bottom" constant="-8" id="dBO-mw-d6i"/>
                                     <constraint firstItem="aJl-sA-MaV" firstAttribute="top" secondItem="reC-a5-SGP" secondAttribute="topMargin" constant="-8" id="hMs-Yu-PoX"/>
+                                    <constraint firstItem="aJl-sA-MaV" firstAttribute="top" secondItem="reC-a5-SGP" secondAttribute="topMargin" constant="-8" id="rG8-pg-prj"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="DBT-XB-E9w"/>
+                                        <exclude reference="DLC-To-zE5"/>
                                         <exclude reference="M1d-AE-4vd"/>
                                         <exclude reference="Tah-z5-dSt"/>
                                         <exclude reference="dBO-mw-d6i"/>
                                         <exclude reference="hMs-Yu-PoX"/>
+                                        <exclude reference="rG8-pg-prj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="DBT-XB-E9w"/>
+                                        <include reference="DLC-To-zE5"/>
+                                        <include reference="rG8-pg-prj"/>
                                     </mask>
                                 </variation>
                                 <connections>

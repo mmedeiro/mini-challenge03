@@ -74,8 +74,12 @@ class CardsViewController: UICollectionViewController {
     
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
         cards = ["oopa","olha","esses","melhores","cards","cards","cards","cards","cards","cards","cards"]
         self.collectionView?.collectionViewLayout = self.stackedLayout
         
@@ -88,6 +92,8 @@ class CardsViewController: UICollectionViewController {
         
         var cell = self.collectionView?.dequeueReusableCellWithReuseIdentifier("cardCell", forIndexPath: indexPath) as! UICollectionViewCell
         
+//        cell.layer.cornerRadius = cell.frame.width/16
+        cell.frame = CGRect(x: 0, y: cell.frame.origin.y, width: self.collectionView!.frame.width, height: cell.frame.height)
         var cors = [UIColor.redColor(),UIColor.purpleColor(),UIColor.yellowColor(),UIColor.blueColor()]
         
         
@@ -110,6 +116,11 @@ class CardsViewController: UICollectionViewController {
             
         }
     }
+    
+    func rotated(){
+        self.collectionView?.reloadData()
+    }
+
     
     
     

@@ -24,6 +24,9 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
+        
        // self.collectionView!.registerClass(ParallaxViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         imagens.append("calculo")
         self.collectionView.contentInset = UIEdgeInsetsMake(-kImageOriginHeight, 0, 0, 0);
@@ -49,6 +52,7 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
     {
         
         let parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ParallaxViewCell
+        parallaxCell.frame = CGRect(x: 0, y: parallaxCell.frame.origin.y, width: self.collectionView.frame.width, height: parallaxCell.frame.height)
         parallaxCell.imageView.image = UIImage(named: "calculo")!
         return parallaxCell
         
@@ -91,6 +95,9 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
         }
     }
     
+    func rotated(){
+        self.collectionView.reloadData()
+    }
     
 
 }
