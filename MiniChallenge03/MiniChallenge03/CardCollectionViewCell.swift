@@ -10,12 +10,14 @@ import UIKit
 
 class CardCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var imageViewCell: UIImageView!
     @IBOutlet weak var title: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
  
         self.layer.cornerRadius = self.frame.width/2
+        self.layer.borderColor = UIColor.blackColor().CGColor
+        self.layer.borderWidth = 2
+        
     }
 }

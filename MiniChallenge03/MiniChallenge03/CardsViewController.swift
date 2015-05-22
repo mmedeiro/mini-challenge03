@@ -80,7 +80,7 @@ class CardsViewController: UICollectionViewController {
         super.viewDidLoad()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
-        cards = ["oopa","olha","esses","melhores","melhores","melhores","melhores"]
+        cards = ["oopa","olha","esses","melhores","cards","loko"]
         self.collectionView?.collectionViewLayout = self.stackedLayout
         
     }
@@ -92,15 +92,14 @@ class CardsViewController: UICollectionViewController {
         
         var cell = self.collectionView?.dequeueReusableCellWithReuseIdentifier("cardCell", forIndexPath: indexPath) as! CardCollectionViewCell
         
-        cell.title.text = cards[indexPath.row]
-        cell.layer.borderColor = UIColor.blackColor().CGColor
-        cell.layer.borderWidth = 2
-        
         cell.frame = CGRect(x: 0, y: cell.frame.origin.y, width: self.collectionView!.frame.width, height: cell.frame.height)
+        cell.title.text = cards[indexPath.row]
+        var red = CGFloat(255 - indexPath.row*25)/255
+        var green = CGFloat(200 - indexPath.row*25)/255
+        var blue = CGFloat(150 - indexPath.row*25)/255
         
-//        var cors = [UIColor.redColor(),UIColor.purpleColor(),UIColor.yellowColor(),UIColor.blueColor()]
-//        cell.backgroundColor = cors[Int(arc4random_uniform(4))]
-        cell.backgroundColor = UIColor.whiteColor()
+        
+        cell.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
         return cell
     }
     

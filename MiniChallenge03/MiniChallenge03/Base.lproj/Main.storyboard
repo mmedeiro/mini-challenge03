@@ -134,6 +134,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6IY-Lv-vMv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.23921570181846619" green="0.13725490868091583" blue="0.062745101749897003" alpha="1" colorSpace="deviceRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OMN-y7-kSg">
                             <size key="itemSize" width="600" height="129"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -148,11 +149,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="129"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NCP-WT-hc3">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="129"/>
-                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eva-qf-dBn">
+                                            <rect key="frame" x="0.0" y="44" width="600" height="85"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwL-gH-dsn">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0U6-Wj-qlj">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <blurEffect style="light"/>
+                                        </visualEffectView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0h-23-pGw">
-                                            <rect key="frame" x="279" y="5" width="42" height="20.5"/>
+                                            <rect key="frame" x="279" y="5.5" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -161,15 +171,18 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="NCP-WT-hc3" secondAttribute="bottom" id="3Zz-nP-gNn"/>
-                                    <constraint firstAttribute="trailing" secondItem="NCP-WT-hc3" secondAttribute="trailing" id="CSF-W4-07d"/>
-                                    <constraint firstItem="NCP-WT-hc3" firstAttribute="leading" secondItem="guE-7h-xKf" secondAttribute="leading" id="Kc5-tA-02A"/>
+                                    <constraint firstItem="Eva-qf-dBn" firstAttribute="leading" secondItem="guE-7h-xKf" secondAttribute="leading" id="Dll-VN-idN"/>
+                                    <constraint firstAttribute="bottom" secondItem="Eva-qf-dBn" secondAttribute="bottom" id="UOL-wI-8PN"/>
                                     <constraint firstItem="X0h-23-pGw" firstAttribute="top" secondItem="guE-7h-xKf" secondAttribute="top" constant="5" id="ZE2-KB-hun"/>
                                     <constraint firstAttribute="centerX" secondItem="X0h-23-pGw" secondAttribute="centerX" id="bvO-Rp-EpC"/>
-                                    <constraint firstItem="NCP-WT-hc3" firstAttribute="top" secondItem="guE-7h-xKf" secondAttribute="top" id="eFS-eN-Dlh"/>
+                                    <constraint firstItem="dwL-gH-dsn" firstAttribute="leading" secondItem="guE-7h-xKf" secondAttribute="leading" id="dzN-l7-vUN"/>
+                                    <constraint firstItem="Eva-qf-dBn" firstAttribute="top" secondItem="dwL-gH-dsn" secondAttribute="bottom" id="oCz-1x-1kY"/>
+                                    <constraint firstItem="dwL-gH-dsn" firstAttribute="top" secondItem="guE-7h-xKf" secondAttribute="top" id="p0k-fh-qSw"/>
+                                    <constraint firstAttribute="trailing" secondItem="dwL-gH-dsn" secondAttribute="trailing" id="r5V-3d-ZtT"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eva-qf-dBn" secondAttribute="trailing" id="ttr-Vm-n7n"/>
+                                    <constraint firstItem="Eva-qf-dBn" firstAttribute="top" secondItem="X0h-23-pGw" secondAttribute="bottom" constant="18.5" id="vpQ-7N-cjz"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="imageViewCell" destination="NCP-WT-hc3" id="ffN-wJ-ltr"/>
                                     <outlet property="title" destination="X0h-23-pGw" id="W6I-pT-YSt"/>
                                 </connections>
                             </collectionViewCell>
@@ -194,7 +207,7 @@
                         <color key="backgroundColor" red="0.87843137250000003" green="0.16862745100000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.89803921568627454" green="0.086274509803921567" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.8784313725490196" green="0.16862745098039217" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -349,14 +362,16 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Tja-yq-I3w"/>
+                    <navigationItem key="navigationItem" id="Tja-yq-I3w">
+                        <barButtonItem key="backBarButtonItem" title="traz" id="Hkr-D4-AmY"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="NnZ-49-kUG" id="dnU-Qf-nY7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6i-k6-X3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66" y="970"/>
+            <point key="canvasLocation" x="125" y="1008"/>
         </scene>
     </scenes>
     <resources>
