@@ -17,7 +17,7 @@ class CardsViewController: UICollectionViewController {
     var stackedContentOffset = CGPoint()
     
     
-    var exposedLayoutMargin = UIEdgeInsetsMake(40.0, 0.0, 0.0, 0.0)
+    var exposedLayoutMargin = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0)
     var exposedItemSize = CGSizeZero
     var exposedTopItemOverLap:CGFloat = 20.0
     var exposedBottomOverLap:CGFloat = 20.0
@@ -90,15 +90,17 @@ class CardsViewController: UICollectionViewController {
     
     override func  collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        var cell = self.collectionView?.dequeueReusableCellWithReuseIdentifier("cardCell", forIndexPath: indexPath) as! UICollectionViewCell
+        var cell = self.collectionView?.dequeueReusableCellWithReuseIdentifier("cardCell", forIndexPath: indexPath) as! CardCollectionViewCell
         
-//        cell.layer.cornerRadius = cell.frame.width/16
+        cell.title.text = cards[indexPath.row]
+        cell.layer.borderColor = UIColor.blackColor().CGColor
+        cell.layer.borderWidth = 2
+        
         cell.frame = CGRect(x: 0, y: cell.frame.origin.y, width: self.collectionView!.frame.width, height: cell.frame.height)
-        var cors = [UIColor.redColor(),UIColor.purpleColor(),UIColor.yellowColor(),UIColor.blueColor()]
         
-        
-        
-        cell.backgroundColor = cors[Int(arc4random_uniform(4))]
+//        var cors = [UIColor.redColor(),UIColor.purpleColor(),UIColor.yellowColor(),UIColor.blueColor()]
+//        cell.backgroundColor = cors[Int(arc4random_uniform(4))]
+        cell.backgroundColor = UIColor.whiteColor()
         return cell
     }
     

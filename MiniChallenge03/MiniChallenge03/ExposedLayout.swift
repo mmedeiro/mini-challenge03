@@ -3,7 +3,7 @@ import UIKit
 
 class ExposedLayout: UICollectionViewLayout {
     
-    var layoutMargin = UIEdgeInsetsMake(40.0, 0.0, 0.0, 0.0)
+    var layoutMargin = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)
     var itemSize = CGSizeZero
     var TopOverLap:CGFloat = 20.0
     var BottomOverLap:CGFloat = 20.0

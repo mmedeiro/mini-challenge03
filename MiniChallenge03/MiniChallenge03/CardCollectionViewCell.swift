@@ -8,13 +8,14 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class CardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageViewCell: UIImageView!
+    @IBOutlet weak var title: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
  
-        self.layer.cornerRadius = self.frame.width
+        self.layer.cornerRadius = self.frame.width/2
     }
 }

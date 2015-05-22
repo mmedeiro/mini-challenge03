@@ -10,9 +10,9 @@ import UIKit
 
 class StackedLayout: UICollectionViewLayout {
     
-    var layoutMargin = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0)
+    var layoutMargin = UIEdgeInsetsMake(5, 0.0, 0.0, 0.0)
     var itemSize = CGSizeZero
-    var topReveal:CGFloat = 120.0
+    var topReveal:CGFloat = 100.0
     var bounceFactor:CGFloat = 0.2
     var fillHeight = false
     var alwaysBounce = false
@@ -88,46 +88,8 @@ class StackedLayout: UICollectionViewLayout {
             var loc = itemReveal * CGFloat(item)
             
             att.frame = CGRectMake(self.layoutMargin.left, self.layoutMargin.top + loc, itemSize.width, itemSize.height)
-            
-            //            if ((contentOffset.y + self.collectionView!.contentInset.top) < 0.0 ){
-            //                var frame = att.frame
-            //
-            //
-            //                var offseto = contentOffset.y + self.collectionView!.contentInset.top
-            //
-            //                frame.origin.y = frame.origin.y - (self.bounceFactor * offseto * CGFloat(item))
-            //
-            //                att.frame = frame
-            //            }
-            //            else if(CGRectGetMinY(att.frame)<contentOffset.y + self.layoutMargin.top){
-            //                var frame = att.frame
-            //                frame.origin.y = contentOffset.y + self.layoutMargin.top
-            //                att.frame = frame
-            //
-            //                previousTopOverLappingAttributes[1].hidden = true
-            //
-            //                previousTopOverLappingAttributes[1] = previousTopOverLappingAttributes[0]
-            //                previousTopOverLappingAttributes[0] = att
-            //            }
-            //            else if (self.collectionViewContentSize().height > CGRectGetHeight(self.collectionView!.bounds) && contentOffset.y > self.collectionViewContentSize().height - CGRectGetHeight(self.collectionView!.bounds)){
-            //
-            //                if firstCompressingItem < 0 {
-            //                    firstCompressingItem = item
-            //                }
-            //                else{
-            //                    var frame = att.frame
-            //                    var delta = contentOffset.y + CGRectGetHeight(collectionView!.bounds) - self.collectionViewContentSize().height
-            //
-            //                    frame.origin.y = frame.origin.y + self.bounceFactor * delta * CGFloat(firstCompressingItem - item)
-            //                    frame.origin.y = max(frame.origin.y, contentOffset.y + self.layoutMargin.top)
-            //
-            //                    att.frame = frame
-            //
-            //                }
-            //            }
-            //            else{
+
             firstCompressingItem = -1
-            //            }
             
             layoutAttributes[index] = att
             
