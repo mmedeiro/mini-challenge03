@@ -11,6 +11,9 @@ import UIKit
 class CardsViewController: UICollectionViewController {
     
     var cards = Array<String>()
+    var cardsLimites = Array<String>()
+    var cardsDerivadas = Array<String>()
+    var cardsIntegrais = Array<String>()
     
     
     var stackedLayout = StackedLayout()
@@ -36,9 +39,7 @@ class CardsViewController: UICollectionViewController {
             self.setExposedItemIndexPath(newVal)
         }
     }
-    
-    
-    
+ 
     func setExposedItemIndexPath(exposedItemIndexPath: NSIndexPath?){
         
         //        if(!exposedItemIndexPath!.isEqual(self.exposedIndexPath)){
@@ -80,7 +81,12 @@ class CardsViewController: UICollectionViewController {
         super.viewDidLoad()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
-        cards = ["oopa","olha","esses","melhores","cards","loko"]
+        cards = ["oopa","olha","esses","melhores","cards","loko", "mais louco ainda"]
+        cardsLimites = ["O que é?", "Definição", "Propriedades", "Indeterminações", "Limites laterais e continuidade", "Limites Fundamentais", "Teste"]
+        cardsDerivadas = ["O que é?", "Definição", "Notações", "Teste"]
+        cardsIntegrais = ["O que é?", "Definição", "Propriedades Integrais Indefinidas", "Métodos", "Teste"]
+        
+        
         self.collectionView?.collectionViewLayout = self.stackedLayout
         
     }
@@ -93,7 +99,8 @@ class CardsViewController: UICollectionViewController {
         var cell = self.collectionView?.dequeueReusableCellWithReuseIdentifier("cardCell", forIndexPath: indexPath) as! CardCollectionViewCell
         
         cell.frame = CGRect(x: 0, y: cell.frame.origin.y, width: self.collectionView!.frame.width, height: cell.frame.height)
-        cell.title.text = cards[indexPath.row]
+        cell.title.text = cardsLimites[indexPath.row]
+
         var red = CGFloat(255 - indexPath.row*25)/255
         var green = CGFloat(200 - indexPath.row*25)/255
         var blue = CGFloat(150 - indexPath.row*25)/255
@@ -104,7 +111,7 @@ class CardsViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cards.count
+        return cardsLimites.count
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -122,9 +129,7 @@ class CardsViewController: UICollectionViewController {
         self.collectionView?.reloadData()
     }
 
-    
-    
-    
+  
 }
 
 

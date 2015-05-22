@@ -11,7 +11,7 @@ import UIKit
 class CardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var title: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
  
