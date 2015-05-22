@@ -80,7 +80,7 @@ class CardsViewController: UICollectionViewController {
         super.viewDidLoad()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
-        cards = ["oopa","olha","esses","melhores","cards","cards","cards","cards","cards","cards","cards"]
+        cards = ["oopa","olha","esses","melhores","melhores","melhores","melhores"]
         self.collectionView?.collectionViewLayout = self.stackedLayout
         
     }
