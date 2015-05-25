@@ -159,14 +159,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="355"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwL-gH-dsn">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwL-gH-dsn">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="0U6-Wj-qlj">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eva-qf-dBn">
-                                                        <rect key="frame" x="84" y="-6" width="483" height="85"/>
+                                                        <rect key="frame" x="-8" y="-85" width="42" height="2"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </view>
                                                 </subviews>
@@ -174,21 +174,11 @@
                                             <blurEffect style="light"/>
                                         </visualEffectView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0h-23-pGw">
-                                            <rect key="frame" x="279" y="5" width="42" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="272" y="5" width="56.5" height="29.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQk-Dx-ALr">
-                                            <rect key="frame" x="63" y="63" width="600" height="265"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="265" id="Rml-rr-3EF"/>
-                                            </constraints>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijJ-Ov-xdL">
                                             <rect key="frame" x="277" y="325" width="46" height="30"/>
                                             <state key="normal" title="Button">
@@ -198,18 +188,46 @@
                                                 <action selector="buttonTeste:" destination="guE-7h-xKf" eventType="touchUpInside" id="jHe-s3-Oen"/>
                                             </connections>
                                         </button>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aQk-Dx-ALr">
+                                            <rect key="frame" x="58" y="85" width="700" height="1000"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="700" id="DqG-U5-Ob8"/>
+                                                <constraint firstAttribute="height" constant="1000" id="y3l-aC-5jK"/>
+                                            </constraints>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="aQk-Dx-ALr" firstAttribute="leading" secondItem="guE-7h-xKf" secondAttribute="leadingMargin" constant="50" id="4cl-h5-rWJ"/>
                                     <constraint firstAttribute="centerX" secondItem="ijJ-Ov-xdL" secondAttribute="centerX" id="4gu-He-zsY"/>
+                                    <constraint firstItem="dwL-gH-dsn" firstAttribute="leading" secondItem="guE-7h-xKf" secondAttribute="leading" id="Ep6-DF-FfE"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="aQk-Dx-ALr" secondAttribute="trailing" constant="10" id="Fbd-sq-lhS"/>
+                                    <constraint firstItem="aQk-Dx-ALr" firstAttribute="top" secondItem="guE-7h-xKf" secondAttribute="topMargin" constant="10" id="Tdg-cz-kT0"/>
                                     <constraint firstItem="X0h-23-pGw" firstAttribute="top" secondItem="guE-7h-xKf" secondAttribute="top" constant="5" id="ZE2-KB-hun"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="aQk-Dx-ALr" secondAttribute="trailing" constant="50" id="bfc-mw-xxe"/>
                                     <constraint firstAttribute="centerX" secondItem="X0h-23-pGw" secondAttribute="centerX" id="bvO-Rp-EpC"/>
                                     <constraint firstItem="dwL-gH-dsn" firstAttribute="leading" secondItem="guE-7h-xKf" secondAttribute="leading" id="dzN-l7-vUN"/>
+                                    <constraint firstItem="dwL-gH-dsn" firstAttribute="top" secondItem="guE-7h-xKf" secondAttribute="top" id="fzL-pO-iLG"/>
+                                    <constraint firstItem="aQk-Dx-ALr" firstAttribute="leading" secondItem="guE-7h-xKf" secondAttribute="leadingMargin" constant="10" id="lZe-Zf-KoL"/>
                                     <constraint firstItem="dwL-gH-dsn" firstAttribute="top" secondItem="guE-7h-xKf" secondAttribute="top" id="p0k-fh-qSw"/>
+                                    <constraint firstItem="aQk-Dx-ALr" firstAttribute="top" secondItem="dwL-gH-dsn" secondAttribute="bottom" constant="100" id="pPc-eG-qEN"/>
                                     <constraint firstAttribute="trailing" secondItem="dwL-gH-dsn" secondAttribute="trailing" id="r5V-3d-ZtT"/>
+                                    <constraint firstAttribute="trailing" secondItem="dwL-gH-dsn" secondAttribute="trailing" id="tFa-ik-P0r"/>
                                     <constraint firstAttribute="centerY" secondItem="ijJ-Ov-xdL" secondAttribute="centerY" constant="-162.5" id="yDz-vU-PSY"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="aQk-Dx-ALr" secondAttribute="bottom" constant="30" id="yGX-Ee-fTi"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fbd-sq-lhS"/>
+                                        <exclude reference="Tdg-cz-kT0"/>
+                                        <exclude reference="lZe-Zf-KoL"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="buttonTest" destination="ijJ-Ov-xdL" id="1ZC-O7-BG2"/>
                                     <outlet property="textViewConteudo" destination="aQk-Dx-ALr" id="Iyc-6G-44F"/>

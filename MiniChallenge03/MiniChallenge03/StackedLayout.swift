@@ -96,7 +96,6 @@ class StackedLayout: UICollectionViewLayout {
         }
         
         self.layoutAttributes = layoutAttributes
-        print(self.layoutAttributes)
         
         
     }
