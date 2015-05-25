@@ -32,7 +32,7 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
         imagens.append("calculo")
         self.collectionView.contentInset = UIEdgeInsetsMake(-kImageOriginHeight, 0, 0, 0);
         
-        materias = ["Pré - Cálculo", NSLocalizedString("limite",  comment: "limite"), "Derivadas", "Integrais", "Calculadora", "Canvas", "só para funcionar o scroll"]
+        materias = [NSLocalizedString("precal",  comment: "pre calculo"), NSLocalizedString("limite",  comment: "limites"), NSLocalizedString("derivada",  comment: "derivada"), NSLocalizedString("integral",  comment: "integral"), NSLocalizedString("calc",  comment: "calculadora"), NSLocalizedString("canvas",  comment: "canvas"), NSLocalizedString("mais",  comment: "outro")]
     }
 
     override func didReceiveMemoryWarning()

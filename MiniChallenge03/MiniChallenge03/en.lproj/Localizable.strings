@@ -6,5 +6,37 @@
   Copyright (c) 2015 Mariana Medeiro. All rights reserved.
 */
 
+//materias
+"precal"="Pré-Calculus";
+"limite"="Limits";
+"derivada"="Derivadas";
+"integral"="Integrais";
+"calc"="Calculadora";
+"canvas"="Canvas";
+"mais"="WHAT";
 
-"limite"="limits";
+//precalculo
+"precal1"="O que é?";
+"precal2"="O que é?";
+"precal3"="O que é?";
+"precal4"="Teste";
+//limite
+"limite1"="O que é?";
+"limite2"="Definição";
+"limite3"="Propiedades";
+"limite4"="Indeterminações";
+"limite5"="Limites laterais e Continuidades";
+"limite6"="Limites Fundamentais";
+"limite7"="Teste";
+
+//derivada
+"derivada1"="O que é?";
+"derivada2"="Definição";
+"derivada3"="Notações";
+"derivada4"="Teste";
+//integral
+"integral1"="O que é?";
+"integral2"="Definição";
+"integral3"="Propiedades integrais indefinidas";
+"integral4"="Metodos";
+"integral5"="Teste";

@@ -88,12 +88,13 @@ class CardsViewController: UICollectionViewController {
         
         
         
-        cardsLimites = ["O que é?", "Definição", "Propriedades", "Indeterminações", "Limites laterais e continuidade", "Limites Fundamentais", "Teste"]
+        cardsLimites = [NSLocalizedString("limite1",  comment: "pre calculo"),NSLocalizedString("limite2",  comment: "pre calculo"),NSLocalizedString("limite3",  comment: "pre calculo"),NSLocalizedString("limite4",  comment: "pre calculo"),NSLocalizedString("limite5",  comment: "pre calculo"),NSLocalizedString("limite6",  comment: "pre calculo"),NSLocalizedString("limite7",  comment: "pre calculo")]
         cardsDerivadas = ["O que é?", "Definição", "Notações", "Teste"]
         cardsIntegrais = ["O que é?", "Definição", "Propriedades Integrais Indefinidas", "Métodos", "Teste"]
         conteudo = ["Limites são a principal base de construção para os cálculos. Muitas vezes, uma função pode ser indefinida em um certo ponto, mas podemos pensar sobre o que a função se aproxima conforme chega cada vez mais perto deste ponto (este é o limite). Outras vezes, a função poderá estar definida em um certo ponto, mas poderá se aproximar de um limite diferente. São muitas as vezes nas quais o valor da função é o mesmo do limite em um ponto. De qualquer forma, este é um recurso muito útil conforme começamos a pensar sobre uma inclinação de uma reta tangente a uma curva.", "", "", "", "", "", "", ""]
         
-        cardsMateria = ["Pré - Cálculo" : cardsLimites , "Limites" : cardsLimites , "Derivadas" : cardsDerivadas, "Integrais" : cardsIntegrais]
+        materias = [NSLocalizedString("precal",  comment: "pre calculo"), NSLocalizedString("limite",  comment: "limites"), NSLocalizedString("derivada",  comment: "derivada"), NSLocalizedString("integral",  comment: "integral"), NSLocalizedString("calc",  comment: "calculadora"), NSLocalizedString("canvas",  comment: "canvas"), NSLocalizedString("mais",  comment: "outro")]
+        cardsMateria = [materias[0] : cardsLimites , materias[1] : cardsLimites , materias[2] : cardsDerivadas, materias[3] : cardsIntegrais]
         
         self.collectionView?.collectionViewLayout = self.stackedLayout
         
