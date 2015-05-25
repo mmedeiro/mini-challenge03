@@ -12,12 +12,16 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var title: UILabel!
 
+    @IBOutlet weak var textViewConteudo: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
  
         self.layer.cornerRadius = self.frame.width/2
         self.layer.borderColor = UIColor.blackColor().CGColor
         self.layer.borderWidth = 2
+        
+        self.textViewConteudo.backgroundColor = UIColor.clearColor()
         
     }
 }

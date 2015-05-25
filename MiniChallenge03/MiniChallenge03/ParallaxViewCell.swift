@@ -15,6 +15,7 @@ class ParallaxViewCell: UICollectionViewCell
 {
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var title: UILabel!
     
     func offset(offset: CGPoint)
     {

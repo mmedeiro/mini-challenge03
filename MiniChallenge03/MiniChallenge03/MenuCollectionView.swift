@@ -11,6 +11,7 @@ import UIKit
 let reuseIdentifier = "menuImage"
 
 var kImageOriginHeight = CGFloat(100)
+var materias = Array<String>()
 
 class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
 {
@@ -30,6 +31,8 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
        // self.collectionView!.registerClass(ParallaxViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         imagens.append("calculo")
         self.collectionView.contentInset = UIEdgeInsetsMake(-kImageOriginHeight, 0, 0, 0);
+        
+        materias = ["Pré - Cálculo", NSLocalizedString("limite",  comment: "limite"), "Derivadas", "Integrais", "Calculadora", "Canvas", "só para funcionar o scroll"]
     }
 
     override func didReceiveMemoryWarning()
@@ -45,7 +48,7 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 14
+        return materias.count
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
@@ -54,6 +57,8 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
         let parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ParallaxViewCell
         parallaxCell.frame = CGRect(x: 0, y: parallaxCell.frame.origin.y, width: self.collectionView.frame.width, height: parallaxCell.frame.height)
         parallaxCell.imageView.image = UIImage(named: "calculo")!
+        parallaxCell.title.text = materias[indexPath.row]
+        parallaxCell.title.textColor = UIColor.yellowColor()
         return parallaxCell
         
     }
@@ -98,6 +103,17 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
     func rotated(){
         self.collectionView.reloadData()
     }
-    
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+    
+        var cards = segue.destinationViewController as! CardsViewController
+        
+        var index = self.collectionView.indexPathForCell(sender as! ParallaxViewCell)
+        
+        cards.materia = materias[index!.row]
+        
+        
+    }
 }

@@ -10,10 +10,12 @@ import UIKit
 
 class CardsViewController: UICollectionViewController {
     
-    var cards = Array<String>()
+    var materia: String?
+    var cardsMateria = Dictionary<String,Array<String>>()
     var cardsLimites = Array<String>()
     var cardsDerivadas = Array<String>()
     var cardsIntegrais = Array<String>()
+    var conteudo = Array<String>()
     
     
     var stackedLayout = StackedLayout()
@@ -80,12 +82,18 @@ class CardsViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(materia)
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
-        cards = ["oopa","olha","esses","melhores","cards","loko", "mais louco ainda"]
+        
+        
+        
         cardsLimites = ["O que é?", "Definição", "Propriedades", "Indeterminações", "Limites laterais e continuidade", "Limites Fundamentais", "Teste"]
         cardsDerivadas = ["O que é?", "Definição", "Notações", "Teste"]
         cardsIntegrais = ["O que é?", "Definição", "Propriedades Integrais Indefinidas", "Métodos", "Teste"]
+        conteudo = ["Limites são a principal base de construção para os cálculos. Muitas vezes, uma função pode ser indefinida em um certo ponto, mas podemos pensar sobre o que a função se aproxima conforme chega cada vez mais perto deste ponto (este é o limite). Outras vezes, a função poderá estar definida em um certo ponto, mas poderá se aproximar de um limite diferente. São muitas as vezes nas quais o valor da função é o mesmo do limite em um ponto. De qualquer forma, este é um recurso muito útil conforme começamos a pensar sobre uma inclinação de uma reta tangente a uma curva.", "", "", "", "", "", "", ""]
         
+        cardsMateria = ["Pré - Cálculo" : cardsLimites , "Limites" : cardsLimites , "Derivadas" : cardsDerivadas, "Integrais" : cardsIntegrais]
         
         self.collectionView?.collectionViewLayout = self.stackedLayout
         
@@ -99,7 +107,11 @@ class CardsViewController: UICollectionViewController {
         var cell = self.collectionView?.dequeueReusableCellWithReuseIdentifier("cardCell", forIndexPath: indexPath) as! CardCollectionViewCell
         
         cell.frame = CGRect(x: 0, y: cell.frame.origin.y, width: self.collectionView!.frame.width, height: cell.frame.height)
-        cell.title.text = cardsLimites[indexPath.row]
+        
+        var arr = cardsMateria[materia!]!
+        
+        cell.title.text = arr[indexPath.row]
+        cell.textViewConteudo.text = conteudo [indexPath.row]
 
         var red = CGFloat(255 - indexPath.row*25)/255
         var green = CGFloat(200 - indexPath.row*25)/255
@@ -111,7 +123,8 @@ class CardsViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cardsLimites.count
+        var arr = cardsMateria[materia!]!
+        return arr.count
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
