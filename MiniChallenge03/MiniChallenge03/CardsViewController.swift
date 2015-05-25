@@ -119,6 +119,13 @@ class CardsViewController: UICollectionViewController {
         
         
         cell.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        
+        if cell.title.text == "Teste" {
+            cell.buttonTest.hidden = false
+        }
+        else{
+            cell.buttonTest.hidden = true
+        }
         return cell
     }
     

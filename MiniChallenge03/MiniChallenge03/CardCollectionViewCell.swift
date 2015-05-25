@@ -14,6 +14,10 @@ class CardCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var textViewConteudo: UITextView!
     
+    @IBAction func buttonTeste(sender: AnyObject) {
+    }
+    @IBOutlet weak var buttonTest: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
  

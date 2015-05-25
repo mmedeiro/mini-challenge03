@@ -179,7 +179,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aQk-Dx-ALr">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQk-Dx-ALr">
                                             <rect key="frame" x="63" y="63" width="600" height="265"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -189,17 +189,29 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijJ-Ov-xdL">
+                                            <rect key="frame" x="277" y="325" width="46" height="30"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="buttonTeste:" destination="guE-7h-xKf" eventType="touchUpInside" id="jHe-s3-Oen"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="ijJ-Ov-xdL" secondAttribute="centerX" id="4gu-He-zsY"/>
                                     <constraint firstItem="X0h-23-pGw" firstAttribute="top" secondItem="guE-7h-xKf" secondAttribute="top" constant="5" id="ZE2-KB-hun"/>
                                     <constraint firstAttribute="centerX" secondItem="X0h-23-pGw" secondAttribute="centerX" id="bvO-Rp-EpC"/>
                                     <constraint firstItem="dwL-gH-dsn" firstAttribute="leading" secondItem="guE-7h-xKf" secondAttribute="leading" id="dzN-l7-vUN"/>
                                     <constraint firstItem="dwL-gH-dsn" firstAttribute="top" secondItem="guE-7h-xKf" secondAttribute="top" id="p0k-fh-qSw"/>
                                     <constraint firstAttribute="trailing" secondItem="dwL-gH-dsn" secondAttribute="trailing" id="r5V-3d-ZtT"/>
+                                    <constraint firstAttribute="centerY" secondItem="ijJ-Ov-xdL" secondAttribute="centerY" constant="-162.5" id="yDz-vU-PSY"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="buttonTest" destination="ijJ-Ov-xdL" id="1ZC-O7-BG2"/>
                                     <outlet property="textViewConteudo" destination="aQk-Dx-ALr" id="Iyc-6G-44F"/>
                                     <outlet property="title" destination="X0h-23-pGw" id="W6I-pT-YSt"/>
                                 </connections>
