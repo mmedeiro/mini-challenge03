@@ -22,11 +22,11 @@ class CardCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
  
         self.layer.cornerRadius = self.frame.width/2
-        self.layer.borderColor = UIColor.blackColor().CGColor
-        self.layer.borderWidth = 2
+//        self.layer.borderColor = UIColor.blackColor().CGColor
+        self.layer.borderWidth = 0.45
         
         self.textViewConteudo.backgroundColor = UIColor.clearColor()
 
-        
+        self.textViewConteudo.selectable=false
     }
 }

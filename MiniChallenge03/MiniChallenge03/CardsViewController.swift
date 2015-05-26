@@ -11,18 +11,18 @@ import UIKit
 class CardsViewController: UICollectionViewController {
     
     var materia: String?
-    var cardsMateria = Dictionary<String,Array<String>>()
+    var cardsMateria = Dictionary<String,Array<Card>>()
     var cardsConteudos = Dictionary<String,Array<String>>()
     
     
     
-    var cardsPreCalculo = Array<String>()
-    var cardsLimites = Array<String>()
-    var cardsDerivadas = Array<String>()
-    var cardsIntegrais = Array<String>()
-    var cardsCalculadora = Array<String>()
-    var cardsCanvas = Array<String>()
-    var cardsAbout = Array<String>()
+    var cardsPreCalculo = Array<Card>()
+    var cardsLimites = Array<Card>()
+    var cardsDerivadas = Array<Card>()
+    var cardsIntegrais = Array<Card>()
+    var cardsCalculadora = Array<Card>()
+    var cardsCanvas = Array<Card>()
+    var cardsAbout = Array<Card>()
     
     var conteudoLimites = Array<String>()
     var conteudoDerivadas = Array<String>()
@@ -87,41 +87,69 @@ class CardsViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.backItem?.title! = materia!
+        print("OOOOLOKO \(materia) BUUULSHiT")
+        
         print(materia)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
         
-        
-        cardsPreCalculo = [NSLocalizedString("precal1",  comment: "pre calculo"),
-                           NSLocalizedString("precal2",  comment: "pre calculo"),
-                           NSLocalizedString("precal3",  comment: "pre calculo"),
-                           NSLocalizedString("precal4",  comment: "pre calculo")]
-        
-        cardsLimites = [NSLocalizedString("limite1",  comment: "limite"),
-                        NSLocalizedString("limite2",  comment: "limite"),
-                        NSLocalizedString("limite3",  comment: "limite"),
-                        NSLocalizedString("limite4",  comment: "limite"),
-                        NSLocalizedString("limite5",  comment: "limite"),
-                        NSLocalizedString("limite6",  comment: "limite"),
-                        NSLocalizedString("limite7",  comment: "limite")]
-        
-        cardsDerivadas = [NSLocalizedString("derivada1",  comment: "derivada"),
-                          NSLocalizedString("derivada2",  comment: "derivada"),
-                          NSLocalizedString("derivada3",  comment: "derivada"),
-                          NSLocalizedString("derivada4",  comment: "derivada")]
+        cardsPreCalculo = [Card(titulo: NSLocalizedString("precal1",  comment: "pre calculo")),
+            Card(titulo: NSLocalizedString("precal2",  comment: "pre calculo")),
+            Card(titulo: NSLocalizedString("precal3",  comment: "pre calculo")),
+            Card(titulo: NSLocalizedString("precal4",  comment: "pre calculo")),
+        ]
+//        cardsPreCalculo = [NSLocalizedString("precal1",  comment: "pre calculo"),
+//                           NSLocalizedString("precal2",  comment: "pre calculo"),
+//                           NSLocalizedString("precal3",  comment: "pre calculo"),
+//                           NSLocalizedString("precal4",  comment: "pre calculo")]
         
         
-        cardsIntegrais = [NSLocalizedString("integral1",  comment: "integral"),
-                          NSLocalizedString("integral2",  comment: "integral"),
-                          NSLocalizedString("integral3",  comment: "integral"),
-                          NSLocalizedString("integral4",  comment: "integral"),
-                          NSLocalizedString("integral5",  comment: "integral")]
         
-        cardsCalculadora = ["Calculadora aqui ⬇️"]
+        cardsLimites = [Card(titulo: NSLocalizedString("limite1",  comment: "limite")),
+            Card(titulo: NSLocalizedString("limite2",  comment: "limite")),
+            Card(titulo: NSLocalizedString("limite3",  comment: "limite")),
+            Card(titulo: NSLocalizedString("limite4",  comment: "limite")),
+            Card(titulo: NSLocalizedString("limite5",  comment: "limite")),
+            Card(titulo: NSLocalizedString("limite6",  comment: "limite")),
+            Card(titulo: NSLocalizedString("limite7",  comment: "limite")),
+        ]
         
-        cardsCanvas = ["Quer fazer um desenho? 😁"]
+//        cardsLimites = [NSLocalizedString("limite1",  comment: "limite"),
+//                        NSLocalizedString("limite2",  comment: "limite"),
+//                        NSLocalizedString("limite3",  comment: "limite"),
+//                        NSLocalizedString("limite4",  comment: "limite"),
+//                        NSLocalizedString("limite5",  comment: "limite"),
+//                        NSLocalizedString("limite6",  comment: "limite"),
+//                        NSLocalizedString("limite7",  comment: "limite")]
         
-        cardsAbout = ["Esse são cards apenas para o scroll funcionar na view inicial haha"]
+        cardsDerivadas = [Card(titulo: NSLocalizedString("derivada1",  comment: "derivada")),
+            Card(titulo: NSLocalizedString("derivada2",  comment: "derivada")),
+            Card(titulo: NSLocalizedString("derivada3",  comment: "derivada")),
+            Card(titulo: NSLocalizedString("derivada4",  comment: "derivada")),
+        ]
+        
+//        cardsDerivadas = [NSLocalizedString("derivada1",  comment: "derivada"),
+//                          NSLocalizedString("derivada2",  comment: "derivada"),
+//                          NSLocalizedString("derivada3",  comment: "derivada"),
+//                          NSLocalizedString("derivada4",  comment: "derivada")]
+        
+        cardsIntegrais = [Card(titulo: NSLocalizedString("integral1",  comment: "integral")),
+            Card(titulo: NSLocalizedString("integral2",  comment: "integral")),
+            Card(titulo: NSLocalizedString("integral3",  comment: "integral")),
+            Card(titulo: NSLocalizedString("integral4",  comment: "integral")),
+            Card(titulo: NSLocalizedString("integral5",  comment: "integral")),
+        ]
+        
+//        cardsIntegrais = [NSLocalizedString("integral1",  comment: "integral"),
+//                          NSLocalizedString("integral2",  comment: "integral"),
+//                          NSLocalizedString("integral3",  comment: "integral"),
+//                          NSLocalizedString("integral4",  comment: "integral"),
+//                          NSLocalizedString("integral5",  comment: "integral")]
+        
+        cardsCalculadora = [Card(titulo: "Calculadora aqui ⬇️")]
+        cardsCanvas = [Card(titulo: "Quer fazer um desenho? 😁")]
+        cardsAbout = [Card(titulo: "Esse são cards apenas para o scroll funcionar na view inicial haha")]
         
         
         conteudoLimites = [NSLocalizedString("conteudoLimites1",  comment: "O que é, limite"),
@@ -131,16 +159,40 @@ class CardsViewController: UICollectionViewController {
                            NSLocalizedString("conteudoLimites6",  comment: "Limites Fundamentais, limite"),
                            NSLocalizedString("conteudoLimites7",  comment: "Teste, limite")]
         
+        for i in 0...cardsLimites.count-1{
+            cardsLimites[i].conteudo = conteudoLimites[i]
+        }
+        
         conteudoDerivadas = [NSLocalizedString("conteudoDerivadas1",  comment: "O que é, derivada"),
                              NSLocalizedString("conteudoDerivadas2",  comment: "Definição, derivada"),
                              NSLocalizedString("conteudoDerivadas3",  comment: "Notações, derivada"),
                              NSLocalizedString("conteudoDerivadas4",  comment: "Teste, derivada")]
+        
+        for i in 0...cardsDerivadas.count-1{
+            cardsDerivadas[i].conteudo = conteudoDerivadas[i]
+        }
         
         conteudoIntegrais = [NSLocalizedString("conteudoIntegrais1",  comment: "O que é, integral"),
                              NSLocalizedString("conteudoIntegrais2",  comment: "Definição, integral"),
                              NSLocalizedString("conteudoIntegrais3",  comment: "Propriedades Integrais Indefinidas, integral"),
                              NSLocalizedString("conteudoIntegrais4",  comment: "Métodos, integral"),
                              NSLocalizedString("conteudoIntegrais5",  comment: "Teste, integral")]
+        
+        for i in 0...cardsIntegrais.count-1{
+            cardsIntegrais[i].conteudo = conteudoIntegrais[i]
+        }
+        for i in 0...cardsPreCalculo.count-1{
+            cardsPreCalculo[i].conteudo = "Volte ao Ensino medio meu caro "
+        }
+        for i in 0...cardsCalculadora.count-1{
+            cardsCalculadora[i].conteudo = "hehe"
+        }
+        for i in 0...cardsCanvas.count-1{
+            cardsCanvas[i].conteudo = "hehe"
+        }
+        for i in 0...cardsAbout.count-1{
+            cardsAbout[i].conteudo = "hehe"
+        }
         
         materias = [NSLocalizedString("precal",     comment: "pre calculo"),
                     NSLocalizedString("limite",     comment: "limites"),
@@ -169,15 +221,22 @@ class CardsViewController: UICollectionViewController {
         
         var arr = cardsMateria[materia!]!
         
-        cell.title.text = arr[indexPath.row]
-        cell.textViewConteudo.text = conteudoLimites [indexPath.row]
+        cell.title.text = arr[indexPath.row].titulo!
+        cell.textViewConteudo.text = arr[indexPath.row].conteudo!
 
-        var red = CGFloat(255 - indexPath.row*25)/255
-        var green = CGFloat(200 - indexPath.row*25)/255
-        var blue = CGFloat(150 - indexPath.row*25)/255
-        
+//        var red = CGFloat(255 - indexPath.row*25)/255
+//        var green = CGFloat(200 - indexPath.row*25)/255
+//        var blue = CGFloat(150 - indexPath.row*25)/255
+        var red = CGFloat(220 - indexPath.row*15)/255
+        var green = CGFloat(220 - indexPath.row*15)/255
+        var blue = CGFloat(220 - indexPath.row*15)/255
         
         cell.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+//        self.collectionView?.backgroundColor = cell.backgroundColor
+        red = CGFloat(200 - indexPath.row*15)/255
+        green = CGFloat(200 - indexPath.row*15)/255
+        blue = CGFloat(200 - indexPath.row*15)/255
+        cell.layer.borderColor = UIColor(red: red, green: green, blue: blue, alpha: 0.75).CGColor
         
         if cell.title.text == "Teste" {
             cell.buttonTest.hidden = false

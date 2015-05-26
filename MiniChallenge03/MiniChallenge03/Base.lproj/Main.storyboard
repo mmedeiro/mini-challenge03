@@ -5,14 +5,14 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Menu Collection View-->
+        <!--Calculus - Sem Limites-->
         <scene sceneID="8do-ai-l62">
             <objects>
                 <collectionViewController id="XSw-L3-9e0" customClass="MenuCollectionView" customModule="MiniChallenge03" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" dataMode="prototypes" id="gra-7O-uhR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YoV-PC-1bq">
                             <size key="itemSize" width="599" height="100"/>
                             <size key="headerReferenceSize" width="50" height="305"/>
@@ -86,18 +86,11 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundHeader" translatesAutoresizingMaskIntoConstraints="NO" id="q8X-IM-jkc">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="297"/>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redBar" translatesAutoresizingMaskIntoConstraints="NO" id="kUe-hk-aZx">
-                                    <rect key="frame" x="0.0" y="73" width="600" height="224"/>
-                                </imageView>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="kUe-hk-aZx" firstAttribute="trailing" secondItem="q8X-IM-jkc" secondAttribute="trailing" id="66x-I0-pWx"/>
-                                <constraint firstItem="kUe-hk-aZx" firstAttribute="bottom" secondItem="q8X-IM-jkc" secondAttribute="bottom" id="7nR-XV-8p7"/>
                                 <constraint firstItem="q8X-IM-jkc" firstAttribute="top" secondItem="Zcx-oL-ztS" secondAttribute="topMargin" constant="-8" id="8wd-g7-C4f"/>
                                 <constraint firstAttribute="bottomMargin" secondItem="q8X-IM-jkc" secondAttribute="bottom" id="BSB-jy-7mv"/>
-                                <constraint firstItem="kUe-hk-aZx" firstAttribute="leading" secondItem="q8X-IM-jkc" secondAttribute="leading" id="OU0-Ya-x5h"/>
                                 <constraint firstAttribute="trailingMargin" secondItem="q8X-IM-jkc" secondAttribute="trailing" constant="-8" id="b73-lw-Fsn"/>
-                                <constraint firstItem="kUe-hk-aZx" firstAttribute="top" secondItem="Zcx-oL-ztS" secondAttribute="topMargin" constant="65" id="c3u-T8-t5O"/>
                                 <constraint firstItem="q8X-IM-jkc" firstAttribute="leading" secondItem="Zcx-oL-ztS" secondAttribute="leadingMargin" constant="-8" id="utR-IV-ZNe"/>
                             </constraints>
                             <connections>
@@ -115,7 +108,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" red="0.91161616161616166" green="0.261907179740621" blue="0.26633117534358286" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.12941176470588237" green="0.47058823529411764" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="LAV-43-bIQ" firstAttribute="centerX" secondItem="Mg4-rq-cEz" secondAttribute="centerX" id="tCq-Cy-Ibq"/>
                                 <constraint firstItem="LAV-43-bIQ" firstAttribute="top" secondItem="Mg4-rq-cEz" secondAttribute="topMargin" constant="6" id="voJ-Rg-2Pi"/>
@@ -127,7 +120,9 @@
                         </connections>
                     </collectionView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="MvK-Ms-Sr2"/>
+                    <navigationItem key="navigationItem" title="Calculus - Sem Limites" id="MvK-Ms-Sr2">
+                        <barButtonItem key="backBarButtonItem" title="BACK" id="uU9-N3-2Zq"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="gra-7O-uhR" id="nhI-gX-28t"/>
                     </connections>
@@ -143,7 +138,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6IY-Lv-vMv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.23921570181846619" green="0.13725490868091583" blue="0.062745101749897003" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OMN-y7-kSg">
                             <size key="itemSize" width="600" height="528"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -158,6 +153,22 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="528"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0h-23-pGw">
+                                            <rect key="frame" x="272" y="23" width="57" height="30"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.7843137255" green="0.7843137255" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijJ-Ov-xdL">
+                                            <rect key="frame" x="277" y="434" width="46" height="30"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="buttonTeste:" destination="guE-7h-xKf" eventType="touchUpInside" id="jHe-s3-Oen"/>
+                                            </connections>
+                                        </button>
                                         <visualEffectView opaque="NO" clipsSubviews="YES" alpha="0.49999999999999961" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dwL-gH-dsn">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="35"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0U6-Wj-qlj">
@@ -175,43 +186,29 @@
                                             </constraints>
                                             <blurEffect style="light"/>
                                         </visualEffectView>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aQk-Dx-ALr">
-                                            <rect key="frame" x="8" y="41" width="584" height="479"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="aQk-Dx-ALr">
+                                            <rect key="frame" x="8" y="91" width="584" height="479"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0h-23-pGw">
-                                            <rect key="frame" x="272" y="3" width="57" height="30"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijJ-Ov-xdL">
-                                            <rect key="frame" x="277" y="434" width="46" height="30"/>
-                                            <state key="normal" title="Button">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="buttonTeste:" destination="guE-7h-xKf" eventType="touchUpInside" id="jHe-s3-Oen"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="aQk-Dx-ALr" firstAttribute="top" secondItem="X0h-23-pGw" secondAttribute="bottom" constant="8" symbolic="YES" id="3Rd-St-PyR"/>
+                                    <constraint firstItem="aQk-Dx-ALr" firstAttribute="top" secondItem="X0h-23-pGw" secondAttribute="bottom" constant="38" id="3Rd-St-PyR"/>
                                     <constraint firstItem="aQk-Dx-ALr" firstAttribute="top" secondItem="dwL-gH-dsn" secondAttribute="bottom" constant="6.5" id="4ec-So-vup"/>
+                                    <constraint firstItem="ijJ-Ov-xdL" firstAttribute="centerX" secondItem="X0h-23-pGw" secondAttribute="centerX" id="AxA-gI-cAL"/>
                                     <constraint firstAttribute="bottom" secondItem="ijJ-Ov-xdL" secondAttribute="bottom" constant="64" id="EYW-Wh-CaV"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="aQk-Dx-ALr" secondAttribute="trailing" constant="10" id="Fbd-sq-lhS"/>
                                     <constraint firstItem="dwL-gH-dsn" firstAttribute="top" secondItem="guE-7h-xKf" secondAttribute="top" id="PFG-w5-uaO"/>
                                     <constraint firstItem="aQk-Dx-ALr" firstAttribute="leading" secondItem="guE-7h-xKf" secondAttribute="leadingMargin" id="SeF-fE-E2q"/>
                                     <constraint firstItem="aQk-Dx-ALr" firstAttribute="top" secondItem="guE-7h-xKf" secondAttribute="topMargin" constant="10" id="Tdg-cz-kT0"/>
                                     <constraint firstItem="dwL-gH-dsn" firstAttribute="centerX" secondItem="ijJ-Ov-xdL" secondAttribute="centerX" id="Tu6-33-5ju"/>
-                                    <constraint firstItem="aQk-Dx-ALr" firstAttribute="bottom" secondItem="guE-7h-xKf" secondAttribute="bottomMargin" id="YCK-6o-iiQ"/>
+                                    <constraint firstItem="aQk-Dx-ALr" firstAttribute="bottom" secondItem="guE-7h-xKf" secondAttribute="bottomMargin" constant="50" id="YCK-6o-iiQ"/>
                                     <constraint firstItem="aQk-Dx-ALr" firstAttribute="top" secondItem="dwL-gH-dsn" secondAttribute="bottom" constant="5" id="ZEG-N6-NtY"/>
-                                    <constraint firstItem="X0h-23-pGw" firstAttribute="top" secondItem="guE-7h-xKf" secondAttribute="top" constant="3" id="dCQ-Fg-KVV"/>
+                                    <constraint firstItem="X0h-23-pGw" firstAttribute="top" secondItem="guE-7h-xKf" secondAttribute="top" constant="23" id="dCQ-Fg-KVV"/>
                                     <constraint firstAttribute="trailing" secondItem="dwL-gH-dsn" secondAttribute="trailing" id="dDW-pg-1dG"/>
                                     <constraint firstItem="aQk-Dx-ALr" firstAttribute="leading" secondItem="guE-7h-xKf" secondAttribute="leadingMargin" constant="10" id="lZe-Zf-KoL"/>
                                     <constraint firstItem="aQk-Dx-ALr" firstAttribute="trailing" secondItem="guE-7h-xKf" secondAttribute="trailingMargin" id="maY-Lt-SOV"/>
@@ -219,6 +216,9 @@
                                     <constraint firstItem="dwL-gH-dsn" firstAttribute="leading" secondItem="guE-7h-xKf" secondAttribute="leading" id="t65-kK-v0v"/>
                                 </constraints>
                                 <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="dwL-gH-dsn"/>
+                                    </mask>
                                     <mask key="constraints">
                                         <exclude reference="4ec-So-vup"/>
                                         <exclude reference="Fbd-sq-lhS"/>
@@ -248,11 +248,13 @@
         <scene sceneID="KSF-Cd-Jxo">
             <objects>
                 <navigationController id="1Wq-f4-gbb" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eNc-rV-9BY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.16862745100000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.89803921568627454" green="0.086274509803921567" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.090196078431372548" green="0.51764705882352935" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
@@ -424,6 +426,5 @@
     <resources>
         <image name="Header" width="512" height="256"/>
         <image name="backgroundHeader" width="512" height="512"/>
-        <image name="redBar" width="512" height="256"/>
     </resources>
 </document>
