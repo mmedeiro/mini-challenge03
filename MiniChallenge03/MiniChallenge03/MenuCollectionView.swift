@@ -14,7 +14,8 @@ var kImageOriginHeight = CGFloat(100)
 var materias = Array<String>()
 
 class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
-{
+{     
+
     
     @IBOutlet weak var collectionView: UICollectionView!
     
