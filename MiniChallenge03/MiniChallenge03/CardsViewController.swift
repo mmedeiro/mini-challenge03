@@ -12,10 +12,21 @@ class CardsViewController: UICollectionViewController {
     
     var materia: String?
     var cardsMateria = Dictionary<String,Array<String>>()
+    var cardsConteudos = Dictionary<String,Array<String>>()
+    
+    
+    
+    var cardsPreCalculo = Array<String>()
     var cardsLimites = Array<String>()
     var cardsDerivadas = Array<String>()
     var cardsIntegrais = Array<String>()
-    var conteudo = Array<String>()
+    var cardsCalculadora = Array<String>()
+    var cardsCanvas = Array<String>()
+    var cardsAbout = Array<String>()
+    
+    var conteudoLimites = Array<String>()
+    var conteudoDerivadas = Array<String>()
+    var conteudoIntegrais = Array<String>()
     
     
     var stackedLayout = StackedLayout()
@@ -44,7 +55,6 @@ class CardsViewController: UICollectionViewController {
  
     func setExposedItemIndexPath(exposedItemIndexPath: NSIndexPath?){
         
-        //        if(!exposedItemIndexPath!.isEqual(self.exposedIndexPath)){
         if (exposedIndexPath == nil){
             
             self.collectionView?.selectItemAtIndexPath(exposedIndexPath, animated: true, scrollPosition: UICollectionViewScrollPosition.None)
@@ -72,13 +82,8 @@ class CardsViewController: UICollectionViewController {
         
         self.auxIndex = exposedItemIndexPath
         
-        //    }
     }
-    
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -87,14 +92,68 @@ class CardsViewController: UICollectionViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
         
         
+        cardsPreCalculo = [NSLocalizedString("precal1",  comment: "pre calculo"),
+                           NSLocalizedString("precal2",  comment: "pre calculo"),
+                           NSLocalizedString("precal3",  comment: "pre calculo"),
+                           NSLocalizedString("precal4",  comment: "pre calculo")]
         
-        cardsLimites = ["O que é?", "Definição", "Propriedades", "Indeterminações", "Limites laterais e continuidade", "Limites Fundamentais", "Teste"]
-        cardsDerivadas = ["O que é?", "Definição", "Notações", "Teste"]
-        cardsIntegrais = ["O que é?", "Definição", "Propriedades Integrais Indefinidas", "Métodos", "Teste"]
-        conteudo = ["Limites são a principal base de construção para os cálculos. Muitas vezes, uma função pode ser indefinida em um certo ponto, mas podemos pensar sobre o que a função se aproxima conforme chega cada vez mais perto deste ponto (este é o limite). Outras vezes, a função poderá estar definida em um certo ponto, mas poderá se aproximar de um limite diferente. São muitas as vezes nas quais o valor da função é o mesmo do limite em um ponto. De qualquer forma, este é um recurso muito útil conforme começamos a pensar sobre uma inclinação de uma reta tangente a uma curva.", "", "", "", "", "", "", ""]
+        cardsLimites = [NSLocalizedString("limite1",  comment: "limite"),
+                        NSLocalizedString("limite2",  comment: "limite"),
+                        NSLocalizedString("limite3",  comment: "limite"),
+                        NSLocalizedString("limite4",  comment: "limite"),
+                        NSLocalizedString("limite5",  comment: "limite"),
+                        NSLocalizedString("limite6",  comment: "limite"),
+                        NSLocalizedString("limite7",  comment: "limite")]
         
-        cardsMateria = ["Pré - Cálculo" : cardsLimites , "Limites" : cardsLimites , "Derivadas" : cardsDerivadas, "Integrais" : cardsIntegrais]
+        cardsDerivadas = [NSLocalizedString("derivada1",  comment: "derivada"),
+                          NSLocalizedString("derivada2",  comment: "derivada"),
+                          NSLocalizedString("derivada3",  comment: "derivada"),
+                          NSLocalizedString("derivada4",  comment: "derivada")]
         
+        
+        cardsIntegrais = [NSLocalizedString("integral1",  comment: "integral"),
+                          NSLocalizedString("integral2",  comment: "integral"),
+                          NSLocalizedString("integral3",  comment: "integral"),
+                          NSLocalizedString("integral4",  comment: "integral"),
+                          NSLocalizedString("integral5",  comment: "integral")]
+        
+        cardsCalculadora = ["Calculadora aqui ⬇️"]
+        
+        cardsCanvas = ["Quer fazer um desenho? 😁"]
+        
+        cardsAbout = ["Esse são cards apenas para o scroll funcionar na view inicial haha"]
+        
+        
+        conteudoLimites = [NSLocalizedString("conteudoLimites1",  comment: "O que é, limite"),
+                           NSLocalizedString("conteudoLimites2",  comment: "Definição, limite"),
+                           NSLocalizedString("conteudoLimites3",  comment: "Propriedades, limite"), NSLocalizedString("conteudoLimites4",  comment: "Indeterminacoes, limite"),
+                           NSLocalizedString("conteudoLimites5",  comment: "Limites laterais e continuidade, limite"),
+                           NSLocalizedString("conteudoLimites6",  comment: "Limites Fundamentais, limite"),
+                           NSLocalizedString("conteudoLimites7",  comment: "Teste, limite")]
+        
+        conteudoDerivadas = [NSLocalizedString("conteudoDerivadas1",  comment: "O que é, derivada"),
+                             NSLocalizedString("conteudoDerivadas2",  comment: "Definição, derivada"),
+                             NSLocalizedString("conteudoDerivadas3",  comment: "Notações, derivada"),
+                             NSLocalizedString("conteudoDerivadas4",  comment: "Teste, derivada")]
+        
+        conteudoIntegrais = [NSLocalizedString("conteudoIntegrais1",  comment: "O que é, integral"),
+                             NSLocalizedString("conteudoIntegrais2",  comment: "Definição, integral"),
+                             NSLocalizedString("conteudoIntegrais3",  comment: "Propriedades Integrais Indefinidas, integral"),
+                             NSLocalizedString("conteudoIntegrais4",  comment: "Métodos, integral"),
+                             NSLocalizedString("conteudoIntegrais5",  comment: "Teste, integral")]
+        
+        materias = [NSLocalizedString("precal",     comment: "pre calculo"),
+                    NSLocalizedString("limite",     comment: "limites"),
+                    NSLocalizedString("derivada",   comment: "derivada"),
+                    NSLocalizedString("integral",   comment: "integral"),
+                    NSLocalizedString("calc",       comment: "calculadora"),
+                    NSLocalizedString("canvas",     comment: "canvas"),
+                    NSLocalizedString("mais",       comment: "outro")]
+        
+        
+        cardsMateria = [materias[0] : cardsPreCalculo , materias[1] : cardsLimites , materias[2] : cardsDerivadas, materias[3] : cardsIntegrais, materias[4] : cardsCalculadora, materias[5] : cardsCanvas, materias[6] : cardsAbout]
+        
+
         self.collectionView?.collectionViewLayout = self.stackedLayout
         
     }
@@ -111,7 +170,7 @@ class CardsViewController: UICollectionViewController {
         var arr = cardsMateria[materia!]!
         
         cell.title.text = arr[indexPath.row]
-        cell.textViewConteudo.text = conteudo [indexPath.row]
+        cell.textViewConteudo.text = conteudoLimites [indexPath.row]
 
         var red = CGFloat(255 - indexPath.row*25)/255
         var green = CGFloat(200 - indexPath.row*25)/255

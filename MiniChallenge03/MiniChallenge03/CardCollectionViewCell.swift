@@ -26,6 +26,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         self.layer.borderWidth = 2
         
         self.textViewConteudo.backgroundColor = UIColor.clearColor()
+
         
     }
 }

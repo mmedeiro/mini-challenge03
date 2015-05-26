@@ -6,5 +6,52 @@
   Copyright (c) 2015 Mariana Medeiro. All rights reserved.
 */
 
+//materias
+"precal"="Pré-Calculus";
+"limite"="Limits";
+"derivada"="Derivadas";
+"integral"="Integrais";
+"calc"="Calculadora";
+"canvas"="Canvas";
+"mais"="WHAT";
 
-"limite"="limits";
+//precalculo
+"precal1"="O que é?";
+"precal2"="O que é?";
+"precal3"="O que é?";
+"precal4"="Teste";
+//limite
+"limite1"="O que é?";
+"limite2"="Definição";
+"limite3"="Propiedades";
+"limite4"="Indeterminações";
+"limite5"="Limites laterais e Continuidades";
+"limite6"="Limites Fundamentais";
+"limite7"="Teste";
+
+//derivada
+"derivada1"="O que é?";
+"derivada2"="Definição";
+"derivada3"="Notações";
+"derivada4"="Teste";
+//integral
+"integral1"="O que é?";
+"integral2"="Definição";
+"integral3"="Propiedades integrais indefinidas";
+"integral4"="Metodos";
+"integral5"="Teste";
+
+//conteudoLimites
+"conteudoLimites1"="Limites são a principal base de construção para os cálculos.\nMuitas vezes, uma função pode ser indefinida em um certo ponto, mas podemos pensar sobre o que a função se aproxima conforme chega cada vez mais perto deste ponto (este é o limite). Outras vezes, a função poderá estar definida em um certo ponto, mas poderá se aproximar de um limite diferente. São muitas as vezes nas quais o valor da função é o mesmo do limite em um ponto. De qualquer forma, este é um recurso muito útil conforme começamos a pensar sobre uma inclinação de uma reta tangente a uma curva.";
+
+"conteudoLimites2"="Seja f uma função definida num intervalo aberto contendo o ponto a, podendo não estar definida no ponto a. Seja b um número real. Diz-se que o limite de f(x) quando x tende para a é b , se e só se, para todo o ε > 0 podemos encontrar um número δ > 0 tal que, para todo o x do domínio de f, se x é tal que 0<x−a<δ então|f (x) − b|< ε";
+
+"conteudoLimites3"="1) O limite da soma é a soma dos limites \n \n2) O limite da diferença é a diferença dos limites \n \n3) O limite do produto é o produto dos limites \n \n4) O limite do quociente é o quociente dos limites, desde que o denominador não seja zero \n \n5) O limite de uma constante é a propria constante \n \n6) O limite de uma função elevada a n é equivalente ao limite elevado a n desta função \n \n7) O limite da raiz enésima de uma função é equivalente a raiz enésima do limite dessa função\n \n8) O limite do logaritmo natural de uma função é equivalente ao logaritmo natural dessa função \n \n9) O limite de e elevado a uma função é equivalente a ë elevado ao limite dessa função \n \n10) O limite do seno de uma função é equivalente ao seno do limite dessa função";
+
+"conteudoLimites4"="1) 0 ÷ 0 \n \n2) ∞ - ∞ \n \n3) 0 x ∞ \n \n4) ∞ ÷ ∞ \n \n5) 0 ⁰ \n \n6) 1 ⁰⁰ \n \n7) ∞ ⁰ ";
+
+"conteudoLimites5"="Quando examinamos  estamos pensando que , isto é, x se aproxima de a, por valores maiores ou menores que a. Entretanto, podemos fazer x se aproximar de a apenas por valores maiores do que a. Nesse caso, dizemos que x tende a a pela direita e indicamos. De modo análogo, podemos fazer x se aproximar de a apenas por valores menores do que a. Nesse caso, dizemos que x tende a a pela esquerda e indicamos .Existe  se e somente se ambos os limites laterais são iguais.";
+
+"conteudoLimites6"="";
+
+"conteudoLimites7"="";
