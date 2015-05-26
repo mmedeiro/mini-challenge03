@@ -33,9 +33,63 @@
 "derivada2"="Definição";
 "derivada3"="Notações";
 "derivada4"="Teste";
+
 //integral
 "integral1"="O que é?";
 "integral2"="Definição";
 "integral3"="Propiedades integrais indefinidas";
 "integral4"="Metodos";
 "integral5"="Teste";
+
+//conteudoLimites
+"conteudoLimites1"="Limites são a principal base de construção para os cálculos.\nMuitas vezes, uma função pode ser indefinida em um certo ponto, mas podemos pensar sobre o que a função se aproxima conforme chega cada vez mais perto deste ponto (este é o limite). Outras vezes, a função poderá estar definida em um certo ponto, mas poderá se aproximar de um limite diferente. São muitas as vezes nas quais o valor da função é o mesmo do limite em um ponto. De qualquer forma, este é um recurso muito útil conforme começamos a pensar sobre uma inclinação de uma reta tangente a uma curva.";
+
+"conteudoLimites2"="Seja f uma função definida num intervalo aberto contendo o ponto a, podendo não estar definida no ponto a. Seja b um número real. Diz-se que o limite de f(x) quando x tende para a é b , se e só se, para todo o ε > 0 podemos encontrar um número δ > 0 tal que, para todo o x do domínio de f, se x é tal que 0<x−a<δ então|f (x) − b|< ε";
+
+"conteudoLimites3"="1) O limite da soma é a soma dos limites \n \n2) O limite da diferença é a diferença dos limites \n \n3) O limite do produto é o produto dos limites \n \n4) O limite do quociente é o quociente dos limites, desde que o denominador não seja zero \n \n5) O limite de uma constante é a propria constante \n \n6) O limite de uma função elevada a n é equivalente ao limite elevado a n desta função \n \n7) O limite da raiz enésima de uma função é equivalente a raiz enésima do limite dessa função\n \n8) O limite do logaritmo natural de uma função é equivalente ao logaritmo natural dessa função \n \n9) O limite de e elevado a uma função é equivalente a ë elevado ao limite dessa função \n \n10) O limite do seno de uma função é equivalente ao seno do limite dessa função";
+
+"conteudoLimites4"="1) 0 ÷ 0 \n \n2) ∞ - ∞ \n \n3) 0 x ∞ \n \n4) ∞ ÷ ∞ \n \n5) 0 ⁰ \n \n6) 1 ⁰⁰ \n \n7) ∞ ⁰ ";
+
+"conteudoLimites5"="Quando examinamos  estamos pensando que , isto é, x se aproxima de a, por valores maiores ou menores que a. Entretanto, podemos fazer x se aproximar de a apenas por valores maiores do que a. Nesse caso, dizemos que x tende a a pela direita e indicamos. De modo análogo, podemos fazer x se aproximar de a apenas por valores menores do que a. Nesse caso, dizemos que x tende a a pela esquerda e indicamos .Existe  se e somente se ambos os limites laterais são iguais.";
+
+"conteudoLimites6"="";
+
+"conteudoLimites7"="";
+
+
+
+//conteudoDerivadas
+"conteudoDerivadas1"="O conceito de derivada está intimamente relacionado à taxa de variação instantânea de uma função, o qual está presente no cotidiano das pessoas, através, por exemplo, da determinação da taxa de crescimento de uma certa população, da taxa de crescimento econômico do país, da taxa de redução da mortalidade infantil, da taxa de variação de temperaturas, da velocidade de corpos ou objetos em movimento, enfim, poderíamos ilustrar inúmeros exemplos que apresentam uma função variando e que a medida desta variação se faz necessária em um determinado momento.";
+
+"conteudoDerivadas2"="Se uma função f é definida em um intervalo aberto contendo x0, então a derivada de f em x0, denotada por f ’(x0), é dada por: \n\n\n(imagem aqui) \n\n , se este limite existir. \n△x representa uma pequena variação em x, próximo de x0, ou seja, tomando x=x0 +∆x (∆x=x−x0),a derivada de f em x0 pode também se expressa por: \n\n\n(imagem aqui) \n\n ";
+
+"conteudoDerivadas3"=": \n\n\n(imagem aqui) \n\n ";
+
+"conteudoDerivadas4"="";
+
+
+
+//conteudoDerivadas
+"conteudoIntegrais1"="No cálculo, a integral de uma função foi criada originalmente para determinar a área sob uma curva no plano cartesiano e também surge naturalmente em dezenas de problemas de Física, como por exemplo na determinação da posição em todos os instantes de um objeto, se for conhecida a sua velocidade instantânea em todos os instantes., a integral de uma função foi criada originalmente para determinar a área sob uma curva no plano cartesiano e também surge naturalmente em dezenas de problemas de Física, como por exemplo na determinação da posição em todos os instantes de um objeto, se for conhecida a sua velocidade instantânea em todos os instantes. \nO cálculo integral trata da ideia de soma ou integração de coisas infinitamente pequenas para chegar a um valor finito (frequentemente a área sob a curva).";
+
+"conteudoIntegrais2"="Da mesma forma que a adição e a  subtração, a multiplicação e a divisão, a operação inversa da derivação é a antiderivação ou integração indefinida. \nDada uma função g(x), qualquer função f'(x) tal que f'(x) = g(x) é chamada integral indefinida ou antiderivada de f(x). \n\n\n(imagem aqui) \n\n Nos exemplos 2 e 3 podemos observar que tanto x3 quando x3+4 são integrais indefinidas para 3x2. A diferença entre quaisquer destas funções (chamadas funções primitivas) é sempre uma constante, ou seja, a integral indefinida de 3x2 é  x3+C, onde C é uma constante real.
+";
+
+"conteudoIntegrais3"="1) A integral da soma é a soma das integrais \n2) a integral da diferença é a diferença das integrais \n3) A constante multiplicativa pode ser retirada da integral \n4) A derivada da integral de uma função é a própria função";
+
+"conteudoIntegrais4"="\n\n\n(imagem aqui) \n\n  \n\n\n(imagem aqui) \n\n ";
+
+"conteudoIntegrais5"="";
+
+
+
+
+
+
+
+
+
+
+
+
+

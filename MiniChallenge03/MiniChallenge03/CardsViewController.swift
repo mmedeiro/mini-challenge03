@@ -12,12 +12,21 @@ class CardsViewController: UICollectionViewController {
     
     var materia: String?
     var cardsMateria = Dictionary<String,Array<String>>()
+    var cardsConteudos = Dictionary<String,Array<String>>()
+    
+    
+    
     var cardsPreCalculo = Array<String>()
     var cardsLimites = Array<String>()
     var cardsDerivadas = Array<String>()
     var cardsIntegrais = Array<String>()
-    var conteudo = Array<String>()
+    var cardsCalculadora = Array<String>()
+    var cardsCanvas = Array<String>()
+    var cardsAbout = Array<String>()
+    
     var conteudoLimites = Array<String>()
+    var conteudoDerivadas = Array<String>()
+    var conteudoIntegrais = Array<String>()
     
     
     var stackedLayout = StackedLayout()
@@ -46,7 +55,6 @@ class CardsViewController: UICollectionViewController {
  
     func setExposedItemIndexPath(exposedItemIndexPath: NSIndexPath?){
         
-        //        if(!exposedItemIndexPath!.isEqual(self.exposedIndexPath)){
         if (exposedIndexPath == nil){
             
             self.collectionView?.selectItemAtIndexPath(exposedIndexPath, animated: true, scrollPosition: UICollectionViewScrollPosition.None)
@@ -74,13 +82,8 @@ class CardsViewController: UICollectionViewController {
         
         self.auxIndex = exposedItemIndexPath
         
-        //    }
     }
-    
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -114,10 +117,30 @@ class CardsViewController: UICollectionViewController {
                           NSLocalizedString("integral4",  comment: "integral"),
                           NSLocalizedString("integral5",  comment: "integral")]
         
+        cardsCalculadora = ["Calculadora aqui ⬇️"]
         
-        conteudoLimites = ["Limites são a principal base de construção para os cálculos.\nMuitas vezes, uma função pode ser indefinida em um certo ponto, mas podemos pensar sobre o que a função se aproxima conforme chega cada vez mais perto deste ponto (este é o limite). Outras vezes, a função poderá estar definida em um certo ponto, mas poderá se aproximar de um limite diferente. São muitas as vezes nas quais o valor da função é o mesmo do limite em um ponto. De qualquer forma, este é um recurso muito útil conforme começamos a pensar sobre uma inclinação de uma reta tangente a uma curva.",
-            "Seja f uma função definida num intervalo aberto contendo o ponto a, podendo não estar definida no ponto a. Seja b um número real. Diz-se que o limite de f(x) quando x tende para a é b , se e só se, para todo o ε > 0 podemos encontrar um número δ > 0 tal que, para todo o x do domínio de f, se x é tal que 0<x−a<δ então|f (x) − b|< ε",
-            "1) O limite da soma é a soma dos limites \n \n2) O limite da diferença é a diferença dos limites \n \n3) O limite do produto é o produto dos limites \n \n4) O limite do quociente é o quociente dos limites, desde que o denominador não seja zero \n \n5) O limite de uma constante é a propria constante \n \n6) O limite de uma função elevada a n é equivalente ao limite elevado a n desta função \n \n7) O limite da raiz enésima de uma função é equivalente a raiz enésima do limite dessa função\n \n8) O limite do logaritmo natural de uma função é equivalente ao logaritmo natural dessa função \n \n9) O limite de e elevado a uma função é equivalente a ë elevado ao limite dessa função \n \n10) O limite do seno de uma função é equivalente ao seno do limite dessa função", "1) 0 ÷ 0 \n \n2) ∞ - ∞ \n \n3) 0 x ∞ \n \n4) ∞ ÷ ∞ \n \n5) 0 ⁰ \n \n6) 1 ⁰⁰ \n \n7) ∞ ⁰ ", "Quando examinamos  estamos pensando que , isto é, x se aproxima de a, por valores maiores ou menores que a. Entretanto, podemos fazer x se aproximar de a apenas por valores maiores do que a. Nesse caso, dizemos que x tende a a pela direita e indicamos. De modo análogo, podemos fazer x se aproximar de a apenas por valores menores do que a. Nesse caso, dizemos que x tende a a pela esquerda e indicamos .Existe  se e somente se ambos os limites laterais são iguais.", "", "", ""]
+        cardsCanvas = ["Quer fazer um desenho? 😁"]
+        
+        cardsAbout = ["Esse são cards apenas para o scroll funcionar na view inicial haha"]
+        
+        
+        conteudoLimites = [NSLocalizedString("conteudoLimites1",  comment: "O que é, limite"),
+                           NSLocalizedString("conteudoLimites2",  comment: "Definição, limite"),
+                           NSLocalizedString("conteudoLimites3",  comment: "Propriedades, limite"), NSLocalizedString("conteudoLimites4",  comment: "Indeterminacoes, limite"),
+                           NSLocalizedString("conteudoLimites5",  comment: "Limites laterais e continuidade, limite"),
+                           NSLocalizedString("conteudoLimites6",  comment: "Limites Fundamentais, limite"),
+                           NSLocalizedString("conteudoLimites7",  comment: "Teste, limite")]
+        
+        conteudoDerivadas = [NSLocalizedString("conteudoDerivadas1",  comment: "O que é, derivada"),
+                             NSLocalizedString("conteudoDerivadas2",  comment: "Definição, derivada"),
+                             NSLocalizedString("conteudoDerivadas3",  comment: "Notações, derivada"),
+                             NSLocalizedString("conteudoDerivadas4",  comment: "Teste, derivada")]
+        
+        conteudoIntegrais = [NSLocalizedString("conteudoIntegrais1",  comment: "O que é, integral"),
+                             NSLocalizedString("conteudoIntegrais2",  comment: "Definição, integral"),
+                             NSLocalizedString("conteudoIntegrais3",  comment: "Propriedades Integrais Indefinidas, integral"),
+                             NSLocalizedString("conteudoIntegrais4",  comment: "Métodos, integral"),
+                             NSLocalizedString("conteudoIntegrais5",  comment: "Teste, integral")]
         
         materias = [NSLocalizedString("precal",     comment: "pre calculo"),
                     NSLocalizedString("limite",     comment: "limites"),
@@ -128,8 +151,9 @@ class CardsViewController: UICollectionViewController {
                     NSLocalizedString("mais",       comment: "outro")]
         
         
-        cardsMateria = [materias[0] : cardsLimites , materias[1] : cardsLimites , materias[2] : cardsDerivadas, materias[3] : cardsIntegrais]
+        cardsMateria = [materias[0] : cardsPreCalculo , materias[1] : cardsLimites , materias[2] : cardsDerivadas, materias[3] : cardsIntegrais, materias[4] : cardsCalculadora, materias[5] : cardsCanvas, materias[6] : cardsAbout]
         
+
         self.collectionView?.collectionViewLayout = self.stackedLayout
         
     }
