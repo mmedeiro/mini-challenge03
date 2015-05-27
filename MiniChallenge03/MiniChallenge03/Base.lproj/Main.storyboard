@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vEa-Uj-ZdS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1Wq-f4-gbb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -75,7 +75,7 @@
                                 <connections>
                                     <outlet property="imageView" destination="aJl-sA-MaV" id="kgQ-5s-Aub"/>
                                     <outlet property="title" destination="Xvi-Id-lY4" id="F1J-ci-Rhg"/>
-                                    <segue destination="W8O-Gl-UZO" kind="show" id="KX4-Tq-Sah"/>
+                                    <segue destination="W8O-Gl-UZO" kind="show" id="itd-XI-4yv"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -483,7 +483,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyA-fa-MZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="251"/>
+            <point key="canvasLocation" x="66" y="923"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KSF-Cd-Jxo">
@@ -508,164 +508,10 @@
             </objects>
             <point key="canvasLocation" x="-667" y="251"/>
         </scene>
-        <!--Menu Collection View-->
-        <scene sceneID="YiB-JL-uoY">
-            <objects>
-                <viewController id="dkU-qB-UA7" customClass="MenuCollectionView" customModule="MiniChallenge03" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Vsa-rj-mBb"/>
-                        <viewControllerLayoutGuide type="bottom" id="l87-uf-XzQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="57p-wJ-mTv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NnZ-49-kUG">
-                                <rect key="frame" x="0.0" y="40" width="600" height="560"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="560" id="ahS-pp-WhY"/>
-                                    <constraint firstAttribute="height" constant="554" id="bNj-U8-2Yb"/>
-                                    <constraint firstAttribute="height" constant="554" id="mh0-nP-4Z5"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CEv-QB-Ydq">
-                                    <size key="itemSize" width="594" height="100"/>
-                                    <size key="headerReferenceSize" width="50" height="87"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="menuImage" id="LU1-sx-fm1" customClass="ParallaxViewCell" customModule="MiniChallenge03" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="594" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wXk-IK-Hqd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="593" height="100"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailingMargin" secondItem="wXk-IK-Hqd" secondAttribute="trailing" constant="-8" id="HT1-6E-bjD"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="wXk-IK-Hqd" secondAttribute="bottom" constant="-8" id="JJ9-bc-Azd"/>
-                                            <constraint firstItem="wXk-IK-Hqd" firstAttribute="top" secondItem="LU1-sx-fm1" secondAttribute="topMargin" constant="-8" id="LeD-xb-Cry"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="wXk-IK-Hqd" secondAttribute="trailing" constant="-7" id="Owd-I9-RJz"/>
-                                            <constraint firstItem="wXk-IK-Hqd" firstAttribute="leading" secondItem="LU1-sx-fm1" secondAttribute="leadingMargin" constant="-8" id="iy5-10-kIP"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="wXk-IK-Hqd" secondAttribute="bottom" constant="-8" id="oRO-Sj-J0E"/>
-                                            <constraint firstItem="wXk-IK-Hqd" firstAttribute="leading" secondItem="LU1-sx-fm1" secondAttribute="leadingMargin" constant="-8" id="sko-FM-eFa"/>
-                                            <constraint firstItem="wXk-IK-Hqd" firstAttribute="top" secondItem="LU1-sx-fm1" secondAttribute="topMargin" constant="-8" id="xQe-Qd-FqK"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="HT1-6E-bjD"/>
-                                                <exclude reference="iy5-10-kIP"/>
-                                                <exclude reference="oRO-Sj-J0E"/>
-                                                <exclude reference="xQe-Qd-FqK"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outlet property="imageView" destination="wXk-IK-Hqd" id="X9w-CE-QPi"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="XCL-3a-6l1" customClass="headerReusableView" customModule="MiniChallenge03" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="87"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="zyD-Bb-x32">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="87"/>
-                                        </imageView>
-                                    </subviews>
-                                    <connections>
-                                        <outlet property="background" destination="zyD-Bb-x32" id="LOS-9s-yHs"/>
-                                    </connections>
-                                </collectionReusableView>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="bNj-U8-2Yb"/>
-                                        <exclude reference="mh0-nP-4Z5"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="dkU-qB-UA7" id="b5O-fp-ggz"/>
-                                    <outlet property="delegate" destination="dkU-qB-UA7" id="8we-BZ-l0W"/>
-                                </connections>
-                            </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNo-AW-zXy">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
-                                <color key="backgroundColor" red="0.91161616160000003" green="0.26190717969999999" blue="0.2663311753" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="PZw-Rv-hpN"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="trailing" secondItem="uNo-AW-zXy" secondAttribute="trailing" id="1pL-MQ-urV"/>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="leading" secondItem="uNo-AW-zXy" secondAttribute="leading" id="73i-90-cIF"/>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="top" secondItem="uNo-AW-zXy" secondAttribute="bottom" id="88d-hU-APv"/>
-                            <constraint firstItem="uNo-AW-zXy" firstAttribute="leading" secondItem="NnZ-49-kUG" secondAttribute="leading" id="8Ar-Xm-XVv"/>
-                            <constraint firstItem="uNo-AW-zXy" firstAttribute="trailing" secondItem="NnZ-49-kUG" secondAttribute="trailing" id="ALO-bN-7FY"/>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="bottom" secondItem="l87-uf-XzQ" secondAttribute="top" id="Hjd-Bi-FPf"/>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="top" secondItem="Vsa-rj-mBb" secondAttribute="bottom" constant="26" id="I4D-s7-mH0"/>
-                            <constraint firstItem="l87-uf-XzQ" firstAttribute="top" secondItem="uNo-AW-zXy" secondAttribute="bottom" constant="553" id="JMf-cD-nAM"/>
-                            <constraint firstItem="l87-uf-XzQ" firstAttribute="top" secondItem="NnZ-49-kUG" secondAttribute="bottom" id="JP5-X1-IDe"/>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="bottom" secondItem="l87-uf-XzQ" secondAttribute="top" id="Ksa-XI-nFW"/>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="bottom" secondItem="l87-uf-XzQ" secondAttribute="top" id="NuY-gK-uYJ"/>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="top" secondItem="uNo-AW-zXy" secondAttribute="bottom" id="OfD-q1-lvi"/>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="bottom" secondItem="l87-uf-XzQ" secondAttribute="top" id="Qvu-eP-kc2"/>
-                            <constraint firstAttribute="trailing" secondItem="NnZ-49-kUG" secondAttribute="trailing" id="ZGX-sD-xFn"/>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="leading" secondItem="57p-wJ-mTv" secondAttribute="leadingMargin" constant="-16" id="amY-34-s17"/>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="leading" secondItem="uNo-AW-zXy" secondAttribute="leading" id="bAG-fp-4V0"/>
-                            <constraint firstItem="uNo-AW-zXy" firstAttribute="leading" secondItem="57p-wJ-mTv" secondAttribute="leading" id="fBe-Xf-doT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uNo-AW-zXy" secondAttribute="trailing" constant="-16" id="gqY-1G-bW8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NnZ-49-kUG" secondAttribute="trailing" constant="-16" id="qS2-uH-vfG"/>
-                            <constraint firstItem="uNo-AW-zXy" firstAttribute="leading" secondItem="57p-wJ-mTv" secondAttribute="leadingMargin" constant="-16" id="tfR-aI-6xt"/>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="trailing" secondItem="uNo-AW-zXy" secondAttribute="trailing" id="tiz-oH-d9J"/>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="trailing" secondItem="uNo-AW-zXy" secondAttribute="trailing" id="wUX-Sh-Zik"/>
-                            <constraint firstItem="NnZ-49-kUG" firstAttribute="leading" secondItem="uNo-AW-zXy" secondAttribute="leading" id="yxr-jZ-DyC"/>
-                            <constraint firstItem="uNo-AW-zXy" firstAttribute="top" secondItem="57p-wJ-mTv" secondAttribute="top" id="zOK-BZ-APC"/>
-                            <constraint firstItem="uNo-AW-zXy" firstAttribute="top" secondItem="57p-wJ-mTv" secondAttribute="topMargin" id="zpE-eW-YMP"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="ALO-bN-7FY"/>
-                                <exclude reference="fBe-Xf-doT"/>
-                                <exclude reference="zOK-BZ-APC"/>
-                                <exclude reference="1pL-MQ-urV"/>
-                                <exclude reference="73i-90-cIF"/>
-                                <exclude reference="Hjd-Bi-FPf"/>
-                                <exclude reference="I4D-s7-mH0"/>
-                                <exclude reference="Ksa-XI-nFW"/>
-                                <exclude reference="OfD-q1-lvi"/>
-                                <exclude reference="Qvu-eP-kc2"/>
-                                <exclude reference="ZGX-sD-xFn"/>
-                                <exclude reference="amY-34-s17"/>
-                                <exclude reference="bAG-fp-4V0"/>
-                                <exclude reference="qS2-uH-vfG"/>
-                                <exclude reference="tiz-oH-d9J"/>
-                                <exclude reference="yxr-jZ-DyC"/>
-                                <exclude reference="JMf-cD-nAM"/>
-                                <exclude reference="JP5-X1-IDe"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" id="Tja-yq-I3w">
-                        <barButtonItem key="backBarButtonItem" title="traz" id="Hkr-D4-AmY"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="collectionView" destination="NnZ-49-kUG" id="dnU-Qf-nY7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N6i-k6-X3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="125" y="1008"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="Header" width="512" height="256"/>
         <image name="backgroundHeader" width="512" height="512"/>
+        <image name="eraser-104" width="104" height="104"/>
+        <image name="pencil-104" width="104" height="104"/>
     </resources>
 </document>

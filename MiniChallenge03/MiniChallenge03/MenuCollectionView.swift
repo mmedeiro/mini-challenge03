@@ -14,8 +14,7 @@ var kImageOriginHeight = CGFloat(100)
 var materias = Array<String>()
 
 class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
-{     
-
+{
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -109,14 +108,18 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        
-    
-        var cards = segue.destinationViewController as! CardsViewController
-        
         var index = self.collectionView.indexPathForCell(sender as! ParallaxViewCell)
-        
-        cards.materia = materias[index!.row]
-        
-        
+    
+        if materias[index!.row] == "Canvas"{
+            var cards = segue.destinationViewController as! TestsViewController
+            self.navigationController?.pushViewController(cards, animated: true)
+        }
+        else{
+            var cards = segue.destinationViewController as! CardsViewController
+            
+            
+            cards.materia = materias[index!.row]
+        }
+
     }
 }
