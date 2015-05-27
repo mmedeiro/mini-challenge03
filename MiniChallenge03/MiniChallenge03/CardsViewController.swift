@@ -24,7 +24,9 @@ class CardsViewController: UICollectionViewController {
     var cardsCalculadora = Array<Card>()
     var cardsCanvas = Array<Card>()
     var cardsAbout = Array<Card>()
+    var cardsLimitesImage = Array<UIImageView>()
     
+    var conteudoPreCalculo = Array<String>()
     var conteudoLimites = Array<String>()
     var conteudoDerivadas = Array<String>()
     var conteudoIntegrais = Array<String>()
@@ -97,62 +99,52 @@ class CardsViewController: UICollectionViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
         
-        cardsPreCalculo = [Card(titulo: NSLocalizedString("precal1",  comment: "pre calculo")),
-            Card(titulo: NSLocalizedString("precal2",  comment: "pre calculo")),
-            Card(titulo: NSLocalizedString("precal3",  comment: "pre calculo")),
-            Card(titulo: NSLocalizedString("precal4",  comment: "pre calculo")),
+        cardsPreCalculo = [Card(titulo: NSLocalizedString("precal1",  comment: "pre                     calculo")),
+                           Card(titulo: NSLocalizedString("precal2",  comment: "pre calculo")),
+                           Card(titulo: NSLocalizedString("precal3",  comment: "pre calculo")),
+                           Card(titulo: NSLocalizedString("precal4",  comment: "pre calculo")),
+                           Card(titulo: NSLocalizedString("precal5",  comment: "pre calculo")),
+                           Card(titulo: NSLocalizedString("precal6",  comment: "pre calculo")),
+                           Card(titulo: NSLocalizedString("precal7",  comment: "pre calculo"))
         ]
-//        cardsPreCalculo = [NSLocalizedString("precal1",  comment: "pre calculo"),
-//                           NSLocalizedString("precal2",  comment: "pre calculo"),
-//                           NSLocalizedString("precal3",  comment: "pre calculo"),
-//                           NSLocalizedString("precal4",  comment: "pre calculo")]
-        
-        
-        
+
         cardsLimites = [Card(titulo: NSLocalizedString("limite1",  comment: "limite")),
-            Card(titulo: NSLocalizedString("limite2",  comment: "limite")),
-            Card(titulo: NSLocalizedString("limite3",  comment: "limite")),
-            Card(titulo: NSLocalizedString("limite4",  comment: "limite")),
-            Card(titulo: NSLocalizedString("limite5",  comment: "limite")),
-            Card(titulo: NSLocalizedString("limite6",  comment: "limite")),
-            Card(titulo: NSLocalizedString("limite7",  comment: "limite")),
+                        Card(titulo: NSLocalizedString("limite2",  comment: "limite")),
+                        Card(titulo: NSLocalizedString("limite3",  comment: "limite")),
+                        Card(titulo: NSLocalizedString("limite4",  comment: "limite")),
+                        Card(titulo: NSLocalizedString("limite5",  comment: "limite")),
+                        Card(titulo: NSLocalizedString("limite6",  comment: "limite")),
+                        Card(titulo: NSLocalizedString("limite7",  comment: "limite")),
+                        Card(titulo: NSLocalizedString("limite8",  comment: "limite"))
         ]
         
-//        cardsLimites = [NSLocalizedString("limite1",  comment: "limite"),
-//                        NSLocalizedString("limite2",  comment: "limite"),
-//                        NSLocalizedString("limite3",  comment: "limite"),
-//                        NSLocalizedString("limite4",  comment: "limite"),
-//                        NSLocalizedString("limite5",  comment: "limite"),
-//                        NSLocalizedString("limite6",  comment: "limite"),
-//                        NSLocalizedString("limite7",  comment: "limite")]
         
         cardsDerivadas = [Card(titulo: NSLocalizedString("derivada1",  comment: "derivada")),
-            Card(titulo: NSLocalizedString("derivada2",  comment: "derivada")),
-            Card(titulo: NSLocalizedString("derivada3",  comment: "derivada")),
-            Card(titulo: NSLocalizedString("derivada4",  comment: "derivada")),
+                          Card(titulo: NSLocalizedString("derivada2",  comment: "derivada")),
+                          Card(titulo: NSLocalizedString("derivada3",  comment: "derivada")),
+                          Card(titulo: NSLocalizedString("derivada4",  comment: "derivada")),
         ]
-        
-//        cardsDerivadas = [NSLocalizedString("derivada1",  comment: "derivada"),
-//                          NSLocalizedString("derivada2",  comment: "derivada"),
-//                          NSLocalizedString("derivada3",  comment: "derivada"),
-//                          NSLocalizedString("derivada4",  comment: "derivada")]
         
         cardsIntegrais = [Card(titulo: NSLocalizedString("integral1",  comment: "integral")),
-            Card(titulo: NSLocalizedString("integral2",  comment: "integral")),
-            Card(titulo: NSLocalizedString("integral3",  comment: "integral")),
-            Card(titulo: NSLocalizedString("integral4",  comment: "integral")),
-            Card(titulo: NSLocalizedString("integral5",  comment: "integral")),
+                          Card(titulo: NSLocalizedString("integral2",  comment: "integral")),
+                          Card(titulo: NSLocalizedString("integral3",  comment: "integral")),
+                          Card(titulo: NSLocalizedString("integral4",  comment: "integral")),
+                          Card(titulo: NSLocalizedString("integral5",  comment: "integral")),
         ]
-        
-//        cardsIntegrais = [NSLocalizedString("integral1",  comment: "integral"),
-//                          NSLocalizedString("integral2",  comment: "integral"),
-//                          NSLocalizedString("integral3",  comment: "integral"),
-//                          NSLocalizedString("integral4",  comment: "integral"),
-//                          NSLocalizedString("integral5",  comment: "integral")]
+
         
         cardsCalculadora = [Card(titulo: "Calculadora aqui ⬇️")]
         cardsCanvas = [Card(titulo: "Quer fazer um desenho? 😁")]
         cardsAbout = [Card(titulo: "Esse são cards apenas para o scroll funcionar na view inicial haha")]
+        
+
+        conteudoPreCalculo = [NSLocalizedString("conteudoPreCal1",  comment: "Atenção, precal"),
+                              NSLocalizedString("conteudoPreCal2",  comment: "Atenção, precal"),
+                              NSLocalizedString("conteudoPreCal3",  comment: "Atenção, precal"),
+                              NSLocalizedString("conteudoPreCal4",  comment: "Atenção, precal"),
+                              NSLocalizedString("conteudoPreCal5",  comment: "Atenção, precal"),
+                              NSLocalizedString("conteudoPreCal6",  comment: "Atenção, precal"),
+                              NSLocalizedString("conteudoPreCal7",  comment: "Atenção, precal")]
         
         
         conteudoLimites = [NSLocalizedString("conteudoLimites1",  comment: "O que é, limite"),
@@ -160,7 +152,8 @@ class CardsViewController: UICollectionViewController {
                            NSLocalizedString("conteudoLimites3",  comment: "Propriedades, limite"), NSLocalizedString("conteudoLimites4",  comment: "Indeterminacoes, limite"),
                            NSLocalizedString("conteudoLimites5",  comment: "Limites laterais e continuidade, limite"),
                            NSLocalizedString("conteudoLimites6",  comment: "Limites Fundamentais, limite"),
-                           NSLocalizedString("conteudoLimites7",  comment: "Teste, limite")]
+                           NSLocalizedString("conteudoLimites7",  comment: "Exercicios Resolvidos, limite"),
+                           NSLocalizedString("conteudoLimites8",  comment: "Teste, limite")]
         
         for i in 0...cardsLimites.count-1{
             cardsLimites[i].conteudo = conteudoLimites[i]
@@ -185,7 +178,7 @@ class CardsViewController: UICollectionViewController {
             cardsIntegrais[i].conteudo = conteudoIntegrais[i]
         }
         for i in 0...cardsPreCalculo.count-1{
-            cardsPreCalculo[i].conteudo = "Volte ao Ensino medio meu caro "
+            cardsPreCalculo[i].conteudo = conteudoPreCalculo[i]
         }
         for i in 0...cardsCalculadora.count-1{
             cardsCalculadora[i].conteudo = "hehe"

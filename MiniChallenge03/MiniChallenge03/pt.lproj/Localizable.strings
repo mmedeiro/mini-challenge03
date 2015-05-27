@@ -15,10 +15,14 @@
 "mais"="So para funcionar o scroll";
 
 //precalculo
-"precal1"="O que é?";
-"precal2"="O que é?";
-"precal3"="O que é?";
-"precal4"="Teste";
+"precal1"="Atenção!!";
+"precal2"="Conjuntos Numéricos";
+"precal3"="Polinômios";
+"precal4"="Trigonometria";
+"precal5"="Equações";
+"precal6"="Inequações";
+"precal7"="Teste";
+
 //limite
 "limite1"="O que é?";
 "limite2"="Definição";
@@ -26,7 +30,9 @@
 "limite4"="Indeterminações";
 "limite5"="Limites laterais e Continuidades";
 "limite6"="Limites Fundamentais";
-"limite7"="Teste";
+"limite7"="Exercícios Resolvidos";
+"limite8"="Teste";
+
 
 //derivada
 "derivada1"="O que é?";
@@ -56,6 +62,8 @@
 
 "conteudoLimites7"="bbbb";
 
+"conteudoLimites8"="Instruções: \n\n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n\n       Boa sorte 😉 ";
+
 
 
 //conteudoDerivadas
@@ -65,7 +73,7 @@
 
 "conteudoDerivadas3"=": \n\n\n(imagem aqui) \n\n ";
 
-"conteudoDerivadas4"="";
+"conteudoDerivadas4"="Instruções: \n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n      Boa sorte 😉 ";
 
 
 
@@ -79,7 +87,7 @@
 
 "conteudoIntegrais4"="\n\n\n(imagem aqui) \n\n  \n\n\n(imagem aqui) \n\n ";
 
-"conteudoIntegrais5"="";
+"conteudoIntegrais5"="Instruções: \n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n      Boa sorte 😉 ";
 
 
 

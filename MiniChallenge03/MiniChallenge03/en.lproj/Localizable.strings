@@ -16,10 +16,14 @@
 "mais"="WHAT";
 
 //precalculo
-"precal1"="O que é?";
-"precal2"="O que é?";
-"precal3"="O que é?";
-"precal4"="Teste";
+"precal1"="Atenção!!";
+"precal2"="Conjuntos Numéricos";
+"precal3"="Polinômios";
+"precal4"="Trigonometria";
+"precal5"="Equações";
+"precal6"="Inequações";
+"precal7"="Teste";
+
 //limite
 "limite1"="O que é?";
 "limite2"="Definição";
@@ -27,19 +31,30 @@
 "limite4"="Indeterminações";
 "limite5"="Limites laterais e Continuidades";
 "limite6"="Limites Fundamentais";
-"limite7"="Teste";
+"limite7"="Exercícios Resolvidos";
+"limite8"="Teste";
 
 //derivada
 "derivada1"="O que é?";
 "derivada2"="Definição";
 "derivada3"="Notações";
 "derivada4"="Teste";
+
 //integral
 "integral1"="O que é?";
 "integral2"="Definição";
 "integral3"="Propiedades integrais indefinidas";
 "integral4"="Metodos";
 "integral5"="Teste";
+
+//conteudoPreCalculo
+"conteudoPreCal1"="Não estamos abordando todo o conteúdo do ensino médio...\n\n\n Aqui temos alguns tópicos que alunos de cálculo1 relataram sentir dificuldade quando cursaram a disciplina. \n\n Caso existam assuntos que você considera importantes estarem aqui também deixe-nos um comentário! 😁";
+"conteudoPreCal2"="\n\n\n Imagem Conjuntos";
+"conteudoPreCal3"="Podemos classificar os polinômios das seguintes formas: \n\n - monômio: quando há apenas um termo;\n - binômio: quando há três termos;\n - trinômio: quando há três termos; - polinômio: quando há mais de três termos.  \n\n\n1) Adição de Polinômios: Deve-se sempre agrupar os termos semelhantes e realizar suas adições. \n\n2) Multiplicação de um monômio por um polinômio: Para desenvolver o produto de um monômio por um polinômio é necessário que se tenha conhecimento sobre a propriedade distributiva da multiplicação, pois est multiplicação é feita multiplicando-se o monômio por cada termo do polinômio. \n\n3)Muliplicação de um polinômio por outro polinômio: Da mesma forma que no caso anterior, a multiplicação de um polinômio por outro polinômio é feita utilizando a propriedade distributiva da multiplicação, ou seja, deve-se multiplicar cada termo do primeiro polinômio por cada termo do segundo polinômio. \n\n4) Divisão de um polinômio por um monômio: O quociente de um polinômio é dado através da divisão de cada termo do polinômio pelo monômio, desde que este não seja nulo. Para isto é importante conhecer bem as propriedades da potenciação. \n\n\n\n\n\n";
+"conteudoPreCal4"="";
+"conteudoPreCal5"="";
+"conteudoPreCal6"="";
+"conteudoPreCal7"="Instruções: \n\n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n\n       Boa sorte 😉 ";
 
 //conteudoLimites
 "conteudoLimites1"="Limites são a principal base de construção para os cálculos.\nMuitas vezes, uma função pode ser indefinida em um certo ponto, mas podemos pensar sobre o que a função se aproxima conforme chega cada vez mais perto deste ponto (este é o limite). Outras vezes, a função poderá estar definida em um certo ponto, mas poderá se aproximar de um limite diferente. São muitas as vezes nas quais o valor da função é o mesmo do limite em um ponto. De qualquer forma, este é um recurso muito útil conforme começamos a pensar sobre uma inclinação de uma reta tangente a uma curva.";
