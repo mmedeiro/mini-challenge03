@@ -15,6 +15,7 @@ class CardsViewController: UICollectionViewController {
     var cardsConteudos = Dictionary<String,Array<String>>()
     
     
+    @IBOutlet var tapGesture: UITapGestureRecognizer!
     
     var cardsPreCalculo = Array<Card>()
     var cardsLimites = Array<Card>()
@@ -86,6 +87,8 @@ class CardsViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tapGesture.numberOfTapsRequired = 2;
         
         self.navigationController?.navigationBar.backItem?.title! = materia!
         print("OOOOLOKO \(materia) BUUULSHiT")
@@ -222,7 +225,14 @@ class CardsViewController: UICollectionViewController {
         var arr = cardsMateria[materia!]!
         
         cell.title.text = arr[indexPath.row].titulo!
-        cell.textViewConteudo.text = arr[indexPath.row].conteudo!
+        
+        var attString = NSMutableAttributedString(string: arr[indexPath.row].conteudo!)
+        var attImage = NSTextAttachment()
+        attImage.image = UIImage(named: "pencil-104")
+        var imageString = NSAttributedString(attachment: attImage)
+        attString.replaceCharactersInRange(NSMakeRange(4, 1), withAttributedString: imageString)
+        
+        cell.textViewConteudo.attributedText = attString
 
 //        var red = CGFloat(255 - indexPath.row*25)/255
 //        var green = CGFloat(200 - indexPath.row*25)/255
@@ -267,6 +277,13 @@ class CardsViewController: UICollectionViewController {
         self.collectionView?.reloadData()
     }
 
+    @IBAction func handleTap(sender: UITapGestureRecognizer) {
+        print("aquele tap")
+        if self.exposedIndexPath != nil {
+            self.collectionView(self.collectionView!, didSelectItemAtIndexPath: exposedIndexPath!)
+        }
+
+    }
   
 }
 
