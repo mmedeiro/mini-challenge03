@@ -223,9 +223,9 @@ class CardsViewController: UICollectionViewController {
         var attImage = NSTextAttachment()
         attImage.image = UIImage(named: "pencil-104")
         var imageString = NSAttributedString(attachment: attImage)
-        attString.replaceCharactersInRange(NSMakeRange(4, 1), withAttributedString: imageString)
+//        attString.replaceCharactersInRange(NSMakeRange(4, 1), withAttributedString: imageString)
         
-        cell.textViewConteudo.attributedText = attString
+        cell.textViewConteudo.text = attString.string
 
 //        var red = CGFloat(255 - indexPath.row*25)/255
 //        var green = CGFloat(200 - indexPath.row*25)/255
