@@ -230,7 +230,7 @@ class CardsViewController: UICollectionViewController {
         var attImage = NSTextAttachment()
         attImage.image = UIImage(named: "pencil-104")
         var imageString = NSAttributedString(attachment: attImage)
-        attString.replaceCharactersInRange(NSMakeRange(4, 1), withAttributedString: imageString)
+        attString.replaceCharactersInRange(NSMakeRange(0, 1), withAttributedString: imageString)
         
         cell.textViewConteudo.attributedText = attString
 
