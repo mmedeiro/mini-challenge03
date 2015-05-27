@@ -223,9 +223,10 @@ class CardsViewController: UICollectionViewController {
         var attImage = NSTextAttachment()
         attImage.image = UIImage(named: "pencil-104")
         var imageString = NSAttributedString(attachment: attImage)
-        attString.replaceCharactersInRange(NSMakeRange(0, 1), withAttributedString: imageString)
+        attString.replaceCharactersInRange(NSMakeRange(0, 0), withAttributedString: imageString)
         
         cell.textViewConteudo.attributedText = attString
+        cell.textViewConteudo.hidden = true
 
 //        var red = CGFloat(255 - indexPath.row*25)/255
 //        var green = CGFloat(200 - indexPath.row*25)/255
@@ -256,13 +257,15 @@ class CardsViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        var cell = self.collectionView?.cellForItemAtIndexPath(indexPath) as! CardCollectionViewCell
         
         if indexPath.isEqual(self.exposedIndexPath){
             self.exposedIndexPath = nil
+            cell.textViewConteudo.hidden = true
         }
         else if self.exposedIndexPath == nil{
             self.exposedIndexPath = indexPath
-            
+            cell.textViewConteudo.hidden = false
         }
     }
     
