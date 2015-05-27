@@ -57,16 +57,6 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
     {
         var parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ParallaxViewCell
         
-        if materias[indexPath.row] == NSLocalizedString("canvas",  comment: "canvas"){
-            parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier("canvas", forIndexPath: indexPath) as! ParallaxViewCell
-        }
-        else if materias[indexPath.row] == NSLocalizedString("calc",  comment: "calculadora"){
-            parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier("calculadora", forIndexPath: indexPath) as! ParallaxViewCell
-        }
-        
-        
-        
-        
         parallaxCell.frame = CGRect(x: 0, y: parallaxCell.frame.origin.y, width: self.collectionView.frame.width, height: parallaxCell.frame.height)
         parallaxCell.imageView.image = UIImage(named: "calculo")!
         parallaxCell.title.text = materias[indexPath.row]
@@ -115,16 +105,29 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
     func rotated(){
         self.collectionView.reloadData()
     }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        
+        var celula = self.collectionView.cellForItemAtIndexPath(indexPath)
+        if materias[indexPath.row] == NSLocalizedString("canvas",  comment: "canvas")
+        {
+            self.performSegueWithIdentifier("tests", sender: celula)
+            
+        }
+        else
+        {
+            self.performSegueWithIdentifier("cards", sender: celula)
+        }
+    }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         var index = self.collectionView.indexPathForCell(sender as! ParallaxViewCell)
     
-        if materias[index!.row] == NSLocalizedString("canvas",  comment: "canvas"){
-            var cards = segue.destinationViewController as! TestsViewController
-        }
-        else if materias[index!.row] == NSLocalizedString("calc",  comment: "calculadora"){
-            var cards = segue.destinationViewController as! UIViewController
+        if (segue.identifier == "tests")
+        {
+            
         }
         else{
             var cards = segue.destinationViewController as! CardsViewController
