@@ -55,8 +55,18 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
+        var parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ParallaxViewCell
         
-        let parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ParallaxViewCell
+        if materias[indexPath.row] == NSLocalizedString("canvas",  comment: "canvas"){
+            parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier("canvas", forIndexPath: indexPath) as! ParallaxViewCell
+        }
+        else if materias[indexPath.row] == NSLocalizedString("calc",  comment: "calculadora"){
+            parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier("calculadora", forIndexPath: indexPath) as! ParallaxViewCell
+        }
+        
+        
+        
+        
         parallaxCell.frame = CGRect(x: 0, y: parallaxCell.frame.origin.y, width: self.collectionView.frame.width, height: parallaxCell.frame.height)
         parallaxCell.imageView.image = UIImage(named: "calculo")!
         parallaxCell.title.text = materias[indexPath.row]
@@ -110,14 +120,14 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
         
         var index = self.collectionView.indexPathForCell(sender as! ParallaxViewCell)
     
-        if materias[index!.row] == "Canvas"{
+        if materias[index!.row] == NSLocalizedString("canvas",  comment: "canvas"){
             var cards = segue.destinationViewController as! TestsViewController
-            self.navigationController?.pushViewController(cards, animated: true)
+        }
+        else if materias[index!.row] == NSLocalizedString("calc",  comment: "calculadora"){
+            var cards = segue.destinationViewController as! UIViewController
         }
         else{
             var cards = segue.destinationViewController as! CardsViewController
-            
-            
             cards.materia = materias[index!.row]
         }
 
