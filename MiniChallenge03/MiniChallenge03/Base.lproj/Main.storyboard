@@ -127,7 +127,7 @@
                         <outlet property="collectionView" destination="gra-7O-uhR" id="nhI-gX-28t"/>
                         <segue destination="vEa-Uj-ZdS" kind="show" identifier="tests" id="Etz-fF-uy2"/>
                         <segue destination="W8O-Gl-UZO" kind="show" identifier="cards" id="Ff2-rd-9rd"/>
-                        <segue destination="1Ij-Wz-f5h" kind="show" identifier="calc" id="teU-b5-SdY"/>
+                        <segue destination="1Ij-Wz-f5h" kind="show" identifier="calculadora" id="nmS-mB-aDA"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPM-yq-Jit" userLabel="First Responder" sceneMemberID="firstResponder"/>

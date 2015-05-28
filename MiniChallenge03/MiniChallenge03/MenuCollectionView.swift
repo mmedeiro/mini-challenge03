@@ -115,6 +115,9 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
             self.performSegueWithIdentifier("tests", sender: celula)
             
         }
+        else if materias[indexPath.row] == NSLocalizedString("calc",  comment: "calculadora"){
+            self.performSegueWithIdentifier("calculadora", sender: celula)
+        }
         else
         {
             self.performSegueWithIdentifier("cards", sender: celula)
@@ -128,6 +131,8 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
         if (segue.identifier == "tests")
         {
             
+        }
+        else if(segue.identifier == "calculadora"){
         }
         else{
             var cards = segue.destinationViewController as! CardsViewController
