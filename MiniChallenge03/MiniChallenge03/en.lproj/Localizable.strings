@@ -69,7 +69,7 @@
 
 "conteudoLimites6"="Primeiro Limite Fundamental: \n\n   lim (senx / x) = 1 \n     x->0 \n\n\nSegundo Limite Fundamental: \n\n   lim [1+(1 ÷ x)]ˣ = ᵉ \n     x->⁺₋ ∞ \n\n\nTerceiro Limite Fundamental: \n\n   lim [(aˣ - 1) ÷ x] = ln a \n     x->0 ";
 
-"conteudoLimites7"="";
+"conteudoLimites7"="\n\n\nimagens exercicios resolvidos";
 
 "conteudoLimites8"="Instruções: \n\n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n\n       Boa sorte 😉 ";
 
