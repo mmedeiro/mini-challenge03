@@ -123,6 +123,9 @@ class CardsViewController: UICollectionViewController {
                           Card(titulo: NSLocalizedString("derivada2",  comment: "derivada")),
                           Card(titulo: NSLocalizedString("derivada3",  comment: "derivada")),
                           Card(titulo: NSLocalizedString("derivada4",  comment: "derivada")),
+                          Card(titulo: NSLocalizedString("derivada5",  comment: "derivada")),
+                          Card(titulo: NSLocalizedString("derivada6",  comment: "derivada")),
+                          Card(titulo: NSLocalizedString("derivada7",  comment: "derivada"))
         ]
         
         cardsIntegrais = [Card(titulo: NSLocalizedString("integral1",  comment: "integral")),
@@ -149,7 +152,8 @@ class CardsViewController: UICollectionViewController {
         
         conteudoLimites = [NSLocalizedString("conteudoLimites1",  comment: "O que é, limite"),
                            NSLocalizedString("conteudoLimites2",  comment: "Definição, limite"),
-                           NSLocalizedString("conteudoLimites3",  comment: "Propriedades, limite"), NSLocalizedString("conteudoLimites4",  comment: "Indeterminacoes, limite"),
+                           NSLocalizedString("conteudoLimites3",  comment: "Propriedades, limite"),
+                           NSLocalizedString("conteudoLimites4",  comment: "Indeterminacoes, limite"),
                            NSLocalizedString("conteudoLimites5",  comment: "Limites laterais e continuidade, limite"),
                            NSLocalizedString("conteudoLimites6",  comment: "Limites Fundamentais, limite"),
                            NSLocalizedString("conteudoLimites7",  comment: "Exercicios Resolvidos, limite"),
@@ -162,7 +166,10 @@ class CardsViewController: UICollectionViewController {
         conteudoDerivadas = [NSLocalizedString("conteudoDerivadas1",  comment: "O que é, derivada"),
                              NSLocalizedString("conteudoDerivadas2",  comment: "Definição, derivada"),
                              NSLocalizedString("conteudoDerivadas3",  comment: "Notações, derivada"),
-                             NSLocalizedString("conteudoDerivadas4",  comment: "Teste, derivada")]
+                             NSLocalizedString("conteudoDerivadas4",  comment: "Propriedades, derivada"),
+                             NSLocalizedString("conteudoDerivadas5",  comment: "Derivadas Trigonometricas, derivada"),
+                             NSLocalizedString("conteudoDerivadas6",  comment: "Ex Resolvidos, derivada"),
+                             NSLocalizedString("conteudoDerivadas7",  comment: "Teste, derivada")]
         
         for i in 0...cardsDerivadas.count-1{
             cardsDerivadas[i].conteudo = conteudoDerivadas[i]
