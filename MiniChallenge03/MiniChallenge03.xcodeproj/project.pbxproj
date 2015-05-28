@@ -16,6 +16,7 @@
 		4BD4AC941B0F9453001FF646 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4AC931B0F9453001FF646 /* CardCollectionViewCell.swift */; };
 		4BD4AC991B1399B6001FF646 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4AC9B1B1399B6001FF646 /* Localizable.strings */; };
 		6E9FF6251B14EB1100997649 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FF6241B14EB1100997649 /* Card.swift */; };
+		6EBAB1CB1B178B4B007087AF /* CalculadoraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBAB1CA1B178B4B007087AF /* CalculadoraViewController.swift */; };
 		6EBBA5671B0E77B000357E93 /* ExposedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBBA5661B0E77B000357E93 /* ExposedLayout.swift */; };
 		6EBBA5691B0E781B00357E93 /* StackedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBBA5681B0E781B00357E93 /* StackedLayout.swift */; };
 		6EBBA56B1B0E784700357E93 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBBA56A1B0E784700357E93 /* CardsViewController.swift */; };
@@ -52,6 +53,7 @@
 		4BD4AC9A1B1399B6001FF646 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4BD4AC9C1B1399BA001FF646 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6E9FF6241B14EB1100997649 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		6EBAB1CA1B178B4B007087AF /* CalculadoraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalculadoraViewController.swift; path = ../CalculadoraViewController.swift; sourceTree = "<group>"; };
 		6EBBA5661B0E77B000357E93 /* ExposedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExposedLayout.swift; sourceTree = "<group>"; };
 		6EBBA5681B0E781B00357E93 /* StackedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackedLayout.swift; sourceTree = "<group>"; };
 		6EBBA56A1B0E784700357E93 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		4B3CB06C1B0511FC00F961B3 /* MiniChallenge03 */ = {
 			isa = PBXGroup;
 			children = (
+				6EBAB1CA1B178B4B007087AF /* CalculadoraViewController.swift */,
 				6EBBA5651B0E76F200357E93 /* CardsView */,
 				4B3CB06F1B0511FC00F961B3 /* AppDelegate.swift */,
 				E6ACD34E1B13B60300A75ABA /* TestsViewController.swift */,
@@ -258,6 +261,7 @@
 				6EBBA5691B0E781B00357E93 /* StackedLayout.swift in Sources */,
 				4BD4AC941B0F9453001FF646 /* CardCollectionViewCell.swift in Sources */,
 				4B3CB0701B0511FC00F961B3 /* AppDelegate.swift in Sources */,
+				6EBAB1CB1B178B4B007087AF /* CalculadoraViewController.swift in Sources */,
 				6EBBA56B1B0E784700357E93 /* CardsViewController.swift in Sources */,
 				6EBBA5671B0E77B000357E93 /* ExposedLayout.swift in Sources */,
 				E6A1DB151B0D0A9900A99CC0 /* ParallaxViewCell.swift in Sources */,
