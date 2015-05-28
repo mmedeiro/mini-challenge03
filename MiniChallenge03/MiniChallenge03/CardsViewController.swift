@@ -14,8 +14,7 @@ class CardsViewController: UICollectionViewController {
     var cardsMateria = Dictionary<String,Array<Card>>()
     var cardsConteudos = Dictionary<String,Array<String>>()
     
-    
-    @IBOutlet var tapGesture: UITapGestureRecognizer!
+    var tap: UITapGestureRecognizer?
     
     var cardsPreCalculo = Array<Card>()
     var cardsLimites = Array<Card>()
@@ -90,12 +89,17 @@ class CardsViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tapGesture.numberOfTapsRequired = 2;
+        
+        
+        tap = UITapGestureRecognizer(target: self , action: "handleTap")
+        tap?.numberOfTapsRequired = 2
+        
+        self.collectionView?.addGestureRecognizer(tap!)
         
         self.navigationController?.navigationBar.backItem?.title! = materia!
-        print("OOOOLOKO \(materia) BUUULSHiT")
+        print("OOOOLOKO \(materia!) BUUULSHiT")
         
-        print(materia)
+        print(materia!)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
         
@@ -273,7 +277,7 @@ class CardsViewController: UICollectionViewController {
         self.collectionView?.reloadData()
     }
 
-    @IBAction func handleTap(sender: UITapGestureRecognizer) {
+    @IBAction func handleTap() {
         print("aquele tap")
         if self.exposedIndexPath != nil {
             self.collectionView(self.collectionView!, didSelectItemAtIndexPath: exposedIndexPath!)
