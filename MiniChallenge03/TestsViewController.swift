@@ -57,6 +57,7 @@ class TestsViewController: UIViewController {
         if(!isInside(lastPoint))
         {
             self.lastPoint = touch.locationInView(mainDraw)
+            
             UIGraphicsBeginImageContext(mainDraw.frame.size)
             self.mainDraw.image?.drawInRect(CGRectMake(0, 0, mainDraw.frame.size.width, mainDraw.frame.size.height))
             self.tempDraw.image?.drawInRect(CGRectMake(0, 0, mainDraw.frame.size.width, mainDraw.frame.size.height))
@@ -137,7 +138,7 @@ class TestsViewController: UIViewController {
     {
         if(defineLayout)
         {
-            pushView.frame = CGRectMake(0, self.view.frame.height - buttonView.frame.height, self.view.frame.width, self.view.frame.height + 100)
+            pushView.frame = CGRectMake(0, self.view.frame.height - buttonView.frame.height, self.view.frame.width, self.view.frame.height + 50)
         }
     }
     
