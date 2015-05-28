@@ -47,8 +47,9 @@
 "integral1"="O que é?";
 "integral2"="Definição";
 "integral3"="Propiedades integrais indefinidas";
-"integral4"="Metodos";
-"integral5"="Teste";
+"integral4"="Método da Substituição";
+"integral5"="Exercícios Resolvidos";
+"integral6"="Teste";
 
 //conteudoPreCalculo
 "conteudoPreCal1"="Não estamos abordando todo o conteúdo do ensino médio...\n\n\n Aqui temos alguns tópicos que alunos de cálculo1 relataram sentir dificuldade quando cursaram a disciplina. \n\n Caso existam assuntos que você considera importantes estarem aqui também deixe-nos um comentário! 😁";
@@ -104,4 +105,6 @@
 
 "conteudoIntegrais4"="\n\n\n(imagem aqui) \n\n  \n\n\n(imagem aqui) \n\n ";
 
-"conteudoIntegrais5"="Instruções: \n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n      Boa sorte 😉 ";
+"conteudoIntegrais5"="\n\n\n(imagem aqui) \n\n  \n\n\n(imagem aqui) \n\n ";
+
+"conteudoIntegrais6"="Instruções: \n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n      Boa sorte 😉 ";

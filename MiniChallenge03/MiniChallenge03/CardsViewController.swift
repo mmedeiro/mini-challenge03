@@ -137,6 +137,7 @@ class CardsViewController: UICollectionViewController {
                           Card(titulo: NSLocalizedString("integral3",  comment: "integral")),
                           Card(titulo: NSLocalizedString("integral4",  comment: "integral")),
                           Card(titulo: NSLocalizedString("integral5",  comment: "integral")),
+                          Card(titulo: NSLocalizedString("integral6",  comment: "integral"))
         ]
 
         
@@ -146,12 +147,12 @@ class CardsViewController: UICollectionViewController {
         
 
         conteudoPreCalculo = [NSLocalizedString("conteudoPreCal1",  comment: "Atenção, precal"),
-                              NSLocalizedString("conteudoPreCal2",  comment: "Atenção, precal"),
-                              NSLocalizedString("conteudoPreCal3",  comment: "Atenção, precal"),
-                              NSLocalizedString("conteudoPreCal4",  comment: "Atenção, precal"),
-                              NSLocalizedString("conteudoPreCal5",  comment: "Atenção, precal"),
-                              NSLocalizedString("conteudoPreCal6",  comment: "Atenção, precal"),
-                              NSLocalizedString("conteudoPreCal7",  comment: "Atenção, precal")]
+                              NSLocalizedString("conteudoPreCal2",  comment: "Conjuntos Numericos, precal"),
+                              NSLocalizedString("conteudoPreCal3",  comment: "Polinomios, precal"),
+                              NSLocalizedString("conteudoPreCal4",  comment: "Trigonometria, precal"),
+                              NSLocalizedString("conteudoPreCal5",  comment: "Equacoes, precal"),
+                              NSLocalizedString("conteudoPreCal6",  comment: "Inequacoes, precal"),
+                              NSLocalizedString("conteudoPreCal7",  comment: "Teste, precal")]
         
         
         conteudoLimites = [NSLocalizedString("conteudoLimites1",  comment: "O que é, limite"),
@@ -172,7 +173,7 @@ class CardsViewController: UICollectionViewController {
                              NSLocalizedString("conteudoDerivadas3",  comment: "Notações, derivada"),
                              NSLocalizedString("conteudoDerivadas4",  comment: "Propriedades, derivada"),
                              NSLocalizedString("conteudoDerivadas5",  comment: "Derivadas Trigonometricas, derivada"),
-                             NSLocalizedString("conteudoDerivadas6",  comment: "Ex Resolvidos, derivada"),
+                             NSLocalizedString("conteudoDerivadas6",  comment: "Exercicios Resolvidos, derivada"),
                              NSLocalizedString("conteudoDerivadas7",  comment: "Teste, derivada")]
         
         for i in 0...cardsDerivadas.count-1{
@@ -183,7 +184,8 @@ class CardsViewController: UICollectionViewController {
                              NSLocalizedString("conteudoIntegrais2",  comment: "Definição, integral"),
                              NSLocalizedString("conteudoIntegrais3",  comment: "Propriedades Integrais Indefinidas, integral"),
                              NSLocalizedString("conteudoIntegrais4",  comment: "Métodos, integral"),
-                             NSLocalizedString("conteudoIntegrais5",  comment: "Teste, integral")]
+                             NSLocalizedString("conteudoIntegrais5",  comment: "Exercicios Resolvidos, integral"),
+                             NSLocalizedString("conteudoIntegrais6",  comment: "Teste, integral")]
         
         for i in 0...cardsIntegrais.count-1{
             cardsIntegrais[i].conteudo = conteudoIntegrais[i]
