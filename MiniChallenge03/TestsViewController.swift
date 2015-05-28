@@ -40,16 +40,13 @@ class TestsViewController: UIViewController {
         blue = 0.0/255.0;
         brush = 5.0;
         opacity = 1.0;
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
     }
     
     override func viewWillAppear(animated: Bool)
     {
         defineLayout = true
-    }
-    
-    override func viewDidAppear(animated: Bool)
-    {
-        defineLayout = false
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
@@ -67,6 +64,10 @@ class TestsViewController: UIViewController {
             self.mainDraw.image = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
         }
+        else
+        {
+         defineLayout = false
+        }
 
     }
     
@@ -83,7 +84,7 @@ class TestsViewController: UIViewController {
             return
         }
         
-        if(currentPoint.y > pushView.frame.origin.y + 60)
+        if(isInsideDraw(currentPoint))
         {
             currentPoint = touch.locationInView(mainDraw)
             
@@ -118,7 +119,7 @@ class TestsViewController: UIViewController {
         if(pushView.frame.origin.y < 200)
         {
             UIView.animateWithDuration(1, animations: { () -> Void in
-                self.pushView.frame.origin.y = 0
+                self.pushView.frame.origin.y = self.navigationController!.navigationBar.bounds.height + UIApplication.sharedApplication().statusBarFrame.height
                 
             })
         }
@@ -144,6 +145,21 @@ class TestsViewController: UIViewController {
     {
         var rect = CGRectMake(pushView.frame.origin.x, pushView.frame.origin.y, buttonView.frame.width, buttonView.frame.height)
         return CGRectContainsPoint(rect, point)
+    }
+    
+    func isInsideDraw(point: CGPoint) -> Bool
+    {
+        var rect = CGRectMake(mainDraw.frame.origin.x, mainDraw.frame.origin.y, mainDraw.frame.width, mainDraw.frame.height)
+        return CGRectContainsPoint(rect, point)
+    }
+    
+    func rotated()
+    {
+        defineLayout = true
+        UIView.animateWithDuration(1, animations: { () -> Void in
+            self.pushView.frame.origin.y = self.view.frame.height - self.buttonView.frame.height
+            
+        })
     }
     
     
