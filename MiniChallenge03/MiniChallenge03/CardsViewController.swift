@@ -193,8 +193,11 @@ class CardsViewController: UICollectionViewController {
         }
     }
     
-    func rotated(){
-        self.collectionView?.reloadData()
+    func rotated()
+    {
+        self.collectionView!.reloadData()
+        //self.view.setNeedsLayout()
+        
     }
 
     //MARK: Gesture

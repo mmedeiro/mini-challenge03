@@ -18,6 +18,12 @@ class TestsViewController: UIViewController {
     @IBOutlet weak var buttonEraser: UIButton!
     @IBOutlet weak var buttonPencil: UIButton!
     
+    @IBOutlet weak var qst1: UILabel!
+    @IBOutlet weak var qst2: UILabel!
+    @IBOutlet weak var qst3: UILabel!
+    @IBOutlet weak var qst4: UILabel!
+    @IBOutlet weak var qst5: UILabel!
+    
     var lastPoint : CGPoint!
     var red : CGFloat!
     var green : CGFloat!
@@ -42,18 +48,20 @@ class TestsViewController: UIViewController {
         opacity = 1.0;
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
-        var tap = UITapGestureRecognizer(target: self, action: Selector("gest"))
-        tap.numberOfTapsRequired = 2
-        self.view.addGestureRecognizer(tap)
         
         self.navigationController!.interactivePopGestureRecognizer.enabled = false
         self.navigationController?.navigationBarHidden = true
         self.navigationController?.navigationBarHidden = false
+        
     }
     
-    func gest()
+    func setLabelsAndAnswers(questions: [String],ansers: [String])
     {
-        
+        qst1.text = questions[0]
+        qst2.text = questions[1]
+        qst3.text = questions[2]
+        qst4.text = questions[3]
+        qst5.text = questions[4]
     }
     
     override func viewWillAppear(animated: Bool)
@@ -105,7 +113,6 @@ class TestsViewController: UIViewController {
             
             self.tempDraw.image?.drawInRect(CGRectMake(0, 0, mainDraw.frame.size.width, mainDraw.frame.size.height))
             
-            
             CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y)
             CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y)
             CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound)
@@ -117,7 +124,6 @@ class TestsViewController: UIViewController {
             
             self.tempDraw.image = UIGraphicsGetImageFromCurrentImageContext()
             self.tempDraw.alpha = opacity
-            
             
             UIGraphicsEndImageContext()
             
@@ -189,7 +195,7 @@ class TestsViewController: UIViewController {
         red = 0.0/255.0;
         green = 0.0/255.0;
         blue = 0.0/255.0;
-        brush = 10.0;
+        brush = 5.0;
         opacity = 1.0;
         inBorracha = false
     }
@@ -200,6 +206,7 @@ class TestsViewController: UIViewController {
         green = 255.0/255.0;
         blue = 255.0/255.0;
         opacity = 1.0;
+        brush = 10.0;
         inBorracha = true
     }
 
