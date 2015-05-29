@@ -42,6 +42,18 @@ class TestsViewController: UIViewController {
         opacity = 1.0;
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
+        var tap = UITapGestureRecognizer(target: self, action: Selector("gest"))
+        tap.numberOfTapsRequired = 2
+        self.view.addGestureRecognizer(tap)
+        
+        self.navigationController!.interactivePopGestureRecognizer.enabled = false
+        self.navigationController?.navigationBarHidden = true
+        self.navigationController?.navigationBarHidden = false
+    }
+    
+    func gest()
+    {
+        
     }
     
     override func viewWillAppear(animated: Bool)
@@ -52,9 +64,9 @@ class TestsViewController: UIViewController {
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
     {
         var touch = touches.first as! UITouch
-        var lastPoint = touch.locationInView(self.view)
+        lastPoint = touch.locationInView(self.view)
         
-        if(!isInside(lastPoint))
+        if(isInsideDraw(lastPoint))
         {
             self.lastPoint = touch.locationInView(mainDraw)
             
@@ -138,7 +150,15 @@ class TestsViewController: UIViewController {
     {
         if(defineLayout)
         {
-            pushView.frame = CGRectMake(0, self.view.frame.height - buttonView.frame.height, self.view.frame.width, self.view.frame.height + 50)
+            pushView.frame = CGRectMake(0, self.view.frame.height - buttonView.frame.height, pushView.frame.width, pushView.frame.height)
+            
+        }
+        else
+        {
+            if(self.navigationController != nil)
+            {
+                self.pushView.frame.origin.y = self.navigationController!.navigationBar.bounds.height + UIApplication.sharedApplication().statusBarFrame.height
+            }
         }
     }
     
