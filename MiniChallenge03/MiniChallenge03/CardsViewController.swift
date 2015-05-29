@@ -16,6 +16,29 @@ class CardsViewController: UICollectionViewController {
     
     var tap: UITapGestureRecognizer?
     
+    var conteudoPreCalculoA = Array<String>()
+    var conteudoPreCalculoB = Array<String>()
+    var conteudoLimitesA = Array<String>()
+    var conteudoLimitesB = Array<String>()
+    var conteudoDerivadasA = Array<String>()
+    var conteudoDerivadasB = Array<String>()
+    var conteudoIntegraisA = Array<String>()
+    var conteudoIntegraisB = Array<String>()
+    var conteudoCalculadoraA = Array<String>()
+    var conteudoCalculadoraB = Array<String>()
+    var conteudoCanvasA = Array<String>()
+    var conteudoCanvasB = Array<String>()
+    var conteudoAboutA = Array<String>()
+    var conteudoAboutB = Array<String>()
+    
+    var conteudoImagePreCalculo = Array<String>()
+    var conteudoImageLimite = Array<String>()
+    var conteudoImageDerivada = Array<String>()
+    var conteudoImageIntegral = Array<String>()
+    var conteudoImageCalculadora = Array<String>()
+    var conteudoImageCanvas = Array<String>()
+    var conteudoImageAbout = Array<String>()
+    
     var cardsPreCalculo = Array<Card>()
     var cardsLimites = Array<Card>()
     var cardsDerivadas = Array<Card>()
@@ -23,12 +46,6 @@ class CardsViewController: UICollectionViewController {
     var cardsCalculadora = Array<Card>()
     var cardsCanvas = Array<Card>()
     var cardsAbout = Array<Card>()
-    var cardsLimitesImage = Array<UIImageView>()
-    
-    var conteudoPreCalculo = Array<String>()
-    var conteudoLimites = Array<String>()
-    var conteudoDerivadas = Array<String>()
-    var conteudoIntegrais = Array<String>()
     
     
     var stackedLayout = StackedLayout()
@@ -103,105 +120,8 @@ class CardsViewController: UICollectionViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
         
-        cardsPreCalculo = [Card(titulo: NSLocalizedString("precal1",  comment: "pre                     calculo")),
-                           Card(titulo: NSLocalizedString("precal2",  comment: "pre calculo")),
-                           Card(titulo: NSLocalizedString("precal3",  comment: "pre calculo")),
-                           Card(titulo: NSLocalizedString("precal4",  comment: "pre calculo")),
-                           Card(titulo: NSLocalizedString("precal5",  comment: "pre calculo")),
-                           Card(titulo: NSLocalizedString("precal6",  comment: "pre calculo")),
-                           Card(titulo: NSLocalizedString("precal7",  comment: "pre calculo"))
-        ]
-
-        cardsLimites = [Card(titulo: NSLocalizedString("limite1",  comment: "limite")),
-                        Card(titulo: NSLocalizedString("limite2",  comment: "limite")),
-                        Card(titulo: NSLocalizedString("limite3",  comment: "limite")),
-                        Card(titulo: NSLocalizedString("limite4",  comment: "limite")),
-                        Card(titulo: NSLocalizedString("limite5",  comment: "limite")),
-                        Card(titulo: NSLocalizedString("limite6",  comment: "limite")),
-                        Card(titulo: NSLocalizedString("limite7",  comment: "limite")),
-                        Card(titulo: NSLocalizedString("limite8",  comment: "limite"))
-        ]
-        
-        
-        cardsDerivadas = [Card(titulo: NSLocalizedString("derivada1",  comment: "derivada")),
-                          Card(titulo: NSLocalizedString("derivada2",  comment: "derivada")),
-                          Card(titulo: NSLocalizedString("derivada3",  comment: "derivada")),
-                          Card(titulo: NSLocalizedString("derivada4",  comment: "derivada")),
-                          Card(titulo: NSLocalizedString("derivada5",  comment: "derivada")),
-                          Card(titulo: NSLocalizedString("derivada6",  comment: "derivada")),
-                          Card(titulo: NSLocalizedString("derivada7",  comment: "derivada"))
-        ]
-        
-        cardsIntegrais = [Card(titulo: NSLocalizedString("integral1",  comment: "integral")),
-                          Card(titulo: NSLocalizedString("integral2",  comment: "integral")),
-                          Card(titulo: NSLocalizedString("integral3",  comment: "integral")),
-                          Card(titulo: NSLocalizedString("integral4",  comment: "integral")),
-                          Card(titulo: NSLocalizedString("integral5",  comment: "integral")),
-                          Card(titulo: NSLocalizedString("integral6",  comment: "integral"))
-        ]
-
-        
-        cardsCalculadora = [Card(titulo: "Calculadora aqui ⬇️")]
-        cardsCanvas = [Card(titulo: "Quer fazer um desenho? 😁")]
-        cardsAbout = [Card(titulo: "Esse são cards apenas para o scroll funcionar na view inicial haha")]
-        
-
-        conteudoPreCalculo = [NSLocalizedString("conteudoPreCal1",  comment: "Atenção, precal"),
-                              NSLocalizedString("conteudoPreCal2",  comment: "Conjuntos Numericos, precal"),
-                              NSLocalizedString("conteudoPreCal3",  comment: "Polinomios, precal"),
-                              NSLocalizedString("conteudoPreCal4",  comment: "Trigonometria, precal"),
-                              NSLocalizedString("conteudoPreCal5",  comment: "Equacoes, precal"),
-                              NSLocalizedString("conteudoPreCal6",  comment: "Inequacoes, precal"),
-                              NSLocalizedString("conteudoPreCal7",  comment: "Teste, precal")]
-        
-        
-        conteudoLimites = [NSLocalizedString("conteudoLimites1",  comment: "O que é, limite"),
-                           NSLocalizedString("conteudoLimites2",  comment: "Definição, limite"),
-                           NSLocalizedString("conteudoLimites3",  comment: "Propriedades, limite"),
-                           NSLocalizedString("conteudoLimites4",  comment: "Indeterminacoes, limite"),
-                           NSLocalizedString("conteudoLimites5",  comment: "Limites laterais e continuidade, limite"),
-                           NSLocalizedString("conteudoLimites6",  comment: "Limites Fundamentais, limite"),
-                           NSLocalizedString("conteudoLimites7",  comment: "Exercicios Resolvidos, limite"),
-                           NSLocalizedString("conteudoLimites8",  comment: "Teste, limite")]
-        
-        for i in 0...cardsLimites.count-1{
-            cardsLimites[i].conteudo = conteudoLimites[i]
-        }
-        
-        conteudoDerivadas = [NSLocalizedString("conteudoDerivadas1",  comment: "O que é, derivada"),
-                             NSLocalizedString("conteudoDerivadas2",  comment: "Definição, derivada"),
-                             NSLocalizedString("conteudoDerivadas3",  comment: "Notações, derivada"),
-                             NSLocalizedString("conteudoDerivadas4",  comment: "Propriedades, derivada"),
-                             NSLocalizedString("conteudoDerivadas5",  comment: "Derivadas Trigonometricas, derivada"),
-                             NSLocalizedString("conteudoDerivadas6",  comment: "Exercicios Resolvidos, derivada"),
-                             NSLocalizedString("conteudoDerivadas7",  comment: "Teste, derivada")]
-        
-        for i in 0...cardsDerivadas.count-1{
-            cardsDerivadas[i].conteudo = conteudoDerivadas[i]
-        }
-        
-        conteudoIntegrais = [NSLocalizedString("conteudoIntegrais1",  comment: "O que é, integral"),
-                             NSLocalizedString("conteudoIntegrais2",  comment: "Definição, integral"),
-                             NSLocalizedString("conteudoIntegrais3",  comment: "Propriedades Integrais Indefinidas, integral"),
-                             NSLocalizedString("conteudoIntegrais4",  comment: "Métodos, integral"),
-                             NSLocalizedString("conteudoIntegrais5",  comment: "Exercicios Resolvidos, integral"),
-                             NSLocalizedString("conteudoIntegrais6",  comment: "Teste, integral")]
-        
-        for i in 0...cardsIntegrais.count-1{
-            cardsIntegrais[i].conteudo = conteudoIntegrais[i]
-        }
-        for i in 0...cardsPreCalculo.count-1{
-            cardsPreCalculo[i].conteudo = conteudoPreCalculo[i]
-        }
-        for i in 0...cardsCalculadora.count-1{
-            cardsCalculadora[i].conteudo = "hehe"
-        }
-        for i in 0...cardsCanvas.count-1{
-            cardsCanvas[i].conteudo = "hehe"
-        }
-        for i in 0...cardsAbout.count-1{
-            cardsAbout[i].conteudo = "hehe"
-        }
+        self.populaCards()
+        self.populaConteudo()
         
         materias = [NSLocalizedString("precal",     comment: "pre calculo"),
                     NSLocalizedString("limite",     comment: "limites"),
@@ -232,28 +152,19 @@ class CardsViewController: UICollectionViewController {
         
         cell.title.text = arr[indexPath.row].titulo!
         
-        var attString = NSMutableAttributedString(string: arr[indexPath.row].conteudo!)
-        var attImage = NSTextAttachment()
-        attImage.image = UIImage(named: "pencil-104")
-        var imageString = NSAttributedString(attachment: attImage)
-        attString.replaceCharactersInRange(NSMakeRange(0, 0), withAttributedString: imageString)
+        cell.textViewConteudo.attributedText = arr[indexPath.row].conteudo!
         
-        cell.textViewConteudo.attributedText = attString
-        cell.textViewConteudo.hidden = true
+        if exposedIndexPath == indexPath{
+            cell.textViewConteudo.hidden = false
+        }
+        else{
+            cell.textViewConteudo.hidden = true
+        }
+        
+    
 
-//        var red = CGFloat(255 - indexPath.row*25)/255
-//        var green = CGFloat(200 - indexPath.row*25)/255
-//        var blue = CGFloat(150 - indexPath.row*25)/255
-        var red = CGFloat(220 - indexPath.row*15)/255
-        var green = CGFloat(220 - indexPath.row*15)/255
-        var blue = CGFloat(220 - indexPath.row*15)/255
-        
-        cell.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
-//        self.collectionView?.backgroundColor = cell.backgroundColor
-        red = CGFloat(200 - indexPath.row*15)/255
-        green = CGFloat(200 - indexPath.row*15)/255
-        blue = CGFloat(200 - indexPath.row*15)/255
-        cell.layer.borderColor = UIColor(red: red, green: green, blue: blue, alpha: 0.75).CGColor
+        cell.backgroundColor = self.geraCorCards(indexPath,corInicial: 220)
+        cell.layer.borderColor = self.geraCorCards(indexPath, corInicial: 200).CGColor
         
         if cell.title.text == "Teste" {
             cell.buttonTest.hidden = false
@@ -286,12 +197,202 @@ class CardsViewController: UICollectionViewController {
         self.collectionView?.reloadData()
     }
 
+    //MARK: Gesture
+    
     @IBAction func handleTap() {
         print("aquele tap")
         if self.exposedIndexPath != nil {
             self.collectionView(self.collectionView!, didSelectItemAtIndexPath: exposedIndexPath!)
         }
 
+    }
+    
+    //MARK: CARDS E CONTEUDO
+    
+    private func populaCards(){
+        cardsPreCalculo = [Card(titulo: NSLocalizedString("precal1",  comment: "pre calculo")),
+            Card(titulo: NSLocalizedString("precal2",  comment: "pre calculo")),
+            Card(titulo: NSLocalizedString("precal3",  comment: "pre calculo")),
+            Card(titulo: NSLocalizedString("precal4",  comment: "pre calculo")),
+            Card(titulo: NSLocalizedString("precal5",  comment: "pre calculo")),
+            Card(titulo: NSLocalizedString("precal6",  comment: "pre calculo")),
+            Card(titulo: NSLocalizedString("precal7",  comment: "pre calculo"))
+        ]
+        
+        cardsLimites = [Card(titulo: NSLocalizedString("limite1",  comment: "limite")),
+            Card(titulo: NSLocalizedString("limite2",  comment: "limite")),
+            Card(titulo: NSLocalizedString("limite3",  comment: "limite")),
+            Card(titulo: NSLocalizedString("limite4",  comment: "limite")),
+            Card(titulo: NSLocalizedString("limite5",  comment: "limite")),
+            Card(titulo: NSLocalizedString("limite6",  comment: "limite")),
+            Card(titulo: NSLocalizedString("limite7",  comment: "limite")),
+            Card(titulo: NSLocalizedString("limite8",  comment: "limite"))
+        ]
+        
+        
+        cardsDerivadas = [Card(titulo: NSLocalizedString("derivada1",  comment: "derivada")),
+            Card(titulo: NSLocalizedString("derivada2",  comment: "derivada")),
+            Card(titulo: NSLocalizedString("derivada3",  comment: "derivada")),
+            Card(titulo: NSLocalizedString("derivada4",  comment: "derivada")),
+            Card(titulo: NSLocalizedString("derivada5",  comment: "derivada")),
+            Card(titulo: NSLocalizedString("derivada6",  comment: "derivada")),
+            Card(titulo: NSLocalizedString("derivada7",  comment: "derivada"))
+        ]
+        
+        cardsIntegrais = [Card(titulo: NSLocalizedString("integral1",  comment: "integral")),
+            Card(titulo: NSLocalizedString("integral2",  comment: "integral")),
+            Card(titulo: NSLocalizedString("integral3",  comment: "integral")),
+            Card(titulo: NSLocalizedString("integral4",  comment: "integral")),
+            Card(titulo: NSLocalizedString("integral5",  comment: "integral")),
+            Card(titulo: NSLocalizedString("integral6",  comment: "integral"))
+        ]
+        cardsCalculadora = [Card(titulo: "Calculadora aqui ⬇️")]
+        cardsCanvas = [Card(titulo: "Quer fazer um desenho? 😁")]
+        
+        cardsAbout = [Card(titulo: "Esse são cards apenas para o scroll funcionar na view inicial haha")]
+        
+    }
+    private func populaConteudo(){
+        conteudoPreCalculoA = [NSLocalizedString("conteudoPreCal1A",  comment: "Atenção, precal"),
+            NSLocalizedString("conteudoPreCal2A",  comment: "Conjuntos Numericos, precal"),
+            NSLocalizedString("conteudoPreCal3A",  comment: "Polinomios, precal"),
+            NSLocalizedString("conteudoPreCal4A",  comment: "Trigonometria, precal"),
+            NSLocalizedString("conteudoPreCal5A",  comment: "Equacoes, precal"),
+            NSLocalizedString("conteudoPreCal6A",  comment: "Inequacoes, precal"),
+            NSLocalizedString("conteudoPreCal7A",  comment: "Teste, precal")]
+        
+        conteudoPreCalculoB = [NSLocalizedString("conteudoPreCal1B",  comment: "Atenção, precal"),
+            NSLocalizedString("conteudoPreCal2B",  comment: "Conjuntos Numericos, precal"),
+            NSLocalizedString("conteudoPreCal3B",  comment: "Polinomios, precal"),
+            NSLocalizedString("conteudoPreCal4B",  comment: "Trigonometria, precal"),
+            NSLocalizedString("conteudoPreCal5B",  comment: "Equacoes, precal"),
+            NSLocalizedString("conteudoPreCal6B",  comment: "Inequacoes, precal"),
+            NSLocalizedString("conteudoPreCal7B",  comment: "Teste, precal")]
+        
+        
+        conteudoLimitesA = [NSLocalizedString("conteudoLimites1A",  comment: "O que é, limite"),
+            NSLocalizedString("conteudoLimites2A",  comment: "Definição, limite"),
+            NSLocalizedString("conteudoLimites3A",  comment: "Propriedades, limite"),
+            NSLocalizedString("conteudoLimites4A",  comment: "Indeterminacoes, limite"),
+            NSLocalizedString("conteudoLimites5A",  comment: "Limites laterais e continuidade, limite"),
+            NSLocalizedString("conteudoLimites6A",  comment: "Limites Fundamentais, limite"),
+            NSLocalizedString("conteudoLimites7A",  comment: "Exercicios Resolvidos, limite"),
+            NSLocalizedString("conteudoLimites8A",  comment: "Teste, limite")]
+        
+        conteudoLimitesB = [NSLocalizedString("conteudoLimites1B",  comment: "O que é, limite"),
+            NSLocalizedString("conteudoLimites2B",  comment: "Definição, limite"),
+            NSLocalizedString("conteudoLimites3B",  comment: "Propriedades, limite"),
+            NSLocalizedString("conteudoLimites4B",  comment: "Indeterminacoes, limite"),
+            NSLocalizedString("conteudoLimites5B",  comment: "Limites laterais e continuidade, limite"),
+            NSLocalizedString("conteudoLimites6B",  comment: "Limites Fundamentais, limite"),
+            NSLocalizedString("conteudoLimites7B",  comment: "Exercicios Resolvidos, limite"),
+            NSLocalizedString("conteudoLimites8B",  comment: "Teste, limite")]
+        
+        
+        
+        conteudoDerivadasA = [NSLocalizedString("conteudoDerivadas1A",  comment: "O que é, derivada"),
+            NSLocalizedString("conteudoDerivadas2A",  comment: "Definição, derivada"),
+            NSLocalizedString("conteudoDerivadas3A",  comment: "Notações, derivada"),
+            NSLocalizedString("conteudoDerivadas4A",  comment: "Propriedades, derivada"),
+            NSLocalizedString("conteudoDerivadas5A",  comment: "Derivadas Trigonometricas, derivada"),
+            NSLocalizedString("conteudoDerivadas6A",  comment: "Exercicios Resolvidos, derivada"),
+            NSLocalizedString("conteudoDerivadas7A",  comment: "Teste, derivada")]
+        
+        conteudoDerivadasB = [NSLocalizedString("conteudoDerivadas1B",  comment: "O que é, derivada"),
+            NSLocalizedString("conteudoDerivadas2B",  comment: "Definição, derivada"),
+            NSLocalizedString("conteudoDerivadas3B",  comment: "Notações, derivada"),
+            NSLocalizedString("conteudoDerivadas4B",  comment: "Propriedades, derivada"),
+            NSLocalizedString("conteudoDerivadas5B",  comment: "Derivadas Trigonometricas, derivada"),
+            NSLocalizedString("conteudoDerivadas6B",  comment: "Exercicios Resolvidos, derivada"),
+            NSLocalizedString("conteudoDerivadas7B",  comment: "Teste, derivada")]
+        
+        conteudoIntegraisA = [NSLocalizedString("conteudoIntegrais1A",  comment: "O que é, integral"),
+            NSLocalizedString("conteudoIntegrais2A",  comment: "Definição, integral"),
+            NSLocalizedString("conteudoIntegrais3A",  comment: "Propriedades Integrais Indefinidas, integral"),
+            NSLocalizedString("conteudoIntegrais4A",  comment: "Métodos, integral"),
+            NSLocalizedString("conteudoIntegrais5A",  comment: "Exercicios Resolvidos, integral"),
+            NSLocalizedString("conteudoIntegrais6A",  comment: "Teste, integral")]
+        
+        conteudoIntegraisB = [NSLocalizedString("conteudoIntegrais1B",  comment: "O que é, integral"),
+            NSLocalizedString("conteudoIntegrais2B",  comment: "Definição, integral"),
+            NSLocalizedString("conteudoIntegrais3B",  comment: "Propriedades Integrais Indefinidas, integral"),
+            NSLocalizedString("conteudoIntegrais4B",  comment: "Métodos, integral"),
+            NSLocalizedString("conteudoIntegrais5B",  comment: "Exercicios Resolvidos, integral"),
+            NSLocalizedString("conteudoIntegrais6B",  comment: "Teste, integral")]
+        
+        
+        conteudoImagePreCalculo = ["1","pencil-104","3","pencil-104","5","6","7","8"]
+        conteudoImageLimite = ["1","2","3","4","5","6","pencil-104","8","9"]
+        conteudoImageDerivada = ["1","pencil-104","pencil-104","4","5","pencil-104","7","8"]
+        conteudoImageIntegral = ["1","pencil-104","3","pencil-104","pencil-104","6","7"]
+        conteudoImageCalculadora = ["1","2","3","4","5","6","7","8"]
+        conteudoImageCanvas = ["1","2","3","4","5","6","7","8"]
+        conteudoImageAbout = ["1","2","3","4","5","6","7","8"]
+        
+        for i in 0...cardsLimites.count-1{
+            var attString = NSMutableAttributedString(string: conteudoLimitesA[i])
+            
+            var attImage = NSTextAttachment()
+            attImage.image = UIImage(named: conteudoImageLimite[i])
+            var imageString = NSAttributedString(attachment: attImage)
+            
+            attString.appendAttributedString(imageString)
+            attString.appendAttributedString(NSMutableAttributedString(string: conteudoLimitesB[i]))
+            
+            cardsLimites[i].conteudo = attString
+        }
+        
+        
+        for i in 0...cardsDerivadas.count-1{
+            var attString = NSMutableAttributedString(string: conteudoDerivadasA[i])
+            
+            var attImage = NSTextAttachment()
+            attImage.image = UIImage(named: conteudoImageDerivada[i])
+            var imageString = NSAttributedString(attachment: attImage)
+            
+            attString.appendAttributedString(imageString)
+            attString.appendAttributedString(NSMutableAttributedString(string: conteudoDerivadasB[i]))
+            
+            cardsDerivadas[i].conteudo = attString
+        }
+        
+        for i in 0...cardsIntegrais.count-1{
+            var attString = NSMutableAttributedString(string: conteudoIntegraisA[i])
+            
+            var attImage = NSTextAttachment()
+            attImage.image = UIImage(named: conteudoImageIntegral[i])
+            var imageString = NSAttributedString(attachment: attImage)
+            
+            attString.appendAttributedString(imageString)
+            attString.appendAttributedString(NSMutableAttributedString(string: conteudoIntegraisB[i]))
+            
+            cardsIntegrais[i].conteudo = attString
+        }
+        for i in 0...cardsPreCalculo.count-1{
+            var attString = NSMutableAttributedString(string: conteudoPreCalculoA[i])
+            
+            var attImage = NSTextAttachment()
+            attImage.image = UIImage(named: conteudoImagePreCalculo[i])
+            var imageString = NSAttributedString(attachment: attImage)
+            
+            attString.appendAttributedString(imageString)
+            attString.appendAttributedString(NSMutableAttributedString(string: conteudoPreCalculoB[i]))
+            
+            cardsPreCalculo[i].conteudo = attString
+            
+        }
+        
+    }
+    private func geraCorCards(index: NSIndexPath, corInicial: Int)->UIColor{
+        
+        //        var red = CGFloat(255 - indexPath.row*25)/255
+        //        var green = CGFloat(200 - indexPath.row*25)/255
+        //        var blue = CGFloat(150 - indexPath.row*25)/255
+        
+        var red = CGFloat(corInicial - index.row*15)/255
+        var green = CGFloat(corInicial - index.row*15)/255
+        var blue = CGFloat(corInicial - index.row*15)/255
+        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
   
 }

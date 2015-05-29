@@ -26,7 +26,6 @@ class CardCollectionViewCell: UICollectionViewCell {
         self.layer.borderWidth = 0.45
         
         self.textViewConteudo.backgroundColor = UIColor.clearColor()
-
         self.textViewConteudo.selectable=false
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 class Card: NSObject {
     
     var titulo:String?
-    var conteudo:String?
+    var conteudo:NSMutableAttributedString?
     
     init(titulo:String!){
         self.titulo = titulo
