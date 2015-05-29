@@ -338,6 +338,9 @@ class CardsViewController: UICollectionViewController {
             
             attString.appendAttributedString(imageString)
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoLimitesB[i]))
+            attString.appendAttributedString(NSAttributedString(string: "\n\n\n\n\n"))
+            
+            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 20)!, range: NSMakeRange(0, attString.length))
             
             cardsLimites[i].conteudo = attString
         }
@@ -352,7 +355,9 @@ class CardsViewController: UICollectionViewController {
             
             attString.appendAttributedString(imageString)
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoDerivadasB[i]))
+            attString.appendAttributedString(NSAttributedString(string: "\n\n\n\n\n"))
             
+            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 20)!, range: NSMakeRange(0, attString.length))
             cardsDerivadas[i].conteudo = attString
         }
         
@@ -365,7 +370,9 @@ class CardsViewController: UICollectionViewController {
             
             attString.appendAttributedString(imageString)
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoIntegraisB[i]))
+            attString.appendAttributedString(NSAttributedString(string: "\n\n\n\n\n"))
             
+            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 20)!, range: NSMakeRange(0, attString.length))
             cardsIntegrais[i].conteudo = attString
         }
         for i in 0...cardsPreCalculo.count-1{
@@ -377,7 +384,9 @@ class CardsViewController: UICollectionViewController {
             
             attString.appendAttributedString(imageString)
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoPreCalculoB[i]))
+            attString.appendAttributedString(NSAttributedString(string: "\n\n\n\n\n"))
             
+            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 20)!, range: NSMakeRange(0, attString.length))
             cardsPreCalculo[i].conteudo = attString
             
         }
