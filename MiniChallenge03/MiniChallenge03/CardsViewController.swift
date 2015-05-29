@@ -172,6 +172,7 @@ class CardsViewController: UICollectionViewController {
         else{
             cell.buttonTest.hidden = true
         }
+        cell.updateConstraints()
         return cell
     }
     
@@ -388,7 +389,6 @@ class CardsViewController: UICollectionViewController {
             
             attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 20)!, range: NSMakeRange(0, attString.length))
             cardsPreCalculo[i].conteudo = attString
-            
         }
         
     }
