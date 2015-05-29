@@ -16,7 +16,7 @@
 "mais"="WHAT";
 
 //precalculo
-"precal1"="Atenção!!";
+"precal1"="Atenção!";
 "precal2"="Conjuntos Numéricos";
 "precal3"="Polinômios";
 "precal4"="Trigonometria";
@@ -52,27 +52,26 @@
 "integral6"="Teste";
 
 //conteudoPreCalculo
-"conteudoPreCal1A"="Não estamos abordando todo o conteúdo do ensino médio...\n\n\n Aqui temos alguns tópicos que alunos de cálculo1 relataram sentir dificuldade quando cursaram a disciplina.\n";
+"conteudoPreCal1A"="\n\n\n Aqui são abordados alguns tópicos que alunos de cálculo 1 relataram sentir dificuldade ao cursar a disciplina.\n\n\n\n É necessário deixar claro que não são abordados todos os conteúdos do ensino médio ...";
 "conteudoPreCal1B"="\n Caso existam assuntos que você considera importantes estarem aqui também deixe-nos um comentário! 😁";
 
 "conteudoPreCal2A"="\n\n\n Imagem Conjuntos";
 "conteudoPreCal2B"="\n\n\n Imagem Conjuntos";
 
-"conteudoPreCal3A"="Podemos classificar os polinômios das seguintes formas: \n\n - monômio: quando há apenas um termo;\n - binômio: quando há três termos;\n - trinômio: quando há três termos; - polinômio: quando há mais de três termos. ";
-"conteudoPreCal3B"="\n\n\n1) Adição de Polinômios: Deve-se sempre agrupar os termos semelhantes e realizar suas adições. \n\n2) Multiplicação de um monômio por um polinômio: Para desenvolver o produto de um monômio por um polinômio é necessário que se tenha conhecimento sobre a propriedade distributiva da multiplicação, pois est multiplicação é feita multiplicando-se o monômio por cada termo do polinômio. \n\n3)Muliplicação de um polinômio por outro polinômio: Da mesma forma que no caso anterior, a multiplicação de um polinômio por outro polinômio é feita utilizando a propriedade distributiva da multiplicação, ou seja, deve-se multiplicar cada termo do primeiro polinômio por cada termo do segundo polinômio. \n\n4) Divisão de um polinômio por um monômio: O quociente de um polinômio é dado através da divisão de cada termo do polinômio pelo monômio, desde que este não seja nulo. Para isto é importante conhecer bem as propriedades da potenciação. \n\n\n\n\n\n";
+"conteudoPreCal3A"="Podemos classificar os polinômios das seguintes formas: \n\n - monômio: quando há apenas um termo;\n - binômio: quando há dois termos;\n - trinômio: quando há três termos; \n - polinômio: quando há mais de três termos. ";
+"conteudoPreCal3B"="\n\n\n1) Adição de Polinômios: Deve-se sempre agrupar os termos semelhantes e realizar suas adições. \n\n2) Multiplicação de um monômio por um polinômio: Para desenvolver o produto de um monômio por um polinômio é necessário que se tenha conhecimento sobre a propriedade distributiva da multiplicação, pois esta multiplicação é feita multiplicando-se o monômio por cada termo do polinômio. \n\n3) Muliplicação de um polinômio por outro polinômio: Da mesma forma que no caso anterior, a multiplicação de um polinômio por outro polinômio é feita utilizando a propriedade distributiva da multiplicação, ou seja, deve-se multiplicar cada termo do primeiro polinômio por cada termo do segundo polinômio. \n\n4) Divisão de um polinômio por um monômio: O quociente de um polinômio é dado através da divisão de cada termo do polinômio pelo monômio, desde que este não seja nulo. Para isto é importante conhecer bem as propriedades da potenciação. \n\n\n\n\n\n";
 
-"conteudoPreCal4A"="As Funções trigonométricas básicas são relações entre as medidas dos lados do triângulo retângulo e seus ângulos. As três funções básicas mais importantes da trigonometria são: seno, cosseno e tangente.";
-"conteudoPreCal4B"="O ângulo é indicado pela letra x. \n\n\nimagem tabela ";
+"conteudoPreCal4A"="As Funções trigonométricas básicas são relações entre as medidas dos lados do triângulo retângulo e seus ângulos. \nAs três funções básicas mais importantes da trigonometria são: seno, cosseno e tangente.";
+"conteudoPreCal4B"="\n\nO ângulo é indicado pela letra x. \n\n\nimagem tabela ";
 
-"conteudoPreCal5"=" ";
-"conteudoPreCal5A"="Uma equação é um sentença matemática formada por uma igualdade composta por expressões matemáticas que contenham ao menos uma incógnita. Cada uma das expressões da igualdade contém coeficientes e incógnitas. Os coeficientes são os valores determinados. As incógnitas são os valores desconhecidos que dependendo do valor que assumam, podem tornar a equação verdadeira ou falsa.";
-"conteudoPreCal5B"="\n\n Exemplo equação de primeiro grau: \n\n[2(x - 5) + 4(1 - 2x)] ÷ 20 = 5 (3 - x) ÷ 20\n2x - 10 + 4 - 8x = 15 - 5x\n-6x -6 = 15 - 5x\n-6x + 5x = 15 + 6\n-x = 21 \nx = -21\n\n Exemplo equação de segundo grau: \n\n4x² + 24x - x² = 5x²\n4x² - x² - 5x² = -24x\n-2x² = -24x \nDividindo os dois lados por x:\n-2x = -24\nx=24 ÷ 2\nx = 12";
+"conteudoPreCal5A"="Uma equação é uma sentença matemática formada por uma igualdade composta por expressões matemáticas que contenham ao menos uma incógnita. Cada uma das expressões da igualdade contém coeficientes e incógnitas.\n Os coeficientes são os valores determinados. As incógnitas são os valores desconhecidos que dependendo do valor que assumem, podem tornar a equação verdadeira ou falsa.";
+"conteudoPreCal5B"="\n\nExemplo equação de primeiro grau: \n\n[2(x - 5) + 4(1 - 2x)] ÷ 20 = 5 (3 - x) ÷ 20\n2x - 10 + 4 - 8x = 15 - 5x\n-6x -6 = 15 - 5x\n-6x + 5x = 15 + 6\n-x = 21 \nx = -21\n\n\nExemplo equação de segundo grau: \n\n4x² + 24x - x² = 5x²\n4x² - x² - 5x² = -24x\n-2x² = -24x \n(Dividindo os dois lados por x:)\n-2x = -24\nx=24 ÷ 2\nx = 12";
 
-"conteudoPreCal6A"="Inequação é uma sentença matemática, com uma ou mais incógnitas, expressas por uma desigualdade, diferenciando da equação, que representa uma igualdade. Elas são representadas através de relações que não são de equivalência.";
+"conteudoPreCal6A"="Inequação é uma sentença matemática, com uma ou mais incógnitas, expressas por uma desigualdade, diferenciando da equação, que representa uma igualdade. \nElas são representadas através de relações que não são de equivalência.";
 "conteudoPreCal6B"="É representada pelo sinal ≠, ou seja,inequação é toda a desigualdade literal que é apenas satisfeita por certos valores, as letras ou incongnitas que nela figuram, por outras palavras, apresentam os sinais de maior (>) ou menor (<) ao invês do sinal de igualdade que é o caracteriza as equações";
 
-"conteudoPreCal7A"="Instruções: \n\n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n\n";
-"conteudoPreCal7B"="Boa sorte 😉 ";
+"conteudoPreCal7A"="    Instruções: \n\n\n  1) Este teste é composto por 5 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n\n";
+"conteudoPreCal7B"="    Boa sorte 😉 ";
 
 //conteudoLimites
 "conteudoLimites1A"="Limites são a principal base de construção para os cálculos.\nMuitas vezes, uma função pode ser indefinida em um certo ponto, mas podemos pensar sobre o que a função se aproxima conforme chega cada vez mais perto deste ponto (este é o limite). Outras vezes, a função poderá estar definida em um certo ponto, mas poderá se aproximar de um limite diferente. São muitas as vezes nas quais o valor da função é o mesmo do limite em um ponto. De qualquer forma, este é um recurso muito útil conforme começamos a pensar sobre uma inclinação de uma reta tangente a uma curva.";
@@ -96,8 +95,8 @@
 "conteudoLimites7A"="\n\n\nimagens exercicios resolvidos";
 "conteudoLimites7B"="\n\n\nimagens exercicios resolvidos";
 
-"conteudoLimites8A"="Instruções: \n\n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n\n       Boa sorte 😉 ";
-"conteudoLimites8B"="Instruções: \n\n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n\n       Boa sorte 😉 ";
+"conteudoLimites8A"="    Instruções: \n\n\n  1) Este teste é composto por 5 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n\n";
+"conteudoLimites8B"="\n\n\n\n       Boa sorte 😉 ";
 
 
 
@@ -120,8 +119,8 @@
 "conteudoDerivadas6A"="\n\n\n\n          (imagens exemplos)";
 "conteudoDerivadas6B"="\n\n\n\n          (imagens exemplos)";
 
-"conteudoDerivadas7A"="Instruções: \n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n      Boa sorte 😉 ";
-"conteudoDerivadas7B"="Instruções: \n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n      Boa sorte 😉 ";
+"conteudoDerivadas7A"="    Instruções: \n\n\n  1) Este teste é composto por 5 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n\n";
+"conteudoDerivadas7B"="\n\n\n      Boa sorte 😉 ";
 
 
 
@@ -132,7 +131,7 @@
 "conteudoIntegrais2A"="Da mesma forma que a adição e a  subtração, a multiplicação e a divisão, a operação inversa da derivação é a antiderivação ou integração indefinida. \nDada uma função g(x), qualquer função f'(x) tal que f'(x) = g(x) é chamada integral indefinida ou antiderivada de f(x). \n\n\n(imagem aqui) \n\n Nos exemplos 2 e 3 podemos observar que tanto x3 quando x3+4 são integrais indefinidas para 3x2. A diferença entre quaisquer destas funções (chamadas funções primitivas) é sempre uma constante, ou seja, a integral indefinida de 3x2 é  x3+C, onde C é uma constante real.";
 "conteudoIntegrais2B"="Da mesma forma que a adição e a  subtração, a multiplicação e a divisão, a operação inversa da derivação é a antiderivação ou integração indefinida. \nDada uma função g(x), qualquer função f'(x) tal que f'(x) = g(x) é chamada integral indefinida ou antiderivada de f(x). \n\n\n(imagem aqui) \n\n Nos exemplos 2 e 3 podemos observar que tanto x3 quando x3+4 são integrais indefinidas para 3x2. A diferença entre quaisquer destas funções (chamadas funções primitivas) é sempre uma constante, ou seja, a integral indefinida de 3x2 é  x3+C, onde C é uma constante real.";
 
-"conteudoIntegrais3A"="1) A integral da soma é a soma das integrais \n2) a integral da diferença é a diferença das integrais \n3) A constante multiplicativa pode ser retirada da integral \n4) A derivada da integral de uma função é a própria função";
+"conteudoIntegrais3A"="1) A integral da soma é a soma das integrais \n\n2) a integral da diferença é a diferença das integrais \n\n3) A constante multiplicativa pode ser retirada da integral \n\n4) A derivada da integral de uma função é a própria função";
 "conteudoIntegrais3B"="1) A integral da soma é a soma das integrais \n2) a integral da diferença é a diferença das integrais \n3) A constante multiplicativa pode ser retirada da integral \n4) A derivada da integral de uma função é a própria função";
 
 "conteudoIntegrais4A"="\n\n\n(imagem aqui) \n\n  \n\n\n(imagem aqui) \n\n ";
@@ -141,5 +140,5 @@
 "conteudoIntegrais5A"="\n\n\n(imagem aqui) \n\n  \n\n\n(imagem aqui) \n\n ";
 "conteudoIntegrais5B"="\n\n\n(imagem aqui) \n\n  \n\n\n(imagem aqui) \n\n ";
 
-"conteudoIntegrais6A"="Instruções: \n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n      Boa sorte 😉 ";
-"conteudoIntegrais6B"="Instruções: \n\n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para que você utilize como rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n      Boa sorte 😉 ";
+"conteudoIntegrais6A"="    Instruções: \n\n\n  1) Este teste é composto por 5 quesões para ajudar na fixação do conteúdo estudado neste tópico; \n\n  2) Você precisa apenas inserir a resposta final no campo indicado; \n\n  3) Para facilitar a resolução do problema existe um canvas disponivel para rascunho; \n\n  4) Ao final do teste será apresentada a sua porcentagem de aproveitamento; \n\n\n\n";
+"conteudoIntegrais6B"="\n\n\n      Boa sorte 😉 ";

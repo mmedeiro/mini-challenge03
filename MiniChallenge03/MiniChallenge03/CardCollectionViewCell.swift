@@ -27,5 +27,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         
         self.textViewConteudo.backgroundColor = UIColor.clearColor()
         self.textViewConteudo.selectable=false
+        
+//        self.title.font=UIFont(name: "Palatino-Roman", size: 30)
     }
 }
