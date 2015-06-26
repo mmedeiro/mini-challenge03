@@ -326,7 +326,7 @@ class CardsViewController: UICollectionViewController {
         
         
         conteudoImagePreCalculo = ["1","conjuntos","3","PreCal-Trigonometria","5","6","7","8"]
-        conteudoImageLimite = ["1","2","3","4","5","6","pencil-104","8","9"]
+        conteudoImageLimite = ["1","2","3","4","5","Limites-Limites Fundamentais","pencil-104","8","9"]
         conteudoImageDerivada = ["1","pencil-104","pencil-104","4","5","pencil-104","7","8"]
         conteudoImageIntegral = ["1","pencil-104","3","pencil-104","pencil-104","6","7"]
         conteudoImageCalculadora = ["1","2","3","4","5","6","7","8"]
@@ -361,7 +361,7 @@ class CardsViewController: UICollectionViewController {
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoDerivadasB[i]))
             attString.appendAttributedString(NSAttributedString(string: "\n\n\n\n\n"))
             
-            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 2)!, range: NSMakeRange(0, attString.length))
+            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 20)!, range: NSMakeRange(0, attString.length))
             cardsDerivadas[i].conteudo = attString
         }
         
