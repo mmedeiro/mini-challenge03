@@ -31,8 +31,9 @@ class CardsViewController: UICollectionViewController {
     var conteudoCalculadoraB = Array<String>()
     var conteudoCanvasA = Array<String>()
     var conteudoCanvasB = Array<String>()
-    var conteudoAboutA = Array<String>()
-    var conteudoAboutB = Array<String>()
+    var conteudoTabsA = Array<String>()
+    var conteudoTabsB = Array<String>()
+
     
     var conteudoImagePreCalculo = Array<String>()
     var conteudoImageLimite = Array<String>()
@@ -40,7 +41,7 @@ class CardsViewController: UICollectionViewController {
     var conteudoImageIntegral = Array<String>()
     var conteudoImageCalculadora = Array<String>()
     var conteudoImageCanvas = Array<String>()
-    var conteudoImageAbout = Array<String>()
+    var conteudoImageTabs = Array<String>()
     
     var cardsPreCalculo = Array<Card>()
     var cardsLimites = Array<Card>()
@@ -48,7 +49,7 @@ class CardsViewController: UICollectionViewController {
     var cardsIntegrais = Array<Card>()
     var cardsCalculadora = Array<Card>()
     var cardsCanvas = Array<Card>()
-    var cardsAbout = Array<Card>()
+    var cardsTabs = Array<Card>()
     
     
     var stackedLayout = StackedLayout()
@@ -127,12 +128,13 @@ class CardsViewController: UICollectionViewController {
                     NSLocalizedString("limite",     comment: "limites"),
                     NSLocalizedString("derivada",   comment: "derivada"),
                     NSLocalizedString("integral",   comment: "integral"),
+                    NSLocalizedString("mais",       comment: "outro"),
                     NSLocalizedString("calc",       comment: "calculadora"),
-                    NSLocalizedString("canvas",     comment: "canvas"),
-                    NSLocalizedString("mais",       comment: "outro")]
+                    NSLocalizedString("canvas",     comment: "canvas")
+                    ]
         
         
-        cardsMateria = [materias[0] : cardsPreCalculo , materias[1] : cardsLimites , materias[2] : cardsDerivadas, materias[3] : cardsIntegrais, materias[4] : cardsCalculadora, materias[5] : cardsCanvas, materias[6] : cardsAbout]
+        cardsMateria = [materias[0] : cardsPreCalculo , materias[1] : cardsLimites , materias[2] : cardsDerivadas, materias[3] : cardsIntegrais, materias[4] : cardsTabs, materias[5] : cardsCalculadora, materias[6] : cardsCanvas]
         
 
         self.collectionView?.collectionViewLayout = self.stackedLayout
@@ -250,10 +252,11 @@ class CardsViewController: UICollectionViewController {
             Card(titulo: NSLocalizedString("integral5",  comment: "integral")),
             Card(titulo: NSLocalizedString("integral6",  comment: "integral"))
         ]
+        
         cardsCalculadora = [Card(titulo: "Calculadora aqui ⬇️")]
         cardsCanvas = [Card(titulo: "Quer fazer um desenho? 😁")]
         
-        cardsAbout = [Card(titulo: "Esse são cards apenas para o scroll funcionar na view inicial haha")]
+        cardsTabs = [Card(titulo: "Trigonometricas"),Card(titulo: "Derivadas"),Card(titulo: "integrais"),Card(titulo: "Formulas de Recorrencia")]
         
     }
     private func populaConteudo(){
@@ -324,6 +327,9 @@ class CardsViewController: UICollectionViewController {
             NSLocalizedString("conteudoIntegrais5B",  comment: "Exercicios Resolvidos, integral"),
             NSLocalizedString("conteudoIntegrais6B",  comment: "Teste, integral")]
         
+        conteudoTabsA = ["","Sejam u e v funções derivaveis e \n n constante","",""]
+        conteudoTabsB = ["","","",""]
+        
         
         conteudoImagePreCalculo = ["1","conjuntos","3","PreCal-Trigonometria","5","6","7","8"]
         conteudoImageLimite = ["1","2","3","4","5","Limites-Limites Fundamentais","pencil-104","8","9"]
@@ -331,7 +337,7 @@ class CardsViewController: UICollectionViewController {
         conteudoImageIntegral = ["1","2","3","Integral - Substituicao","ExInt","6","7"]
         conteudoImageCalculadora = ["1","2","3","4","5","6","7","8"]
         conteudoImageCanvas = ["1","2","3","4","5","6","7","8"]
-        conteudoImageAbout = ["1","2","3","4","5","6","7","8"]
+        conteudoImageTabs = ["TabTrig","TabDer","TabInt","TabRec","5","6","7","8"]
         
         for i in 0...cardsLimites.count-1{
             var attString = NSMutableAttributedString(string: conteudoLimitesA[i])
@@ -396,6 +402,21 @@ class CardsViewController: UICollectionViewController {
     
             attString.addAttribute(NSParagraphStyleAttributeName, value: algmt, range: NSMakeRange(0, attString.length))
             cardsPreCalculo[i].conteudo = attString
+        }
+        
+        for i in 0...cardsTabs.count-1{
+            var attString = NSMutableAttributedString(string: conteudoTabsA[i])
+            
+            var attImage = NSTextAttachment()
+            attImage.image = UIImage(named: conteudoImageTabs[i])
+            var imageString = NSAttributedString(attachment: attImage)
+            
+            attString.appendAttributedString(imageString)
+            attString.appendAttributedString(NSMutableAttributedString(string: conteudoTabsB[i]))
+            attString.appendAttributedString(NSAttributedString(string: "\n\n\n\n\n"))
+            
+            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 20)!, range: NSMakeRange(0, attString.length))
+            cardsTabs[i].conteudo = attString
         }
         
     }
