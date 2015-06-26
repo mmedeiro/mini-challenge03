@@ -109,7 +109,6 @@
 				4B3CB06F1B0511FC00F961B3 /* AppDelegate.swift */,
 				E6ACD34E1B13B60300A75ABA /* TestsViewController.swift */,
 				E6A1DB121B0D079C00A99CC0 /* MenuCollectionView.swift */,
-				E6AF6DA61B0E58A2002AC7DC /* headerReusableView.swift */,
 				E6A1DB141B0D0A9900A99CC0 /* ParallaxViewCell.swift */,
 				4B3CB0761B0511FC00F961B3 /* Main.storyboard */,
 				4B0CB2631B18F52A00456D94 /* DesignableViews.swift */,
@@ -125,6 +124,7 @@
 		4B3CB06D1B0511FC00F961B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E6AF6DA61B0E58A2002AC7DC /* headerReusableView.swift */,
 				4B3CB06E1B0511FC00F961B3 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -410,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -421,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
