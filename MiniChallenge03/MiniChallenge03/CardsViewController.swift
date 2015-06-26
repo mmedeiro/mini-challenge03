@@ -10,6 +10,9 @@ import UIKit
 
 class CardsViewController: UICollectionViewController {
     
+
+    @IBOutlet var titulo: UINavigationItem!
+    
     var materia: String?
     var cardsMateria = Dictionary<String,Array<Card>>()
     var cardsConteudos = Dictionary<String,Array<String>>()
@@ -113,10 +116,7 @@ class CardsViewController: UICollectionViewController {
         
         self.collectionView?.addGestureRecognizer(tap!)
         
-        self.navigationController?.navigationBar.backItem?.title! = materia!
-        print("OOOOLOKO \(materia!) BUUULSHiT")
-        
-        print(materia!)
+        self.titulo.title = materia!
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
         
@@ -327,8 +327,8 @@ class CardsViewController: UICollectionViewController {
         
         conteudoImagePreCalculo = ["1","conjuntos","3","PreCal-Trigonometria","5","6","7","8"]
         conteudoImageLimite = ["1","2","3","4","5","Limites-Limites Fundamentais","pencil-104","8","9"]
-        conteudoImageDerivada = ["1","pencil-104","pencil-104","4","5","pencil-104","7","8"]
-        conteudoImageIntegral = ["1","pencil-104","3","pencil-104","pencil-104","6","7"]
+        conteudoImageDerivada = ["1","Derivada - Notacao","Derivada - definicao","4","5","pencil-104","7","8"]
+        conteudoImageIntegral = ["1","2","3","Integral - Substituicao","pencil-104","6","7"]
         conteudoImageCalculadora = ["1","2","3","4","5","6","7","8"]
         conteudoImageCanvas = ["1","2","3","4","5","6","7","8"]
         conteudoImageAbout = ["1","2","3","4","5","6","7","8"]

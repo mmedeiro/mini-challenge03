@@ -668,7 +668,7 @@
             </objects>
             <point key="canvasLocation" x="436" y="1081"/>
         </scene>
-        <!--Cards View Controller-->
+        <!--Title-->
         <scene sceneID="4Ch-MU-JdY">
             <objects>
                 <collectionViewController id="W8O-Gl-UZO" customClass="CardsViewController" customModule="MiniChallenge03" customModuleProvider="target" sceneMemberID="viewController">
@@ -783,6 +783,10 @@
                             <outlet property="delegate" destination="W8O-Gl-UZO" id="iys-ag-nNj"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Title" id="hYR-Uf-htk"/>
+                    <connections>
+                        <outlet property="titulo" destination="hYR-Uf-htk" id="96y-jK-xC0"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nf-Dv-JTn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
