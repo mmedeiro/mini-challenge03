@@ -325,7 +325,7 @@ class CardsViewController: UICollectionViewController {
             NSLocalizedString("conteudoIntegrais6B",  comment: "Teste, integral")]
         
         
-        conteudoImagePreCalculo = ["1","pencil-104","3","pencil-104","5","6","7","8"]
+        conteudoImagePreCalculo = ["1","conjuntos","3","PreCal-Trigonometria","5","6","7","8"]
         conteudoImageLimite = ["1","2","3","4","5","6","pencil-104","8","9"]
         conteudoImageDerivada = ["1","pencil-104","pencil-104","4","5","pencil-104","7","8"]
         conteudoImageIntegral = ["1","pencil-104","3","pencil-104","pencil-104","6","7"]
@@ -391,6 +391,10 @@ class CardsViewController: UICollectionViewController {
             attString.appendAttributedString(NSAttributedString(string: "\n\n\n\n\n"))
             
             attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 20)!, range: NSMakeRange(0, attString.length))
+            var algmt = NSMutableParagraphStyle()
+            algmt.alignment = NSTextAlignment.Justified
+    
+            attString.addAttribute(NSParagraphStyleAttributeName, value: algmt, range: NSMakeRange(0, attString.length))
             cardsPreCalculo[i].conteudo = attString
         }
         
