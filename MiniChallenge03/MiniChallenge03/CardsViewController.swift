@@ -221,8 +221,7 @@ class CardsViewController: UICollectionViewController {
             Card(titulo: NSLocalizedString("precal3",  comment: "pre calculo")),
             Card(titulo: NSLocalizedString("precal4",  comment: "pre calculo")),
             Card(titulo: NSLocalizedString("precal5",  comment: "pre calculo")),
-            Card(titulo: NSLocalizedString("precal6",  comment: "pre calculo")),
-            Card(titulo: NSLocalizedString("precal7",  comment: "pre calculo"))
+            Card(titulo: NSLocalizedString("precal6",  comment: "pre calculo"))
         ]
         
         cardsLimites = [Card(titulo: NSLocalizedString("limite1",  comment: "limite")),
@@ -231,8 +230,7 @@ class CardsViewController: UICollectionViewController {
             Card(titulo: NSLocalizedString("limite4",  comment: "limite")),
             Card(titulo: NSLocalizedString("limite5",  comment: "limite")),
             Card(titulo: NSLocalizedString("limite6",  comment: "limite")),
-            Card(titulo: NSLocalizedString("limite7",  comment: "limite")),
-            Card(titulo: NSLocalizedString("limite8",  comment: "limite"))
+            Card(titulo: NSLocalizedString("limite7",  comment: "limite"))
         ]
         
         
@@ -241,16 +239,14 @@ class CardsViewController: UICollectionViewController {
             Card(titulo: NSLocalizedString("derivada3",  comment: "derivada")),
             Card(titulo: NSLocalizedString("derivada4",  comment: "derivada")),
             Card(titulo: NSLocalizedString("derivada5",  comment: "derivada")),
-            Card(titulo: NSLocalizedString("derivada6",  comment: "derivada")),
-            Card(titulo: NSLocalizedString("derivada7",  comment: "derivada"))
+            Card(titulo: NSLocalizedString("derivada6",  comment: "derivada"))
         ]
         
         cardsIntegrais = [Card(titulo: NSLocalizedString("integral1",  comment: "integral")),
             Card(titulo: NSLocalizedString("integral2",  comment: "integral")),
             Card(titulo: NSLocalizedString("integral3",  comment: "integral")),
             Card(titulo: NSLocalizedString("integral4",  comment: "integral")),
-            Card(titulo: NSLocalizedString("integral5",  comment: "integral")),
-            Card(titulo: NSLocalizedString("integral6",  comment: "integral"))
+            Card(titulo: NSLocalizedString("integral5",  comment: "integral"))
         ]
         
         cardsCalculadora = [Card(titulo: "Calculadora aqui ⬇️")]
@@ -265,16 +261,14 @@ class CardsViewController: UICollectionViewController {
             NSLocalizedString("conteudoPreCal3A",  comment: "Polinomios, precal"),
             NSLocalizedString("conteudoPreCal4A",  comment: "Trigonometria, precal"),
             NSLocalizedString("conteudoPreCal5A",  comment: "Equacoes, precal"),
-            NSLocalizedString("conteudoPreCal6A",  comment: "Inequacoes, precal"),
-            NSLocalizedString("conteudoPreCal7A",  comment: "Teste, precal")]
+            NSLocalizedString("conteudoPreCal6A",  comment: "Inequacoes, precal")]
         
         conteudoPreCalculoB = [NSLocalizedString("conteudoPreCal1B",  comment: "Atenção, precal"),
             NSLocalizedString("conteudoPreCal2B",  comment: "Conjuntos Numericos, precal"),
             NSLocalizedString("conteudoPreCal3B",  comment: "Polinomios, precal"),
             NSLocalizedString("conteudoPreCal4B",  comment: "Trigonometria, precal"),
             NSLocalizedString("conteudoPreCal5B",  comment: "Equacoes, precal"),
-            NSLocalizedString("conteudoPreCal6B",  comment: "Inequacoes, precal"),
-            NSLocalizedString("conteudoPreCal7B",  comment: "Teste, precal")]
+            NSLocalizedString("conteudoPreCal6B",  comment: "Inequacoes, precal")]
         
         
         conteudoLimitesA = [NSLocalizedString("conteudoLimites1A",  comment: "O que é, limite"),
@@ -283,8 +277,7 @@ class CardsViewController: UICollectionViewController {
             NSLocalizedString("conteudoLimites4A",  comment: "Indeterminacoes, limite"),
             NSLocalizedString("conteudoLimites5A",  comment: "Limites laterais e continuidade, limite"),
             NSLocalizedString("conteudoLimites6A",  comment: "Limites Fundamentais, limite"),
-            NSLocalizedString("conteudoLimites7A",  comment: "Exercicios Resolvidos, limite"),
-            NSLocalizedString("conteudoLimites8A",  comment: "Teste, limite")]
+            NSLocalizedString("conteudoLimites7A",  comment: "Exercicios Resolvidos, limite")]
         
         conteudoLimitesB = [NSLocalizedString("conteudoLimites1B",  comment: "O que é, limite"),
             NSLocalizedString("conteudoLimites2B",  comment: "Definição, limite"),
@@ -292,8 +285,7 @@ class CardsViewController: UICollectionViewController {
             NSLocalizedString("conteudoLimites4B",  comment: "Indeterminacoes, limite"),
             NSLocalizedString("conteudoLimites5B",  comment: "Limites laterais e continuidade, limite"),
             NSLocalizedString("conteudoLimites6B",  comment: "Limites Fundamentais, limite"),
-            NSLocalizedString("conteudoLimites7B",  comment: "Exercicios Resolvidos, limite"),
-            NSLocalizedString("conteudoLimites8B",  comment: "Teste, limite")]
+            NSLocalizedString("conteudoLimites7B",  comment: "Exercicios Resolvidos, limite")]
         
         
         
@@ -302,42 +294,38 @@ class CardsViewController: UICollectionViewController {
             NSLocalizedString("conteudoDerivadas3A",  comment: "Notações, derivada"),
             NSLocalizedString("conteudoDerivadas4A",  comment: "Propriedades, derivada"),
             NSLocalizedString("conteudoDerivadas5A",  comment: "Derivadas Trigonometricas, derivada"),
-            NSLocalizedString("conteudoDerivadas6A",  comment: "Exercicios Resolvidos, derivada"),
-            NSLocalizedString("conteudoDerivadas7A",  comment: "Teste, derivada")]
+            NSLocalizedString("conteudoDerivadas6A",  comment: "Exercicios Resolvidos, derivada")]
         
         conteudoDerivadasB = [NSLocalizedString("conteudoDerivadas1B",  comment: "O que é, derivada"),
             NSLocalizedString("conteudoDerivadas2B",  comment: "Definição, derivada"),
             NSLocalizedString("conteudoDerivadas3B",  comment: "Notações, derivada"),
             NSLocalizedString("conteudoDerivadas4B",  comment: "Propriedades, derivada"),
             NSLocalizedString("conteudoDerivadas5B",  comment: "Derivadas Trigonometricas, derivada"),
-            NSLocalizedString("conteudoDerivadas6B",  comment: "Exercicios Resolvidos, derivada"),
-            NSLocalizedString("conteudoDerivadas7B",  comment: "Teste, derivada")]
+            NSLocalizedString("conteudoDerivadas6B",  comment: "Exercicios Resolvidos, derivada")]
         
         conteudoIntegraisA = [NSLocalizedString("conteudoIntegrais1A",  comment: "O que é, integral"),
             NSLocalizedString("conteudoIntegrais2A",  comment: "Definição, integral"),
             NSLocalizedString("conteudoIntegrais3A",  comment: "Propriedades Integrais Indefinidas, integral"),
             NSLocalizedString("conteudoIntegrais4A",  comment: "Métodos, integral"),
-            NSLocalizedString("conteudoIntegrais5A",  comment: "Exercicios Resolvidos, integral"),
-            NSLocalizedString("conteudoIntegrais6A",  comment: "Teste, integral")]
+            NSLocalizedString("conteudoIntegrais5A",  comment: "Exercicios Resolvidos, integral")]
         
         conteudoIntegraisB = [NSLocalizedString("conteudoIntegrais1B",  comment: "O que é, integral"),
             NSLocalizedString("conteudoIntegrais2B",  comment: "Definição, integral"),
             NSLocalizedString("conteudoIntegrais3B",  comment: "Propriedades Integrais Indefinidas, integral"),
             NSLocalizedString("conteudoIntegrais4B",  comment: "Métodos, integral"),
-            NSLocalizedString("conteudoIntegrais5B",  comment: "Exercicios Resolvidos, integral"),
-            NSLocalizedString("conteudoIntegrais6B",  comment: "Teste, integral")]
+            NSLocalizedString("conteudoIntegrais5B",  comment: "Exercicios Resolvidos, integral")]
         
         conteudoTabsA = ["","Sejam u e v funções derivaveis e \n n constante","",""]
         conteudoTabsB = ["","","",""]
         
         
-        conteudoImagePreCalculo = ["1","conjuntos","3","PreCal-Trigonometria","5","6","7","8"]
-        conteudoImageLimite = ["1","2","3","4","5","Limites-Limites Fundamentais","pencil-104","8","9"]
-        conteudoImageDerivada = ["1","Derivada - Notacao","Derivada - definicao","4","5","ExDer","7","8"]
-        conteudoImageIntegral = ["1","2","3","Integral - Substituicao","ExInt","6","7"]
-        conteudoImageCalculadora = ["1","2","3","4","5","6","7","8"]
-        conteudoImageCanvas = ["1","2","3","4","5","6","7","8"]
-        conteudoImageTabs = ["TabTrig","TabDer","TabInt","TabRec","5","6","7","8"]
+        conteudoImagePreCalculo = ["1","conjuntos","3","PreCal-Trigonometria","5","6","7"]
+        conteudoImageLimite = ["1","2","3","4","5","Limites-Limites Fundamentais","pencil-104","8"]
+        conteudoImageDerivada = ["1","Derivada - Notacao","Derivada - definicao","4","5","ExDer","7"]
+        conteudoImageIntegral = ["1","2","3","Integral - Substituicao","ExInt","6"]
+        conteudoImageCalculadora = ["1","2","3","4","5","6","7"]
+        conteudoImageCanvas = ["1","2","3","4","5","6","7"]
+        conteudoImageTabs = ["TabTrig","TabDer","TabInt","TabRec","5","6","7"]
         
         for i in 0...cardsLimites.count-1{
             var attString = NSMutableAttributedString(string: conteudoLimitesA[i])
