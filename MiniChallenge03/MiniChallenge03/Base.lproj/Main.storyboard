@@ -32,8 +32,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="598" height="100"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWI-1v-Hpq">
-                                            <rect key="frame" x="158" y="33.5" width="433" height="33.5"/>
-                                            <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="30"/>
+                                            <rect key="frame" x="133" y="31.5" width="458" height="38"/>
+                                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -41,7 +41,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="gWI-1v-Hpq" firstAttribute="leading" secondItem="reC-a5-SGP" secondAttribute="leadingMargin" constant="150" id="6y9-qe-lhI"/>
+                                    <constraint firstItem="gWI-1v-Hpq" firstAttribute="leading" secondItem="reC-a5-SGP" secondAttribute="leadingMargin" constant="125" id="6y9-qe-lhI"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="gWI-1v-Hpq" secondAttribute="bottom" constant="29" id="8g4-PJ-Ff9"/>
                                     <constraint firstItem="aJl-sA-MaV" firstAttribute="leading" secondItem="reC-a5-SGP" secondAttribute="leadingMargin" constant="-8" id="BPJ-0x-ztr"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="aJl-sA-MaV" secondAttribute="bottom" constant="-8" id="DBT-XB-E9w"/>
