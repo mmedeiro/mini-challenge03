@@ -47,10 +47,18 @@ class TestsViewController: UIViewController {
         brush = 5.0;
         opacity = 1.0;
         
+        
+        
+        
+        var nav = self.navigationController?.navigationBar
+        if let font = UIFont(name: "Palatino", size: 25) {
+            nav?.titleTextAttributes = [NSFontAttributeName: font]
+        }
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
         
         self.navigationController!.interactivePopGestureRecognizer.enabled = false
-        self.navigationController?.navigationBarHidden = true
+//        self.navigationController?.navigationBarHidden = true
         self.navigationController?.navigationBarHidden = false
         
     }
@@ -67,6 +75,7 @@ class TestsViewController: UIViewController {
     override func viewWillAppear(animated: Bool)
     {
         defineLayout = true
+        pushView.frame = CGRectMake(0, self.view.frame.height - buttonView.frame.height, pushView.frame.width, pushView.frame.height)
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
@@ -99,7 +108,7 @@ class TestsViewController: UIViewController {
         
         if(isInside(currentPoint) || speedControl)
         {
-            pushView.frame = CGRectMake(pushView.frame.origin.x, currentPoint.y - 20, pushView.frame.width, pushView.frame.height)
+//            pushView.frame = CGRectMake(pushView.frame.origin.x, currentPoint.y - 20, pushView.frame.width, pushView.frame.height)
             speedControl = true
             
             return
@@ -154,18 +163,19 @@ class TestsViewController: UIViewController {
     
     override func viewDidLayoutSubviews()
     {
-        if(defineLayout)
-        {
-            pushView.frame = CGRectMake(0, self.view.frame.height - buttonView.frame.height, pushView.frame.width, pushView.frame.height)
-            
-        }
-        else
-        {
-            if(self.navigationController != nil)
-            {
-                self.pushView.frame.origin.y = self.navigationController!.navigationBar.bounds.height + UIApplication.sharedApplication().statusBarFrame.height
-            }
-        }
+//        if(defineLayout)
+//        {
+//            pushView.frame = CGRectMake(0, self.view.frame.height - buttonView.frame.height, pushView.frame.width, pushView.frame.height)
+//            
+//        }
+//        else
+//        {
+//            if(self.navigationController != nil)
+//            {
+//                self.pushView.frame.origin.y = self.navigationController!.navigationBar.bounds.height + UIApplication.sharedApplication().statusBarFrame.height
+//            }
+//        }
+//
     }
     
     func isInside(point: CGPoint) -> Bool

@@ -118,6 +118,11 @@ class CardsViewController: UICollectionViewController {
         self.collectionView?.addGestureRecognizer(tap!)
         
         self.titulo.title = materia!
+        var nav = self.navigationController?.navigationBar
+        
+        if let font = UIFont(name: "Palatino", size: 25) {
+            nav?.titleTextAttributes = [NSFontAttributeName: font]
+        }
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
         
@@ -338,7 +343,7 @@ class CardsViewController: UICollectionViewController {
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoLimitesB[i]))
             attString.appendAttributedString(NSAttributedString(string: "\n\n\n\n\n"))
             
-            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 20)!, range: NSMakeRange(0, attString.length))
+            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino", size: 20)!, range: NSMakeRange(0, attString.length))
             
             cardsLimites[i].conteudo = attString
         }
@@ -355,7 +360,7 @@ class CardsViewController: UICollectionViewController {
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoDerivadasB[i]))
             attString.appendAttributedString(NSAttributedString(string: "\n\n\n\n\n"))
             
-            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 20)!, range: NSMakeRange(0, attString.length))
+            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino", size: 20)!, range: NSMakeRange(0, attString.length))
             cardsDerivadas[i].conteudo = attString
         }
         
@@ -370,7 +375,7 @@ class CardsViewController: UICollectionViewController {
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoIntegraisB[i]))
             attString.appendAttributedString(NSAttributedString(string: "\n\n\n\n\n"))
             
-            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 20)!, range: NSMakeRange(0, attString.length))
+            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino", size: 20)!, range: NSMakeRange(0, attString.length))
             cardsIntegrais[i].conteudo = attString
         }
         for i in 0...cardsPreCalculo.count-1{
@@ -384,7 +389,7 @@ class CardsViewController: UICollectionViewController {
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoPreCalculoB[i]))
             attString.appendAttributedString(NSAttributedString(string: "\n\n\n\n\n"))
             
-            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 20)!, range: NSMakeRange(0, attString.length))
+            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino", size: 20)!, range: NSMakeRange(0, attString.length))
             var algmt = NSMutableParagraphStyle()
             algmt.alignment = NSTextAlignment.Justified
     
@@ -403,7 +408,7 @@ class CardsViewController: UICollectionViewController {
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoTabsB[i]))
             attString.appendAttributedString(NSAttributedString(string: "\n\n\n\n\n"))
             
-            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino-Roman", size: 20)!, range: NSMakeRange(0, attString.length))
+            attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino", size: 20)!, range: NSMakeRange(0, attString.length))
             cardsTabs[i].conteudo = attString
         }
         
