@@ -60,7 +60,6 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
         parallaxCell.frame = CGRect(x: 0, y: parallaxCell.frame.origin.y, width: self.collectionView.frame.width, height: parallaxCell.frame.height)
         parallaxCell.imageView.image = UIImage(named: "calculo")!
         parallaxCell.title.text = materias[indexPath.row]
-        parallaxCell.title.textColor = UIColor.yellowColor()
         return parallaxCell
         
     }

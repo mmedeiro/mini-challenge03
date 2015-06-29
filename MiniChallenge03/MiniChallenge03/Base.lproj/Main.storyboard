@@ -28,22 +28,22 @@
                                     <rect key="frame" x="0.0" y="0.0" width="599" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvi-Id-lY4">
-                                            <rect key="frame" x="278.5" y="40" width="42" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aJl-sA-MaV">
                                             <rect key="frame" x="0.0" y="0.0" width="598" height="100"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWI-1v-Hpq">
+                                            <rect key="frame" x="158" y="33.5" width="433" height="33.5"/>
+                                            <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="30"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="Xvi-Id-lY4" secondAttribute="centerY" id="137-MA-S6c"/>
+                                    <constraint firstItem="gWI-1v-Hpq" firstAttribute="leading" secondItem="reC-a5-SGP" secondAttribute="leadingMargin" constant="150" id="6y9-qe-lhI"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="gWI-1v-Hpq" secondAttribute="bottom" constant="29" id="8g4-PJ-Ff9"/>
                                     <constraint firstItem="aJl-sA-MaV" firstAttribute="leading" secondItem="reC-a5-SGP" secondAttribute="leadingMargin" constant="-8" id="BPJ-0x-ztr"/>
-                                    <constraint firstAttribute="centerX" secondItem="Xvi-Id-lY4" secondAttribute="centerX" id="CxV-P7-ibX"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="aJl-sA-MaV" secondAttribute="bottom" constant="-8" id="DBT-XB-E9w"/>
                                     <constraint firstItem="aJl-sA-MaV" firstAttribute="leading" secondItem="reC-a5-SGP" secondAttribute="leading" id="DLC-To-zE5"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="aJl-sA-MaV" secondAttribute="trailing" constant="-7" id="EW6-ze-gqo"/>
@@ -51,9 +51,12 @@
                                     <constraint firstAttribute="bottomMargin" secondItem="aJl-sA-MaV" secondAttribute="bottom" constant="-8" id="Oy5-io-giJ"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="aJl-sA-MaV" secondAttribute="trailing" constant="-8" id="Tah-z5-dSt"/>
                                     <constraint firstItem="aJl-sA-MaV" firstAttribute="top" secondItem="reC-a5-SGP" secondAttribute="topMargin" constant="-8" id="ZGA-Eo-ofe"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="gWI-1v-Hpq" secondAttribute="trailing" id="cPt-PQ-ds3"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="aJl-sA-MaV" secondAttribute="bottom" constant="-8" id="dBO-mw-d6i"/>
+                                    <constraint firstItem="gWI-1v-Hpq" firstAttribute="top" secondItem="reC-a5-SGP" secondAttribute="topMargin" constant="29" id="eiA-Hp-C4s"/>
                                     <constraint firstItem="aJl-sA-MaV" firstAttribute="top" secondItem="reC-a5-SGP" secondAttribute="topMargin" constant="-8" id="hMs-Yu-PoX"/>
                                     <constraint firstItem="aJl-sA-MaV" firstAttribute="top" secondItem="reC-a5-SGP" secondAttribute="topMargin" constant="-8" id="rG8-pg-prj"/>
+                                    <constraint firstAttribute="centerY" secondItem="gWI-1v-Hpq" secondAttribute="centerY" id="rki-CH-sUb"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -64,6 +67,8 @@
                                         <exclude reference="dBO-mw-d6i"/>
                                         <exclude reference="hMs-Yu-PoX"/>
                                         <exclude reference="rG8-pg-prj"/>
+                                        <exclude reference="8g4-PJ-Ff9"/>
+                                        <exclude reference="eiA-Hp-C4s"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -75,7 +80,7 @@
                                 </variation>
                                 <connections>
                                     <outlet property="imageView" destination="aJl-sA-MaV" id="kgQ-5s-Aub"/>
-                                    <outlet property="title" destination="Xvi-Id-lY4" id="F1J-ci-Rhg"/>
+                                    <outlet property="title" destination="gWI-1v-Hpq" id="euH-oh-YLp"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
