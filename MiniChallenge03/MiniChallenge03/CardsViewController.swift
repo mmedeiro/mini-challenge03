@@ -325,7 +325,7 @@ class CardsViewController: UICollectionViewController {
         
         
         conteudoImagePreCalculo = ["1","conjuntos","3","PreCal-Trigonometria","5","6","7"]
-        conteudoImageLimite = ["1","2","3","4","5","Limites-Limites Fundamentais","pencil-104","8"]
+        conteudoImageLimite = ["1","2","3","4","5","Limites-Limites Fundamentais","ExLim","8"]
         conteudoImageDerivada = ["1","Derivada - Notacao","Derivada - definicao","4","5","ExDer","7"]
         conteudoImageIntegral = ["1","2","3","Integral - Substituicao","ExInt","6"]
         conteudoImageCalculadora = ["1","2","3","4","5","6","7"]
