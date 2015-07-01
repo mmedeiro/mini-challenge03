@@ -116,7 +116,7 @@
 "conteudoDerivadas5A"="1) A derivada do seno de uma função é igual ao cosseno da função. \n      Ex: (sen(x))' = cos (x) \n\n2) A derivada do cosseno de uma função é igual ao -seno  da função. \n      Ex: (cos(x))' = - sen (x) \n\n3) A derivada da tangente de uma função é igual a secante ao quadrado da função. \n      Ex: (tg(x))' = sec²(x) ";
 "conteudoDerivadas5B"="\n\n4) A derivada da cotangente de uma função é igual a -cossecante da função. \n      Ex: (cot(x))' = - cossec (x) \n\n5) A derivada da secante uma função é igual a secante da função, multiplicada pela tangente da função. \n      Ex: (sec(x))' = sec(x) . tg(x) \n\n6) A derivada da cossecante de uma função é igual a -cossecante da função, multiplicada pela cotangente da função. \n      Ex: (cossec(x))' = - cossec (x) . cot (x)  \n\n\n         OBS: Na pagina inicial você tem acesso a tabela de derivadas para te auxiliar nos estudos!";
 
-"conteudoDerivadas6A"="Calcule a derivada das funções a seguir:";
+"conteudoDerivadas6A"="Calcule a derivada das funções a seguir:\n";
 "conteudoDerivadas6B"="";
 
 "conteudoDerivadas7A"="Instruções: \n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico \n\n  2) Você precisa apenas inserir a resposta final no campo indicado ";
@@ -137,7 +137,7 @@
 "conteudoIntegrais4A"="";
 "conteudoIntegrais4B"="";
 
-"conteudoIntegrais5A"="Encontre as integrais das seguintes funções:";
+"conteudoIntegrais5A"="Encontre as integrais das seguintes funções:\n";
 "conteudoIntegrais5B"="";
 
 "conteudoIntegrais6A"="Instruções: \n\n  1) Este teste é composto por 10 quesões para ajudar na fixação do conteúdo estudado neste tópico \n\n  2) Você precisa apenas inserir a resposta final no campo indicado ";
