@@ -21,9 +21,9 @@ class CardCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
  
-        self.layer.cornerRadius = self.frame.width/8
-//        self.layer.borderColor = UIColor.blackColor().CGColor
-        self.layer.borderWidth = 0.45
+        self.layer.cornerRadius = self.frame.width/16
+        //self.layer.borderColor = UIColor.blackColor().CGColor
+        //self.layer.borderWidth = 0.45
         
         self.textViewConteudo.backgroundColor = UIColor.clearColor()
         self.textViewConteudo.textAlignment = NSTextAlignment.Right

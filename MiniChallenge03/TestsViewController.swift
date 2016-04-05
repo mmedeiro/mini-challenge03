@@ -55,7 +55,7 @@ class TestsViewController: UIViewController {
             nav?.titleTextAttributes = [NSFontAttributeName: font]
         }
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TestsViewController.rotated), name: UIDeviceOrientationDidChangeNotification, object: nil)
         
         self.navigationController!.interactivePopGestureRecognizer!.enabled = false
 //        self.navigationController?.navigationBarHidden = true

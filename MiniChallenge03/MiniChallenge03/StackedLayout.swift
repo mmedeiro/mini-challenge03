@@ -14,12 +14,8 @@ class StackedLayout: UICollectionViewLayout {
     var itemSize = CGSizeZero
     var topReveal:CGFloat = 100.0
     var bounceFactor:CGFloat = 0.2
-    var fillHeight = false
-    var alwaysBounce = false
     var overwriteContOffset = false
-    var filling = false
     var contentOffset = CGPoint()
-    var movingIndexPath = NSIndexPath()
     var layoutAttributes = Dictionary<NSIndexPath,UICollectionViewLayoutAttributes>()
     
     override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint) -> CGPoint {
@@ -45,56 +41,30 @@ class StackedLayout: UICollectionViewLayout {
     
     override func prepareLayout() {
         self.collectionViewContentSize()
-        
-        var itemReveal = self.topReveal
-        
-        if self.filling{
-            
-            let size = CGRectGetHeight(self.collectionView!.bounds) - self.layoutMargin.top - self.layoutMargin.bottom - self.collectionView!.contentInset.top - self.collectionView!.contentInset.bottom
-            
-            itemReveal = floor( size / CGFloat(self.collectionView!.numberOfItemsInSection(0) ))
-            
-            
-        }
-        
+
         if CGSizeEqualToSize(itemSize, CGSizeZero){
             itemSize = CGSizeMake(CGRectGetWidth(self.collectionView!.bounds) - self.layoutMargin.left - self.layoutMargin.right, CGRectGetHeight(self.collectionView!.bounds) - self.layoutMargin.top - self.layoutMargin.bottom - self.collectionView!.contentInset.top - self.collectionView!.contentInset.bottom)
         }
-        
-        
-        var contenOffseto = CGPoint()
-        if overwriteContOffset{
-            contenOffseto =  self.contentOffset
-        }
-        else{
-            contenOffseto = self.collectionView!.contentOffset
-        }
+
         
         var layoutAttributes = Dictionary<NSIndexPath,UICollectionViewLayoutAttributes>()
-        _ = Array<UICollectionViewLayoutAttributes>()
-        let itemCount = self.collectionView?.numberOfItemsInSection(0)
+        let itemCount = self.collectionView!.numberOfItemsInSection(0)
         
         
-        var  firstCompressingItem = -1
         
-        
-        for var item = 0; item < itemCount; item=item+1{
-            
+        for item in 0...itemCount-1{
             let index = NSIndexPath(forItem: item, inSection: 0)
             let att = UICollectionViewLayoutAttributes(forCellWithIndexPath: index)
             
             att.zIndex = item
             
-            let loc = itemReveal * CGFloat(item)
+            let loc = topReveal * CGFloat(item)
             
             att.frame = CGRectMake(self.layoutMargin.left, self.layoutMargin.top + loc, itemSize.width, itemSize.height)
-
-            firstCompressingItem = -1
             
             layoutAttributes[index] = att
-            
         }
-        
+
         self.layoutAttributes = layoutAttributes
         
         
