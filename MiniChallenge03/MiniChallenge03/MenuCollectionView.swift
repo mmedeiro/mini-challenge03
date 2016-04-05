@@ -28,7 +28,7 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MenuCollectionView.rotated), name: UIDeviceOrientationDidChangeNotification, object: nil)
         
        // self.collectionView!.registerClass(ParallaxViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         imagens.append("calculo")

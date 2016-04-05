@@ -108,7 +108,7 @@ class CardsViewController: UICollectionViewController {
         
         
         
-        tap = UITapGestureRecognizer(target: self , action: "handleTap")
+        tap = UITapGestureRecognizer(target: self , action: #selector(CardsViewController.handleTap))
         tap?.numberOfTapsRequired = 2
         
         self.collectionView?.addGestureRecognizer(tap!)
@@ -120,7 +120,7 @@ class CardsViewController: UICollectionViewController {
             nav?.titleTextAttributes = [NSFontAttributeName: font]
         }
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CardsViewController.rotated), name: UIDeviceOrientationDidChangeNotification, object: nil)
         
         self.populaCards()
         self.populaConteudo()
@@ -214,7 +214,7 @@ class CardsViewController: UICollectionViewController {
     //MARK: CARDS E CONTEUDO
     
     private func populaCards(){
-        cardsPreCalculo = [Card(titulo: NSLocalizedString("precal1",  comment: "pre calculo")),
+        cardsPreCalculo = [
             Card(titulo: NSLocalizedString("precal2",  comment: "pre calculo")),
             Card(titulo: NSLocalizedString("precal3",  comment: "pre calculo")),
             Card(titulo: NSLocalizedString("precal4",  comment: "pre calculo")),
@@ -252,14 +252,14 @@ class CardsViewController: UICollectionViewController {
         
     }
     private func populaConteudo(){
-        conteudoPreCalculoA = [NSLocalizedString("conteudoPreCal1A",  comment: "Atenção, precal"),
+        conteudoPreCalculoA = [
             NSLocalizedString("conteudoPreCal2A",  comment: "Conjuntos Numericos, precal"),
             NSLocalizedString("conteudoPreCal3A",  comment: "Polinomios, precal"),
             NSLocalizedString("conteudoPreCal4A",  comment: "Trigonometria, precal"),
             NSLocalizedString("conteudoPreCal5A",  comment: "Equacoes, precal"),
             NSLocalizedString("conteudoPreCal6A",  comment: "Inequacoes, precal")]
         
-        conteudoPreCalculoB = [NSLocalizedString("conteudoPreCal1B",  comment: "Atenção, precal"),
+        conteudoPreCalculoB = [
             NSLocalizedString("conteudoPreCal2B",  comment: "Conjuntos Numericos, precal"),
             NSLocalizedString("conteudoPreCal3B",  comment: "Polinomios, precal"),
             NSLocalizedString("conteudoPreCal4B",  comment: "Trigonometria, precal"),
@@ -315,7 +315,7 @@ class CardsViewController: UICollectionViewController {
         conteudoTabsB = ["","","",""]
         
         
-        conteudoImagePreCalculo = ["1","conjuntos","3","PreCal-Trigonometria","5","6","7"]
+        conteudoImagePreCalculo = ["conjuntos","3","PreCal-Trigonometria","5","6","7"]
         conteudoImageLimite = ["1","2","3","4","5","Limites-Limites Fundamentais","ExLim","8"]
         conteudoImageDerivada = ["1","Derivada - Notacao","Derivada - definicao","4","5","ExDer","7"]
         conteudoImageIntegral = ["1","2","3","Integral - Substituicao","ExInt","6"]
