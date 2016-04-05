@@ -29,8 +29,6 @@ class CardsViewController: UICollectionViewController {
     var conteudoIntegraisB = Array<String>()
     var conteudoCalculadoraA = Array<String>()
     var conteudoCalculadoraB = Array<String>()
-    var conteudoCanvasA = Array<String>()
-    var conteudoCanvasB = Array<String>()
     var conteudoTabsA = Array<String>()
     var conteudoTabsB = Array<String>()
 
@@ -40,7 +38,6 @@ class CardsViewController: UICollectionViewController {
     var conteudoImageDerivada = Array<String>()
     var conteudoImageIntegral = Array<String>()
     var conteudoImageCalculadora = Array<String>()
-    var conteudoImageCanvas = Array<String>()
     var conteudoImageTabs = Array<String>()
     
     var cardsPreCalculo = Array<Card>()
@@ -48,7 +45,6 @@ class CardsViewController: UICollectionViewController {
     var cardsDerivadas = Array<Card>()
     var cardsIntegrais = Array<Card>()
     var cardsCalculadora = Array<Card>()
-    var cardsCanvas = Array<Card>()
     var cardsTabs = Array<Card>()
     
     
@@ -135,11 +131,10 @@ class CardsViewController: UICollectionViewController {
                     NSLocalizedString("integral",   comment: "integral"),
                     NSLocalizedString("mais",       comment: "outro"),
                     NSLocalizedString("calc",       comment: "calculadora"),
-                    NSLocalizedString("canvas",     comment: "canvas")
                     ]
         
         
-        cardsMateria = [materias[0] : cardsPreCalculo , materias[1] : cardsLimites , materias[2] : cardsDerivadas, materias[3] : cardsIntegrais, materias[4] : cardsTabs, materias[5] : cardsCalculadora, materias[6] : cardsCanvas]
+        cardsMateria = [materias[0] : cardsPreCalculo , materias[1] : cardsLimites , materias[2] : cardsDerivadas, materias[3] : cardsIntegrais, materias[4] : cardsTabs, materias[5] : cardsCalculadora]
         
 
         self.collectionView?.collectionViewLayout = self.stackedLayout
@@ -167,8 +162,6 @@ class CardsViewController: UICollectionViewController {
         else{
             cell.textViewConteudo.hidden = true
         }
-        
-    
 
         cell.backgroundColor = self.geraCorCards(indexPath,corInicial: 220)
         cell.layer.borderColor = self.geraCorCards(indexPath, corInicial: 200).CGColor
@@ -255,8 +248,6 @@ class CardsViewController: UICollectionViewController {
         ]
         
         cardsCalculadora = [Card(titulo: "Calculadora aqui ⬇️")]
-        cardsCanvas = [Card(titulo: "Quer fazer um desenho? 😁")]
-        
         cardsTabs = [Card(titulo: "Trigonometricas"),Card(titulo: "Derivadas"),Card(titulo: "integrais"),Card(titulo: "Formulas de Recorrencia")]
         
     }
@@ -329,7 +320,6 @@ class CardsViewController: UICollectionViewController {
         conteudoImageDerivada = ["1","Derivada - Notacao","Derivada - definicao","4","5","ExDer","7"]
         conteudoImageIntegral = ["1","2","3","Integral - Substituicao","ExInt","6"]
         conteudoImageCalculadora = ["1","2","3","4","5","6","7"]
-        conteudoImageCanvas = ["1","2","3","4","5","6","7"]
         conteudoImageTabs = ["TabTrig","TabDer","TabInt","TabRec","5","6","7"]
         
         for i in 0...cardsLimites.count-1{
@@ -414,11 +404,7 @@ class CardsViewController: UICollectionViewController {
         
     }
     private func geraCorCards(index: NSIndexPath, corInicial: Int)->UIColor{
-        
-        //        var red = CGFloat(255 - indexPath.row*25)/255
-        //        var green = CGFloat(200 - indexPath.row*25)/255
-        //        var blue = CGFloat(150 - indexPath.row*25)/255
-        
+
         let red = CGFloat(corInicial - index.row*15)/255
         let green = CGFloat(corInicial - index.row*15)/255
         let blue = CGFloat(corInicial - index.row*15)/255

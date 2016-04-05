@@ -175,7 +175,6 @@ class TestsViewController: UIViewController {
                 self.pushView.frame.origin.y = self.navigationController!.navigationBar.bounds.height + UIApplication.sharedApplication().statusBarFrame.height
             }
         }
-//
     }
     
     func isInside(point: CGPoint) -> Bool
