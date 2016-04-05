@@ -106,8 +106,6 @@ class CardsViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         tap = UITapGestureRecognizer(target: self , action: #selector(CardsViewController.handleTap))
         tap?.numberOfTapsRequired = 2
         
@@ -247,7 +245,6 @@ class CardsViewController: UICollectionViewController {
             Card(titulo: NSLocalizedString("integral5",  comment: "integral"))
         ]
         
-        cardsCalculadora = [Card(titulo: "Calculadora aqui ⬇️")]
         cardsTabs = [Card(titulo: "Trigonometricas"),Card(titulo: "Derivadas"),Card(titulo: "integrais"),Card(titulo: "Formulas de Recorrencia")]
         
     }

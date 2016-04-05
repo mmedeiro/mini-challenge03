@@ -26,11 +26,14 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
     {
         super.viewDidLoad()
         
+        if let font = UIFont(name: "Palatino", size: 25) {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: font]
+        }
+        
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MenuCollectionView.rotated), name: UIDeviceOrientationDidChangeNotification, object: nil)
         
-       // self.collectionView!.registerClass(ParallaxViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         imagens.append("calculo")
         self.collectionView.contentInset = UIEdgeInsetsMake(-kImageOriginHeight, 0, 0, 0);
         

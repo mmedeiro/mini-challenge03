@@ -11,7 +11,7 @@ import UIKit
 class CardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var title: UILabel!
-
+    
     @IBOutlet weak var textViewConteudo: UITextView!
     
     @IBAction func buttonTeste(sender: AnyObject) {
@@ -20,15 +20,10 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
- 
-        self.layer.cornerRadius = self.frame.width/16
-        //self.layer.borderColor = UIColor.blackColor().CGColor
-        //self.layer.borderWidth = 0.45
         
+        self.layer.cornerRadius = self.frame.width/16
         self.textViewConteudo.backgroundColor = UIColor.clearColor()
         self.textViewConteudo.textAlignment = NSTextAlignment.Right
         self.textViewConteudo.selectable=false
-        
-//        self.title.font=UIFont(name: "Palatino-Roman", size: 30)
     }
 }
