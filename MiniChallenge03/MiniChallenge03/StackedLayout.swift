@@ -35,9 +35,9 @@ class StackedLayout: UICollectionViewLayout {
     
     override func  collectionViewContentSize() -> CGSize {
         
-        var tops = self.topReveal * CGFloat(self.collectionView!.numberOfItemsInSection(0))
+        let tops = self.topReveal * CGFloat(self.collectionView!.numberOfItemsInSection(0))
         
-        var contentSize = CGSizeMake(CGRectGetWidth(self.collectionView!.bounds), self.layoutMargin.top + tops + self.layoutMargin.bottom - self.collectionView!.contentInset.bottom)
+        let contentSize = CGSizeMake(CGRectGetWidth(self.collectionView!.bounds), self.layoutMargin.top + tops + self.layoutMargin.bottom - self.collectionView!.contentInset.bottom)
         
         return contentSize
         
@@ -50,7 +50,7 @@ class StackedLayout: UICollectionViewLayout {
         
         if self.filling{
             
-            var size = CGRectGetHeight(self.collectionView!.bounds) - self.layoutMargin.top - self.layoutMargin.bottom - self.collectionView!.contentInset.top - self.collectionView!.contentInset.bottom
+            let size = CGRectGetHeight(self.collectionView!.bounds) - self.layoutMargin.top - self.layoutMargin.bottom - self.collectionView!.contentInset.top - self.collectionView!.contentInset.bottom
             
             itemReveal = floor( size / CGFloat(self.collectionView!.numberOfItemsInSection(0) ))
             
@@ -71,8 +71,8 @@ class StackedLayout: UICollectionViewLayout {
         }
         
         var layoutAttributes = Dictionary<NSIndexPath,UICollectionViewLayoutAttributes>()
-        var previousTopOverLappingAttributes = Array<UICollectionViewLayoutAttributes>()
-        var itemCount = self.collectionView?.numberOfItemsInSection(0)
+        _ = Array<UICollectionViewLayoutAttributes>()
+        let itemCount = self.collectionView?.numberOfItemsInSection(0)
         
         
         var  firstCompressingItem = -1
@@ -80,12 +80,12 @@ class StackedLayout: UICollectionViewLayout {
         
         for var item = 0; item < itemCount; item=item+1{
             
-            var index = NSIndexPath(forItem: item, inSection: 0)
-            var att = UICollectionViewLayoutAttributes(forCellWithIndexPath: index)
+            let index = NSIndexPath(forItem: item, inSection: 0)
+            let att = UICollectionViewLayoutAttributes(forCellWithIndexPath: index)
             
             att.zIndex = item
             
-            var loc = itemReveal * CGFloat(item)
+            let loc = itemReveal * CGFloat(item)
             
             att.frame = CGRectMake(self.layoutMargin.left, self.layoutMargin.top + loc, itemSize.width, itemSize.height)
 
@@ -100,21 +100,21 @@ class StackedLayout: UICollectionViewLayout {
         
     }
     
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
-        var layoutAttributes = NSMutableArray()
+    override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        var layoutAttributes = [UICollectionViewLayoutAttributes]()
         
         for item in self.layoutAttributes{
-            var att = item.1
+            let att = item.1
             if CGRectIntersectsRect(rect, att.frame){
-                layoutAttributes.addObject(att)
+                layoutAttributes.append(att)
             }
         }
         
-        return layoutAttributes as [AnyObject]
+        return layoutAttributes
         
     }
     
-    override func  layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
+    override func  layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
         return self.layoutAttributes[indexPath]
         
     }

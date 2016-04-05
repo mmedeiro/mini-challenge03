@@ -84,7 +84,7 @@ class CardsViewController: UICollectionViewController {
             if self.collectionView?.collectionViewLayout == stackedLayout {
                 self.stackedContentOffset = self.collectionView!.contentOffset
             }
-            var exposedLayout = ExposedLayout()
+            let exposedLayout = ExposedLayout()
             
             exposedLayout.exposedItemIndex = exposedItemIndexPath!.item
             
@@ -97,7 +97,7 @@ class CardsViewController: UICollectionViewController {
             self.collectionView!.setCollectionViewLayout(exposedLayout, animated: true)
         }
         else{
-            self.collectionView?.deselectItemAtIndexPath(self.exposedIndexPath, animated: true)
+            self.collectionView?.deselectItemAtIndexPath(self.exposedIndexPath!, animated: true)
             self.stackedLayout.overwriteContOffset = true
             self.collectionView?.setCollectionViewLayout(stackedLayout, animated: true)
             self.stackedLayout.overwriteContOffset = true
@@ -118,7 +118,7 @@ class CardsViewController: UICollectionViewController {
         self.collectionView?.addGestureRecognizer(tap!)
         
         self.titulo.title = materia!
-        var nav = self.navigationController?.navigationBar
+        let nav = self.navigationController?.navigationBar
         
         if let font = UIFont(name: "Palatino", size: 25) {
             nav?.titleTextAttributes = [NSFontAttributeName: font]
@@ -151,7 +151,7 @@ class CardsViewController: UICollectionViewController {
     
     override func  collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        var cell = self.collectionView?.dequeueReusableCellWithReuseIdentifier("cardCell", forIndexPath: indexPath) as! CardCollectionViewCell
+        let cell = self.collectionView?.dequeueReusableCellWithReuseIdentifier("cardCell", forIndexPath: indexPath) as! CardCollectionViewCell
         
         cell.frame = CGRect(x: 0, y: cell.frame.origin.y, width: self.collectionView!.frame.width, height: cell.frame.height)
         
@@ -184,12 +184,12 @@ class CardsViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        var arr = cardsMateria[materia!]!
+        let arr = cardsMateria[materia!]!
         return arr.count
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        var cell = self.collectionView?.cellForItemAtIndexPath(indexPath) as! CardCollectionViewCell
+        let cell = self.collectionView?.cellForItemAtIndexPath(indexPath) as! CardCollectionViewCell
         
         if indexPath.isEqual(self.exposedIndexPath){
             self.exposedIndexPath = nil
@@ -333,11 +333,11 @@ class CardsViewController: UICollectionViewController {
         conteudoImageTabs = ["TabTrig","TabDer","TabInt","TabRec","5","6","7"]
         
         for i in 0...cardsLimites.count-1{
-            var attString = NSMutableAttributedString(string: conteudoLimitesA[i])
+            let attString = NSMutableAttributedString(string: conteudoLimitesA[i])
             
-            var attImage = NSTextAttachment()
+            let attImage = NSTextAttachment()
             attImage.image = UIImage(named: conteudoImageLimite[i])
-            var imageString = NSAttributedString(attachment: attImage)
+            let imageString = NSAttributedString(attachment: attImage)
             
             attString.appendAttributedString(imageString)
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoLimitesB[i]))
@@ -350,11 +350,11 @@ class CardsViewController: UICollectionViewController {
         
         
         for i in 0...cardsDerivadas.count-1{
-            var attString = NSMutableAttributedString(string: conteudoDerivadasA[i])
+            let attString = NSMutableAttributedString(string: conteudoDerivadasA[i])
             
-            var attImage = NSTextAttachment()
+            let attImage = NSTextAttachment()
             attImage.image = UIImage(named: conteudoImageDerivada[i])
-            var imageString = NSAttributedString(attachment: attImage)
+            let imageString = NSAttributedString(attachment: attImage)
             
             attString.appendAttributedString(imageString)
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoDerivadasB[i]))
@@ -365,11 +365,11 @@ class CardsViewController: UICollectionViewController {
         }
         
         for i in 0...cardsIntegrais.count-1{
-            var attString = NSMutableAttributedString(string: conteudoIntegraisA[i])
+            let attString = NSMutableAttributedString(string: conteudoIntegraisA[i])
             
-            var attImage = NSTextAttachment()
+            let attImage = NSTextAttachment()
             attImage.image = UIImage(named: conteudoImageIntegral[i])
-            var imageString = NSAttributedString(attachment: attImage)
+            let imageString = NSAttributedString(attachment: attImage)
             
             attString.appendAttributedString(imageString)
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoIntegraisB[i]))
@@ -379,18 +379,18 @@ class CardsViewController: UICollectionViewController {
             cardsIntegrais[i].conteudo = attString
         }
         for i in 0...cardsPreCalculo.count-1{
-            var attString = NSMutableAttributedString(string: conteudoPreCalculoA[i])
+            let attString = NSMutableAttributedString(string: conteudoPreCalculoA[i])
             
-            var attImage = NSTextAttachment()
+            let attImage = NSTextAttachment()
             attImage.image = UIImage(named: conteudoImagePreCalculo[i])
-            var imageString = NSAttributedString(attachment: attImage)
+            let imageString = NSAttributedString(attachment: attImage)
             
             attString.appendAttributedString(imageString)
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoPreCalculoB[i]))
             attString.appendAttributedString(NSAttributedString(string: "\n\n\n\n\n"))
             
             attString.addAttribute(NSFontAttributeName, value: UIFont(name: "Palatino", size: 20)!, range: NSMakeRange(0, attString.length))
-            var algmt = NSMutableParagraphStyle()
+            let algmt = NSMutableParagraphStyle()
             algmt.alignment = NSTextAlignment.Justified
     
             attString.addAttribute(NSParagraphStyleAttributeName, value: algmt, range: NSMakeRange(0, attString.length))
@@ -398,11 +398,11 @@ class CardsViewController: UICollectionViewController {
         }
         
         for i in 0...cardsTabs.count-1{
-            var attString = NSMutableAttributedString(string: conteudoTabsA[i])
+            let attString = NSMutableAttributedString(string: conteudoTabsA[i])
             
-            var attImage = NSTextAttachment()
+            let attImage = NSTextAttachment()
             attImage.image = UIImage(named: conteudoImageTabs[i])
-            var imageString = NSAttributedString(attachment: attImage)
+            let imageString = NSAttributedString(attachment: attImage)
             
             attString.appendAttributedString(imageString)
             attString.appendAttributedString(NSMutableAttributedString(string: conteudoTabsB[i]))
@@ -419,9 +419,9 @@ class CardsViewController: UICollectionViewController {
         //        var green = CGFloat(200 - indexPath.row*25)/255
         //        var blue = CGFloat(150 - indexPath.row*25)/255
         
-        var red = CGFloat(corInicial - index.row*15)/255
-        var green = CGFloat(corInicial - index.row*15)/255
-        var blue = CGFloat(corInicial - index.row*15)/255
+        let red = CGFloat(corInicial - index.row*15)/255
+        let green = CGFloat(corInicial - index.row*15)/255
+        let blue = CGFloat(corInicial - index.row*15)/255
         return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
   

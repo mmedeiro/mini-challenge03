@@ -31,12 +31,12 @@ class ExposedLayout: UICollectionViewLayout {
         }
         
         var layoutAttributes = Dictionary<NSIndexPath,UICollectionViewLayoutAttributes>()
-        var itemCount = self.collectionView?.numberOfItemsInSection(0)
+        let itemCount = self.collectionView?.numberOfItemsInSection(0)
         var bottomOverlapCount = self.BottomLapCount
         
         for var item = 0; item < itemCount; item=item+1{
-            var index = NSIndexPath(forItem: item, inSection: 0)
-            var att = UICollectionViewLayoutAttributes(forCellWithIndexPath: index)
+            let index = NSIndexPath(forItem: item, inSection: 0)
+            let att = UICollectionViewLayoutAttributes(forCellWithIndexPath: index)
             
             if item < self.exposedItemIndex{
                 att.frame = CGRectMake(self.layoutMargin.left, self.layoutMargin.top - self.TopOverLap, itemSize.width, itemSize.height)
@@ -52,11 +52,11 @@ class ExposedLayout: UICollectionViewLayout {
                 att.hidden = true
             }
             else{
-                var count = min(self.BottomLapCount + 1, itemCount! - self.exposedItemIndex) - (item - self.exposedItemIndex)
+                let count = min(self.BottomLapCount + 1, itemCount! - self.exposedItemIndex) - (item - self.exposedItemIndex)
                 
                 
-                var tops = self.layoutMargin.top + itemSize.height
-                var bottons = CGFloat(count) * self.BottomOverLap
+                let tops = self.layoutMargin.top + itemSize.height
+                let bottons = CGFloat(count) * self.BottomOverLap
                 
                 att.frame = CGRectMake(self.layoutMargin.left, tops - bottons, itemSize.width, itemSize.height)
                 
@@ -73,22 +73,22 @@ class ExposedLayout: UICollectionViewLayout {
         
         self.layoutAttributes = layoutAttributes
     }
-    
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
-        var layoutAttributes = NSMutableArray()
+    override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        
+        var layoutAttributes = [UICollectionViewLayoutAttributes]()
         
         for item in self.layoutAttributes{
-            var att = item.1
+            let att = item.1
             if CGRectIntersectsRect(rect, att.frame){
-                layoutAttributes.addObject(att)
+                layoutAttributes.append(att)
             }
         }
         
-        return layoutAttributes as [AnyObject]
-        
+        return layoutAttributes as [UICollectionViewLayoutAttributes]
     }
     
-    override func  layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
+    
+    override func  layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
         return self.layoutAttributes[indexPath]
         
     }

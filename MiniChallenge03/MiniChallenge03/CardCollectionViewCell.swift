@@ -21,7 +21,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
  
-        self.layer.cornerRadius = self.frame.width/2
+        self.layer.cornerRadius = self.frame.width/8
 //        self.layer.borderColor = UIColor.blackColor().CGColor
         self.layer.borderWidth = 0.45
         

@@ -55,7 +55,7 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
-        var parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ParallaxViewCell
+        let parallaxCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ParallaxViewCell
         
         parallaxCell.frame = CGRect(x: 0, y: parallaxCell.frame.origin.y, width: self.collectionView.frame.width, height: parallaxCell.frame.height)
         parallaxCell.imageView.image = UIImage(named: "calculo")!
@@ -68,14 +68,14 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
     {
         if(kind == UICollectionElementKindSectionHeader)
         {
-            var view = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "header", forIndexPath: indexPath) as! headerReusableView
+            let view = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "header", forIndexPath: indexPath) as! headerReusableView
             view.initialFrame = view.frame
             header = view
             return view
         }
         else
         {
-            var view = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionFooter, withReuseIdentifier: "footer", forIndexPath: indexPath) as! UICollectionReusableView
+            let view = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionFooter, withReuseIdentifier: "footer", forIndexPath: indexPath)
             return view
         }
     }
@@ -95,7 +95,7 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
         {
             for parallaxCell in visibleCells
             {
-                var yOffset = ((collectionView!.contentOffset.y - parallaxCell.frame.origin.y) / ImageHeight) * OffsetSpeed
+                let yOffset = ((collectionView!.contentOffset.y - parallaxCell.frame.origin.y) / ImageHeight) * OffsetSpeed
                 parallaxCell.offset(CGPointMake(0.0, yOffset))
             }
         }
@@ -108,7 +108,7 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
         
-        var celula = self.collectionView.cellForItemAtIndexPath(indexPath)
+        let celula = self.collectionView.cellForItemAtIndexPath(indexPath)
         if materias[indexPath.row] == NSLocalizedString("canvas",  comment: "canvas")
         {
             self.performSegueWithIdentifier("tests", sender: celula)
@@ -125,7 +125,7 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        var index = self.collectionView.indexPathForCell(sender as! ParallaxViewCell)
+        let index = self.collectionView.indexPathForCell(sender as! ParallaxViewCell)
     
         if (segue.identifier == "tests")
         {
@@ -134,7 +134,7 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
         else if(segue.identifier == "calculadora"){
         }
         else{
-            var cards = segue.destinationViewController as! CardsViewController
+            let cards = segue.destinationViewController as! CardsViewController
             cards.materia = materias[index!.row]
         }
 

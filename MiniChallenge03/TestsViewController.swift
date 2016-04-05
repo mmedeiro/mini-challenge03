@@ -50,14 +50,14 @@ class TestsViewController: UIViewController {
         
         
         
-        var nav = self.navigationController?.navigationBar
+        let nav = self.navigationController?.navigationBar
         if let font = UIFont(name: "Palatino", size: 25) {
             nav?.titleTextAttributes = [NSFontAttributeName: font]
         }
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
         
-        self.navigationController!.interactivePopGestureRecognizer.enabled = false
+        self.navigationController!.interactivePopGestureRecognizer!.enabled = false
 //        self.navigationController?.navigationBarHidden = true
         self.navigationController?.navigationBarHidden = false
         
@@ -78,9 +78,9 @@ class TestsViewController: UIViewController {
         pushView.frame = CGRectMake(0, self.view.frame.height - buttonView.frame.height, pushView.frame.width, pushView.frame.height)
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
-    {
-        var touch = touches.first as! UITouch
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+
+        let touch = touches.first! // as! UITouch
         lastPoint = touch.locationInView(self.view)
         
         if(isInsideDraw(lastPoint))
@@ -101,9 +101,9 @@ class TestsViewController: UIViewController {
 
     }
     
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent)
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?)
     {
-        var touch = touches.first as! UITouch
+        let touch = touches.first! // as! UITouch
         var currentPoint = touch.locationInView(self.view)
         
         if(isInside(currentPoint) || speedControl)
@@ -124,10 +124,10 @@ class TestsViewController: UIViewController {
             
             CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y)
             CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y)
-            CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound)
+            CGContextSetLineCap(UIGraphicsGetCurrentContext(), .Round)
             CGContextSetLineWidth(UIGraphicsGetCurrentContext(), brush)
             CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), red, green, blue, 1.0)
-            CGContextSetBlendMode(UIGraphicsGetCurrentContext(), kCGBlendModeNormal)
+            CGContextSetBlendMode(UIGraphicsGetCurrentContext(), .Normal)
             
             CGContextStrokePath(UIGraphicsGetCurrentContext())
             
@@ -140,7 +140,7 @@ class TestsViewController: UIViewController {
         }
     }
     
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent)
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?)
     {
         speedControl = false
         
@@ -163,30 +163,30 @@ class TestsViewController: UIViewController {
     
     override func viewDidLayoutSubviews()
     {
-//        if(defineLayout)
-//        {
-//            pushView.frame = CGRectMake(0, self.view.frame.height - buttonView.frame.height, pushView.frame.width, pushView.frame.height)
-//            
-//        }
-//        else
-//        {
-//            if(self.navigationController != nil)
-//            {
-//                self.pushView.frame.origin.y = self.navigationController!.navigationBar.bounds.height + UIApplication.sharedApplication().statusBarFrame.height
-//            }
-//        }
+        if(defineLayout)
+        {
+            pushView.frame = CGRectMake(0, self.view.frame.height - buttonView.frame.height, pushView.frame.width, pushView.frame.height)
+            
+        }
+        else
+        {
+            if(self.navigationController != nil)
+            {
+                self.pushView.frame.origin.y = self.navigationController!.navigationBar.bounds.height + UIApplication.sharedApplication().statusBarFrame.height
+            }
+        }
 //
     }
     
     func isInside(point: CGPoint) -> Bool
     {
-        var rect = CGRectMake(pushView.frame.origin.x, pushView.frame.origin.y, buttonView.frame.width, buttonView.frame.height)
+        let rect = CGRectMake(pushView.frame.origin.x, pushView.frame.origin.y, buttonView.frame.width, buttonView.frame.height)
         return CGRectContainsPoint(rect, point)
     }
     
     func isInsideDraw(point: CGPoint) -> Bool
     {
-        var rect = CGRectMake(mainDraw.frame.origin.x, mainDraw.frame.origin.y, mainDraw.frame.width, mainDraw.frame.height)
+        let rect = CGRectMake(mainDraw.frame.origin.x, mainDraw.frame.origin.y, mainDraw.frame.width, mainDraw.frame.height)
         return CGRectContainsPoint(rect, point)
     }
     
