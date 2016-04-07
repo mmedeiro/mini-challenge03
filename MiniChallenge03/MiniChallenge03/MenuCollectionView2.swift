@@ -11,16 +11,15 @@ import UIKit
 let reuseIdentifier = "menuImage"
 
 var kImageOriginHeight = CGFloat(100)
-var materias = Array<String>()
+var materias:[NSDictionary] = []
 
-class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
+class MenuCollectionView2: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
 {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     var header : headerReusableView!
     
-    var imagens = [String]()
     
     override func viewDidLoad()
     {
@@ -29,15 +28,13 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
         if let font = UIFont(name: "Palatino", size: 25) {
             self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: font]
         }
-        
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MenuCollectionView.rotated), name: UIDeviceOrientationDidChangeNotification, object: nil)
-        
-        imagens.append("calculo")
         self.collectionView.contentInset = UIEdgeInsetsMake(-kImageOriginHeight, 0, 0, 0);
         
-        materias = [NSLocalizedString("precal",  comment: "pre calculo"), NSLocalizedString("limite",  comment: "limites"), NSLocalizedString("derivada",  comment: "derivada"), NSLocalizedString("integral",  comment: "integral"),NSLocalizedString("mais",  comment: "outro"), NSLocalizedString("calc",  comment: "calculadora")]
+        let jsm = JsonManager.sharedInstance;
+
+        materias = jsm.lerMaterias()
+
     }
 
     override func didReceiveMemoryWarning()
@@ -62,7 +59,7 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
         
         parallaxCell.frame = CGRect(x: 0, y: parallaxCell.frame.origin.y, width: self.collectionView.frame.width, height: parallaxCell.frame.height)
         parallaxCell.imageView.image = UIImage(named: "calculo")!
-        parallaxCell.title.text = materias[indexPath.row]
+        parallaxCell.title.text = materias[indexPath.row]["nome"] as? String
         return parallaxCell
         
     }
@@ -112,12 +109,8 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
     {
         
         let celula = self.collectionView.cellForItemAtIndexPath(indexPath)
-        if materias[indexPath.row] == NSLocalizedString("canvas",  comment: "canvas")
-        {
-            self.performSegueWithIdentifier("tests", sender: celula)
-            
-        }
-        else if materias[indexPath.row] == NSLocalizedString("calc",  comment: "calculadora"){
+        
+        if ( materias[indexPath.row]["codigo"] as? String) == "calculadora"{
             self.performSegueWithIdentifier("calculadora", sender: celula)
         }
         else
@@ -129,16 +122,10 @@ class MenuCollectionView: UIViewController,UICollectionViewDelegate,UICollection
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let index = self.collectionView.indexPathForCell(sender as! ParallaxViewCell)
-    
-        if (segue.identifier == "tests")
-        {
-            
-        }
-        else if(segue.identifier == "calculadora"){
-        }
-        else{
-            let cards = segue.destinationViewController as! CardsViewController
-            cards.materia = materias[index!.row]
+
+        if(segue.identifier == "cards"){
+            let cards = segue.destinationViewController as! CartaoController
+            cards.materia = materias[index!.row]["codigo"] as? String
         }
 
     }

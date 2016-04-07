@@ -21,8 +21,6 @@ class ExposedLayout: UICollectionViewLayout {
     }
     
     override func prepareLayout() {
-        var itemSize = self.itemSize
-        
         if CGSizeEqualToSize(itemSize, CGSizeZero){
             let width = CGRectGetWidth(self.collectionView!.bounds) - self.layoutMargin.left - self.layoutMargin.right
             let height = CGRectGetHeight(self.collectionView!.bounds) - self.layoutMargin.top - self.layoutMargin.bottom - self.collectionView!.contentInset.top - self.collectionView!.contentInset.bottom
@@ -32,7 +30,6 @@ class ExposedLayout: UICollectionViewLayout {
         
         var layoutAttributes = Dictionary<NSIndexPath,UICollectionViewLayoutAttributes>()
         let itemCount = self.collectionView?.numberOfItemsInSection(0)
-        var bottomOverlapCount = self.BottomLapCount
         
         for var item = 0; item < itemCount; item=item+1{
             let index = NSIndexPath(forItem: item, inSection: 0)
@@ -54,15 +51,13 @@ class ExposedLayout: UICollectionViewLayout {
             else{
                 let count = min(self.BottomLapCount + 1, itemCount! - self.exposedItemIndex) - (item - self.exposedItemIndex)
                 
-                
                 let tops = self.layoutMargin.top + itemSize.height
                 let bottons = CGFloat(count) * self.BottomOverLap
                 
                 att.frame = CGRectMake(self.layoutMargin.left, tops - bottons, itemSize.width, itemSize.height)
                 
-                if item == self.exposedItemIndex + bottomOverlapCount && att.frame.origin.y < self.collectionView!.bounds.size.height - self.layoutMargin.bottom{
-                    
-                    bottomOverlapCount = bottomOverlapCount + 1
+                if item == self.exposedItemIndex + BottomLapCount && att.frame.origin.y < self.collectionView!.bounds.size.height - self.layoutMargin.bottom{
+                    BottomLapCount = BottomLapCount + 1
                 }
             }
             
@@ -73,8 +68,8 @@ class ExposedLayout: UICollectionViewLayout {
         
         self.layoutAttributes = layoutAttributes
     }
+    
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        
         var layoutAttributes = [UICollectionViewLayoutAttributes]()
         
         for item in self.layoutAttributes{
@@ -87,9 +82,7 @@ class ExposedLayout: UICollectionViewLayout {
         return layoutAttributes as [UICollectionViewLayoutAttributes]
     }
     
-    
     override func  layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
         return self.layoutAttributes[indexPath]
-        
     }
 }

@@ -50,8 +50,6 @@ class StackedLayout: UICollectionViewLayout {
         var layoutAttributes = Dictionary<NSIndexPath,UICollectionViewLayoutAttributes>()
         let itemCount = self.collectionView!.numberOfItemsInSection(0)
         
-        
-        
         for item in 0...itemCount-1{
             let index = NSIndexPath(forItem: item, inSection: 0)
             let att = UICollectionViewLayoutAttributes(forCellWithIndexPath: index)

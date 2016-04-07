@@ -1,0 +1,38 @@
+{
+    "materias": [
+        {
+            "codigo": "precalculo"
+            , "nome": "Pré-Calculo"
+                 }
+
+        
+        , {
+            "codigo": "limites"
+            , "nome": "Limites"
+                 }
+
+        
+        , {
+            "codigo": "derivada"
+            , "nome": "Derivadas"
+                 }
+
+        
+        , {
+            "codigo": "integrais"
+            , "nome": "Integrais"
+                 }
+
+        
+        , {
+            "codigo": "tabela"
+            , "nome": "Tabelas"
+                 }
+
+        
+        , {
+            "codigo": "calculadora"
+            , "nome": "Calculadora"
+                 }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "O que é?": [{
+        "text": "Limites são a principal base de construção para os cálculos.\nMuitas vezes, uma função pode ser indefinida em um certo ponto, mas podemos pensar sobre o que a função se aproxima conforme chega cada vez mais perto deste ponto (este é o limite)."
+    }, {
+        "text": "\n\nOutras vezes, a função poderá estar definida em um certo ponto, mas poderá se aproximar de um limite diferente. São muitas as vezes nas quais o valor da função é o mesmo do limite em um ponto. De qualquer forma, este é um recurso muito útil conforme começamos a pensar sobre uma inclinação de uma reta tangente a uma curva."
+    }]
+    , "Definição": [{
+        "text": "Seja f uma função definida sobre um intervalo aberto que contém o número b, exceto possivelmente o próprio b. \nDizemos que o limite de f(x) quando x tende a b é L, e escrevemos: \n\n lim f(x) = L, x→a \n\n Se para todo ε > 0, existe um δ > 0 \n\ntal que\n\n 0<|x−a|<δ =⇒ |f(x)−L|<ε."
+    }, {
+        "text": "\n\n\n"
+    }]
+    , "Propiedades": [{
+        "text": "1) O limite da soma é a soma dos limites \n \n2) O limite da diferença é a diferença dos limites \n \n3) O limite do produto é o produto dos limites \n \n4) O limite do quociente é o quociente dos limites, desde que o denominador não seja zero \n \n5) O limite de uma constante é a propria constante"
+    }, {
+        "text": "\n \n6) O limite de uma função elevada a n é equivalente ao limite elevado a n desta função \n \n7) O limite da raiz enésima de uma função é equivalente a raiz enésima do limite dessa função\n \n8) O limite do logaritmo natural de uma função é equivalente ao logaritmo natural dessa função \n \n9) O limite de e elevado a uma função é equivalente a é elevado ao limite dessa função \n \n10) O limite do seno de uma função é equivalente ao seno do limite dessa função"
+    }]
+    , "Indeterminações": [{
+        "text": "1) 0 ÷ 0 \n \n2) ∞ - ∞ \n \n3) 0 x ∞ \n"
+    }, {
+        "text": "\n4) ∞ ÷ ∞ \n \n5) 0 ⁰ \n \n6) 1 ⁰⁰ \n \n7) ∞ ⁰ "
+    }]
+    , "Limites laterais e Continuidades": [{
+        "text": "Quando examinamos  estamos pensando que , isto é, x se aproxima de a, por valores maiores ou menores que a. Entretanto, podemos fazer x se aproximar de a apenas por valores maiores do que a. Nesse caso, dizemos que x tende a a pela direita e indicamos."
+    }, {
+        "text": "\n\n De modo análogo, podemos fazer x se aproximar de a apenas por valores menores do que a. Nesse caso, dizemos que x tende a a pela esquerda e indicamos .Existe  se e somente se ambos os limites laterais são iguais."
+    }]
+    , "Limites Fundamentais": [{
+        "text": "Lim"
+    }, {
+        "text": ""
+    }]
+    , "Exercícios Resolvidos": [{
+        "text": "exrcicios"
+    }]
+
+}
