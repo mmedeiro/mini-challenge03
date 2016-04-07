@@ -20,7 +20,7 @@
 		6EBBA5671B0E77B000357E93 /* ExposedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBBA5661B0E77B000357E93 /* ExposedLayout.swift */; };
 		6EBBA5691B0E781B00357E93 /* StackedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBBA5681B0E781B00357E93 /* StackedLayout.swift */; };
 		6EBBA56B1B0E784700357E93 /* CartaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBBA56A1B0E784700357E93 /* CartaoController.swift */; };
-		940F5C7F1CB6D65C00D1DB8C /* tabelas.json in Resources */ = {isa = PBXBuildFile; fileRef = 940F5C7B1CB6D65C00D1DB8C /* tabelas.json */; };
+		940F5C7F1CB6D65C00D1DB8C /* tabela.json in Resources */ = {isa = PBXBuildFile; fileRef = 940F5C7B1CB6D65C00D1DB8C /* tabela.json */; };
 		940F5C801CB6D65C00D1DB8C /* integrais.json in Resources */ = {isa = PBXBuildFile; fileRef = 940F5C7C1CB6D65C00D1DB8C /* integrais.json */; };
 		940F5C811CB6D65C00D1DB8C /* derivada.json in Resources */ = {isa = PBXBuildFile; fileRef = 940F5C7D1CB6D65C00D1DB8C /* derivada.json */; };
 		940F5C821CB6D65C00D1DB8C /* limites.json in Resources */ = {isa = PBXBuildFile; fileRef = 940F5C7E1CB6D65C00D1DB8C /* limites.json */; };
@@ -63,7 +63,7 @@
 		6EBBA5661B0E77B000357E93 /* ExposedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExposedLayout.swift; sourceTree = "<group>"; };
 		6EBBA5681B0E781B00357E93 /* StackedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackedLayout.swift; sourceTree = "<group>"; };
 		6EBBA56A1B0E784700357E93 /* CartaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartaoController.swift; sourceTree = "<group>"; };
-		940F5C7B1CB6D65C00D1DB8C /* tabelas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tabelas.json; sourceTree = "<group>"; };
+		940F5C7B1CB6D65C00D1DB8C /* tabela.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tabela.json; sourceTree = "<group>"; };
 		940F5C7C1CB6D65C00D1DB8C /* integrais.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = integrais.json; sourceTree = "<group>"; };
 		940F5C7D1CB6D65C00D1DB8C /* derivada.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = derivada.json; sourceTree = "<group>"; };
 		940F5C7E1CB6D65C00D1DB8C /* limites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = limites.json; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 			children = (
 				94F874821CB594EE000304ED /* Materias.json */,
 				94F874831CB594EE000304ED /* precalculo.json */,
-				940F5C7B1CB6D65C00D1DB8C /* tabelas.json */,
+				940F5C7B1CB6D65C00D1DB8C /* tabela.json */,
 				940F5C7C1CB6D65C00D1DB8C /* integrais.json */,
 				940F5C7D1CB6D65C00D1DB8C /* derivada.json */,
 				940F5C7E1CB6D65C00D1DB8C /* limites.json */,
@@ -289,7 +289,7 @@
 				4B3CB07A1B0511FC00F961B3 /* Images.xcassets in Resources */,
 				940F5C811CB6D65C00D1DB8C /* derivada.json in Resources */,
 				940F5C801CB6D65C00D1DB8C /* integrais.json in Resources */,
-				940F5C7F1CB6D65C00D1DB8C /* tabelas.json in Resources */,
+				940F5C7F1CB6D65C00D1DB8C /* tabela.json in Resources */,
 				940F5C821CB6D65C00D1DB8C /* limites.json in Resources */,
 				4B6B28651CB44363009F4A3A /* Main.storyboard in Resources */,
 				94F874841CB594EE000304ED /* Materias.json in Resources */,

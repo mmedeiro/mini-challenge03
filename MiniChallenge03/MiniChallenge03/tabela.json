@@ -1,0 +1,14 @@
+{
+    "Trigonometricas": [{
+        "image": "Tabela-Trigonometrica"
+    }]
+    , "Derivadas": [{
+        "image": "Tabela-Derivada"
+    }]
+    , "Integrais": [{
+        "image": "Tabela-Integral"
+    }]
+    , "Formulas Recursiva": [{
+        "image": "Tabela-Recorrencia"
+    }]
+}

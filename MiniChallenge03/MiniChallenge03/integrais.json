@@ -1,27 +1,29 @@
 {
     "O que é?": [{
-        "text": "No cálculo, a integral de uma função foi criada originalmente para determinar a área sob uma curva no plano cartesiano e também surge naturalmente em dezenas de problemas de Física, como por exemplo na determinação da posição em todos os instantes de um objeto, se for conhecida a sua velocidade instantânea em todos os instantes."
+        "text": "No cálculo, a integral de uma função foi criada originalmente para determinar a área sob uma curva no plano cartesiano e também surge naturalmente em dezenas de problemas de Física, como por exemplo na determinação da posição em todos os instantes de um objeto, se for conhecida a sua velocidade instantânea em todos os instantes.\n\n"
     }, {
-        "text": "\n\nO cálculo integral trata da ideia de soma ou integração de coisas infinitamente pequenas para chegar a um valor finito (frequentemente a área sob a curva)."
+        "text": "O cálculo integral trata da ideia de soma ou integração de coisas infinitamente pequenas para chegar a um valor finito (frequentemente a área sob a curva)."
     }]
     , "Definição": [{
-        "text": "Da mesma forma que a adição e a  subtração, a multiplicação e a divisão, a operação inversa da derivação é a antiderivação ou integração indefinida. \nDada uma função g(x), qualquer função f'(x) tal que f'(x) = g(x) é chamada integral indefinida ou antiderivada de f(x)."
+        "text": "Da mesma forma que a adição e a  subtração, a multiplicação e a divisão, a operação inversa da derivação é a antiderivação ou integração indefinida. \nDada uma função g(x), qualquer função f'(x) tal que f'(x) = g(x) é chamada integral indefinida ou antiderivada de f(x).\n\n "
     }, {
-        "text": "\n\n Nos exemplos 2 e 3 podemos observar que tanto x3 quando x3+4 são integrais indefinidas para 3x2. A diferença entre quaisquer destas funções (chamadas funções primitivas) é sempre uma constante, ou seja, a integral indefinida de 3x2 é  x3+C, onde C é uma constante real."
+        "text": "Nos exemplos 2 e 3 podemos observar que tanto x3 quando x3+4 são integrais indefinidas para 3x2. A diferença entre quaisquer destas funções (chamadas funções primitivas) é sempre uma constante, ou seja, a integral indefinida de 3x2 é  x3+C, onde C é uma constante real."
     }]
     , "Propiedades integrais indefinidas": [{
-        "text": "1) A integral da soma é a soma das integrais \n\n2) a integral da diferença é a diferença das integrais "
+        "text": "1) A integral da soma é a soma das integrais \n\n"
     }, {
-        "text": "\n\n3) A constante multiplicativa pode ser retirada da integral \n\n4) A derivada da integral de uma função é a própria função"
+        "text": "2) a integral da diferença é a diferença das integrais \n\n"
+    }, {
+        "text": "3) A constante multiplicativa pode ser retirada da integral \n\n"
+    }, {
+        "text": "4) A derivada da integral de uma função é a própria função\n\n"
     }]
     , "Método da Substituição": [{
-        "text": ""
-    }, {
-        "text": ""
+        "image": "Integral - Substituicao"
     }]
     , "Exercícios Resolvidos": [{
         "text": "Encontre as integrais das seguintes funções:\n"
     }, {
-        "text": ""
+        "image": "Integral-Exercicios"
     }]
 }
