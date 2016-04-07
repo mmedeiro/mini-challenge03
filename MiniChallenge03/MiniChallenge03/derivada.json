@@ -1,67 +1,84 @@
 {
-    "O que é?": [{
-        "text": "O conceito de derivada está intimamente relacionado à taxa de variação instantânea de uma função, o qual está presente no cotidiano das pessoas\n\n"
+    "conteudo": [{
+            "O que é?": [{
+                "text": "O conceito de derivada está intimamente relacionado à taxa de variação instantânea de uma função, o qual está presente no cotidiano das pessoas\n\n"
     }, {
-        "text": "Poderíamos ilustrar inúmeros exemplos que apresentam uma função variando e que a medida desta variação se faz necessária em um determinado momento."
+                "text": "Poderíamos ilustrar inúmeros exemplos que apresentam uma função variando e que a medida desta variação se faz necessária em um determinado momento."
     }]
-    , "Notações": [{
-        "image": "Derivada - Notacao"
+        }
+    
+        , {
+            "Notações": [{
+                "image": "Derivada - Notacao"
     }]
-    , "Definição": [{
-        "text": "A derivada de uma função y = f(x) num ponto x = x0 , é igual ao valor da tangente trigonométrica do ângulo formado pela tangente geométrica à curva representativa de y=f(x), no ponto x = x0, ou seja, a derivada é o coeficiente angular da reta tangente ao gráfico da função no ponto x0.\n\n"
+        }
+    
+        , {
+            "Definição": [{
+                "text": "A derivada de uma função y = f(x) num ponto x = x0 , é igual ao valor da tangente trigonométrica do ângulo formado pela tangente geométrica à curva representativa de y=f(x), no ponto x = x0, ou seja, a derivada é o coeficiente angular da reta tangente ao gráfico da função no ponto x0.\n\n"
     }, {
-        "text": "A derivada de uma função f(x) no ponto x0 é dada por: \n\n\n"
+                "text": "A derivada de uma função f(x) no ponto x0 é dada por: \n\n\n"
     }, {
-        "image": "Derivada - Definicao"
+                "image": "Derivada - Definicao"
     }]
-    , "Propriedades Básicas": [{
-        "text": "1) A derivada de uma constante é sempre zero. \n      Ex: k'=0\n\n"
+        }
+    
+        , {
+            "Propriedades Básicas": [{
+                "text": "1) A derivada de uma constante é sempre zero. \n      Ex: k'=0\n\n"
     }, {
-        "text": "2) A derivada de uma variável, elevada à primeira potência é sempre 1. \n      Ex: x'=1\n\n"
+                "text": "2) A derivada de uma variável, elevada à primeira potência é sempre 1. \n      Ex: x'=1\n\n"
     }, {
-        "text": "3) A derivada de uma constante multiplicada por 'x' (elevado à primeira potência) é sempre igual a constante. \n      Ex: (k.x)'= k\n\n"
+                "text": "3) A derivada de uma constante multiplicada por 'x' (elevado à primeira potência) é sempre igual a constante. \n      Ex: (k.x)'= k\n\n"
     }, {
-        "text": "4) A derivada da potência é igual ao expoente inicial multiplicado pela base com o expoente decrescido de uma unidade ('regra do tombo'); \n\n"
+                "text": "4) A derivada da potência é igual ao expoente inicial multiplicado pela base com o expoente decrescido de uma unidade ('regra do tombo'); \n\n"
     }, {
-        "text": "5) A derivada de uma constante multiplicada por uma função é igual a constante multiplicada pela derivada da função; \n\n"
+                "text": "5) A derivada de uma constante multiplicada por uma função é igual a constante multiplicada pela derivada da função; \n\n"
     }, {
-        "text": "6) A derivada da soma de funções é igual a soma das derivadas das funções; \n\n"
+                "text": "6) A derivada da soma de funções é igual a soma das derivadas das funções; \n\n"
     }, {
-        "text": "7) A derivada da diferença de funções é igual a diferença das derivadas das funções\n\n"
+                "text": "7) A derivada da diferença de funções é igual a diferença das derivadas das funções\n\n"
     }, {
-        "text": "8) A derivada da multiplicação de funções é igual a derivada da primeira função multiplicada pela segunda, somando com a primeira função multiplicada pela derivada da segunda. \n      Ex: (f.g)'=f'.g + f.g' \n\n"
+                "text": "8) A derivada da multiplicação de funções é igual a derivada da primeira função multiplicada pela segunda, somando com a primeira função multiplicada pela derivada da segunda. \n      Ex: (f.g)'=f'.g + f.g' \n\n"
     }, {
-        "text": "9) A derivada da divisão de funções é igual a derivada da função do numerador multiplicada pela função do denominador, subtraindo com a função do numerador multiplicada pela derivada da função do denominador; e tudo isso dividido pela função do denominador ao quadrado. \n      Ex: (f ÷ g)' = (f' . g - f . g') ÷ g² \n\n"
+                "text": "9) A derivada da divisão de funções é igual a derivada da função do numerador multiplicada pela função do denominador, subtraindo com a função do numerador multiplicada pela derivada da função do denominador; e tudo isso dividido pela função do denominador ao quadrado. \n      Ex: (f ÷ g)' = (f' . g - f . g') ÷ g² \n\n"
     }, {
-        "text": "10) A derivada da exponencial é a própria exponencial multiplicada pelo seu exponte (considerar a regra do tombo). \n      Ex: (eᵇ) = b . e ᵇ ⁻ ¹ \n\n"
+                "text": "10) A derivada da exponencial é a própria exponencial multiplicada pelo seu exponte (considerar a regra do tombo). \n      Ex: (eᵇ) = b . e ᵇ ⁻ ¹ \n\n"
     }, {
-        "text": "11) A derivada de uma constante elevada à uma função é igual a constante elevada à função, multiplicada pela derivada da função e multiplicada também pelo ln da constante. \n      Ex: (aᵍ)' = aᵍ . g' . lna \n\n"
+                "text": "11) A derivada de uma constante elevada à uma função é igual a constante elevada à função, multiplicada pela derivada da função e multiplicada também pelo ln da constante. \n      Ex: (aᵍ)' = aᵍ . g' . lna \n\n"
     }, {
-        "text": "12) A derivada do logaritmo neperiano de uma variável é igual a derivada da variável dividida pela própria variável. \n      Ex: (ln x) = (x' ÷ x) = (1 ÷ x) \n\n"
+                "text": "12) A derivada do logaritmo neperiano de uma variável é igual a derivada da variável dividida pela própria variável. \n      Ex: (ln x) = (x' ÷ x) = (1 ÷ x) \n\n"
     }, {
-        "text": "13) A derivada de uma função composta é a derivada da função de fora com a variável substituida pela função de dentro; multiplicando pela derivada da função de dentro ('regra da cadeia'). \n      Ex: (f ₀ g)' (x) = f'(g(x)) . g'(x) \n\n\n"
+                "text": "13) A derivada de uma função composta é a derivada da função de fora com a variável substituida pela função de dentro; multiplicando pela derivada da função de dentro ('regra da cadeia'). \n      Ex: (f ₀ g)' (x) = f'(g(x)) . g'(x) \n\n\n"
     }, {
-        "text": "OBS: Na pagina inicial você tem acesso a tabela de derivadas para te auxiliar nos estudos!"
+                "text": "OBS: Na pagina inicial você tem acesso a tabela de derivadas para te auxiliar nos estudos!"
     }]
-    , "Derivadas Trigonométricas": [{
-        "text": "1) A derivada do seno de uma função é igual ao cosseno da função. \n      Ex: (sen(x))' = cos (x) \n\n"
+        }
+    
+        , {
+            "Derivadas Trigonométricas": [{
+                "text": "1) A derivada do seno de uma função é igual ao cosseno da função. \n      Ex: (sen(x))' = cos (x) \n\n"
     }, {
-        "text": "2) A derivada do cosseno de uma função é igual ao -seno  da função. \n      Ex: (cos(x))' = - sen (x) \n\n"
+                "text": "2) A derivada do cosseno de uma função é igual ao -seno  da função. \n      Ex: (cos(x))' = - sen (x) \n\n"
     }, {
-        "text": "3) A derivada da tangente de uma função é igual a secante ao quadrado da função. \n      Ex: (tg(x))' = sec²(x) \n\n"
+                "text": "3) A derivada da tangente de uma função é igual a secante ao quadrado da função. \n      Ex: (tg(x))' = sec²(x) \n\n"
     }, {
-        "text": "4) A derivada da cotangente de uma função é igual a -cossecante da função. \n      Ex: (cot(x))' = - cossec (x) \n\n"
+                "text": "4) A derivada da cotangente de uma função é igual a -cossecante da função. \n      Ex: (cot(x))' = - cossec (x) \n\n"
     }, {
-        "text": "5) A derivada da secante uma função é igual a secante da função, multiplicada pela tangente da função. \n      Ex: (sec(x))' = sec(x) . tg(x) \n\n"
+                "text": "5) A derivada da secante uma função é igual a secante da função, multiplicada pela tangente da função. \n      Ex: (sec(x))' = sec(x) . tg(x) \n\n"
     }, {
-        "text": "6) A derivada da cossecante de uma função é igual a -cossecante da função, multiplicada pela cotangente da função. \n      Ex: (cossec(x))' = - cossec (x) . cot (x)  \n\n\n"
+                "text": "6) A derivada da cossecante de uma função é igual a -cossecante da função, multiplicada pela cotangente da função. \n      Ex: (cossec(x))' = - cossec (x) . cot (x)  \n\n\n"
     }, {
-        "text": "OBS: Na pagina inicial você tem acesso a tabela de derivadas para te auxiliar nos estudos!"
+                "text": "OBS: Na pagina inicial você tem acesso a tabela de derivadas para te auxiliar nos estudos!"
     }]
-    , "Exercícios Resolvidos": [{
-        "text": "Calcule a derivada das funções a seguir:\n"
+        }
+    
+        , {
+            "Exercícios Resolvidos": [{
+                "text": "Calcule a derivada das funções a seguir:\n"
     }, {
-        "image": "Derivada - Exercicios"
+                "image": "Derivada - Exercicios"
     }]
+        }]
 
 }

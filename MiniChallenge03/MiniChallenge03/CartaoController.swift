@@ -212,9 +212,10 @@ class CartaoController: UICollectionViewController {
     private func populaCards(){
         let jsm = JsonManager.sharedInstance
         let materiaCard = jsm.lerConteudo(materia!)
-        
-        for conteudo in materiaCard{
-            cards.append(Card(titulo: conteudo.0, conteudo: conteudo.1))
+        for item in materiaCard{
+            for conteudo in item{
+                cards.append(Card(titulo: conteudo.0, conteudo: conteudo.1))
+            }
         }
     }
 

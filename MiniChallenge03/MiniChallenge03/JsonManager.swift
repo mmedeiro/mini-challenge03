@@ -21,8 +21,9 @@ class JsonManager: NSObject {
         return jsonData["materias"]!
     }
     
-    func lerConteudo(materia:String) -> [String:Array<NSDictionary>] {
-        return readJson(materia) as! [String:Array<NSDictionary>]
+    func lerConteudo(materia:String) -> [[String:Array<NSDictionary>] ] {
+        let conteudo = readJson(materia) as! [String:Array<NSDictionary>]
+        return conteudo.first!.1 as! [[String:Array<NSDictionary>] ]
     }
     
     

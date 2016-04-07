@@ -1,42 +1,59 @@
 {
-    "Conjuntos Numéricos": [{
-        "image": "PreCal-Conjuntos"
+    "conteudo": [
+        {
+            "Conjuntos Numéricos": [{
+                "image": "PreCal-Conjuntos"
     }, {
-        "text": "imagem"
+                "text": "imagem"
     }]
-    , "Polinômios": [{
-        "text": "Podemos classificar os polinômios das seguintes formas: \n\n - monômio: quando há apenas um termo;\n - binômio: quando há três termos;\n - trinômio: quando há três termos; - polinômio: quando há mais de três termos.\n"
+        }
+    
+        , {
+            "Polinômios": [{
+                "text": "Podemos classificar os polinômios das seguintes formas: \n\n - monômio: quando há apenas um termo;\n - binômio: quando há três termos;\n - trinômio: quando há três termos; - polinômio: quando há mais de três termos.\n"
     }, {
-        "text": "\n\n1) Adição de Polinômios: Deve-se sempre agrupar os termos semelhantes e realizar suas adições. "
+                "text": "\n\n1) Adição de Polinômios: Deve-se sempre agrupar os termos semelhantes e realizar suas adições. "
     }, {
-        "text": "\n\n2) Multiplicação de um monômio por um polinômio: Para desenvolver o produto de um monômio por um polinômio é necessário que se tenha conhecimento sobre a propriedade distributiva da multiplicação, pois est multiplicação é feita multiplicando-se o monômio por cada termo do polinômio. "
+                "text": "\n\n2) Multiplicação de um monômio por um polinômio: Para desenvolver o produto de um monômio por um polinômio é necessário que se tenha conhecimento sobre a propriedade distributiva da multiplicação, pois est multiplicação é feita multiplicando-se o monômio por cada termo do polinômio. "
     }, {
-        "text": "\n\n3)Muliplicação de um polinômio por outro polinômio: Da mesma forma que no caso anterior, a multiplicação de um polinômio por outro polinômio é feita utilizando a propriedade distributiva da multiplicação, ou seja, deve-se multiplicar cada termo do primeiro polinômio por cada termo do segundo polinômio. "
+                "text": "\n\n3)Muliplicação de um polinômio por outro polinômio: Da mesma forma que no caso anterior, a multiplicação de um polinômio por outro polinômio é feita utilizando a propriedade distributiva da multiplicação, ou seja, deve-se multiplicar cada termo do primeiro polinômio por cada termo do segundo polinômio. "
     }, {
-        "text": "\n\n4) Divisão de um polinômio por um monômio: O quociente de um polinômio é dado através da divisão de cada termo do polinômio pelo monômio, desde que este não seja nulo. Para isto é importante conhecer bem as propriedades da potenciação."
+                "text": "\n\n4) Divisão de um polinômio por um monômio: O quociente de um polinômio é dado através da divisão de cada termo do polinômio pelo monômio, desde que este não seja nulo. Para isto é importante conhecer bem as propriedades da potenciação."
     }]
-    , "Trigonometria": [{
-        "text": "As Funções trigonométricas básicas são relações entre as medidas dos lados do triângulo retângulo e seus ângulos. As três funções básicas mais importantes da trigonometria são:\n\n"
+        }
+    
+        , {
+            "Trigonometria": [{
+                "text": "As Funções trigonométricas básicas são relações entre as medidas dos lados do triângulo retângulo e seus ângulos. As três funções básicas mais importantes da trigonometria são:\n\n"
     }, {
-        "image": "PreCal-Trigonometria"
+                "image": "PreCal-Trigonometria"
     }, {
-        "text": "\n\nO ângulo é indicado pela letra x. "
+                "text": "\n\nO ângulo é indicado pela letra x. "
     }]
-    , "Equações": [{
-        "text": "Uma equação é um sentença matemática formada por uma igualdade composta por expressões matemáticas que contenham ao menos uma incógnita. Cada uma das expressões da igualdade contém coeficientes e incógnitas. \nOs coeficientes são os valores determinados. As incógnitas são os valores desconhecidos que dependendo do valor que assumam, podem tornar a equação verdadeira ou falsa."
+        }
+    
+        , {
+            "Equações": [{
+                "text": "Uma equação é um sentença matemática formada por uma igualdade composta por expressões matemáticas que contenham ao menos uma incógnita. Cada uma das expressões da igualdade contém coeficientes e incógnitas. \nOs coeficientes são os valores determinados. As incógnitas são os valores desconhecidos que dependendo do valor que assumam, podem tornar a equação verdadeira ou falsa."
     }, {
-        "text": "\n\n Exemplo equação de primeiro grau: \n\n"
+                "text": "\n\n Exemplo equação de primeiro grau: \n\n"
     }, {
-        "text": "[2(x - 5) + 4(1 - 2x)] ÷ 20 = 5 (3 - x) ÷ 20\n2x - 10 + 4 - 8x = 15 - 5x\n-6x -6 = 15 - 5x\n-6x + 5x = 15 + 6\n-x = 21 \nx = -21"
+                "text": "[2(x - 5) + 4(1 - 2x)] ÷ 20 = 5 (3 - x) ÷ 20\n2x - 10 + 4 - 8x = 15 - 5x\n-6x -6 = 15 - 5x\n-6x + 5x = 15 + 6\n-x = 21 \nx = -21"
     }, {
-        "text": "\n\nExemplo equação de segundo grau: \n\n"
+                "text": "\n\nExemplo equação de segundo grau: \n\n"
     }, {
-        "text": "4x² + 24x - x² = 5x²\n4x² - x² - 5x² = -24x\n-2x² = -24x \nDividindo os dois lados por x:\n-2x = -24\nx=24 ÷ 2\nx = 12"
+                "text": "4x² + 24x - x² = 5x²\n4x² - x² - 5x² = -24x\n-2x² = -24x \nDividindo os dois lados por x:\n-2x = -24\nx=24 ÷ 2\nx = 12"
     }]
-    , "Inequações": [{
-        "text": "Inequação é uma sentença matemática, com uma ou mais incógnitas, expressas por uma desigualdade(≠), diferenciando da equação, que representa uma igualdade(=). Elas são representadas através de relações que não são de equivalência."
+        }
+    
+        , {
+            "Inequações": [{
+                "text": "Inequação é uma sentença matemática, com uma ou mais incógnitas, expressas por uma desigualdade(≠), diferenciando da equação, que representa uma igualdade(=). Elas são representadas através de relações que não são de equivalência."
     }, {
-        "text": "\n\nEm outras palavras, apresentam os sinais de maior (>) ou menor (<) ao invês do sinal de igualdade que é o caracteriza as equações"
+                "text": "\n\nEm outras palavras, apresentam os sinais de maior (>) ou menor (<) ao invês do sinal de igualdade que é o caracteriza as equações"
     }]
+        }
+    ]
+
 
 }
