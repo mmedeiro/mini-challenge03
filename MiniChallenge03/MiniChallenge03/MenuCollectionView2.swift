@@ -29,6 +29,8 @@ class MenuCollectionView2: UIViewController,UICollectionViewDelegate,UICollectio
             self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: font]
         }
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        
+        
         self.collectionView.contentInset = UIEdgeInsetsMake(-kImageOriginHeight, 0, 0, 0);
         
         let jsm = JsonManager.sharedInstance;
@@ -118,6 +120,9 @@ class MenuCollectionView2: UIViewController,UICollectionViewDelegate,UICollectio
             self.performSegueWithIdentifier("cards", sender: celula)
         }
     }
+    
+
+    
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

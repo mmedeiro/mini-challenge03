@@ -9,7 +9,9 @@
         , {
             "Derivadas": [{
                 "image": "Tabela-Derivada"
-    }]
+                          },{
+                          "text":"\n\n\n\n"
+                          }]
         }
 
         

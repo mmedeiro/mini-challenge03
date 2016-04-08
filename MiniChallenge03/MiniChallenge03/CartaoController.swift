@@ -101,9 +101,15 @@ class CartaoController: UICollectionViewController {
         self.auxIndex = exposedItemIndexPath
         
     }
+    
+//    override func viewDidAppear(animated: Bool) {
+//        self.navigationController?.navigationBarHidden = false
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         tap = UITapGestureRecognizer(target: self , action: #selector(CartaoController.handleTap))
         tap?.numberOfTapsRequired = 2

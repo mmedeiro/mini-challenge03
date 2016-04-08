@@ -700,7 +700,7 @@
                         </connections>
                     </collectionView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Calculus - Sem Limites" id="fI7-e3-xZ2">
+                    <navigationItem key="navigationItem" title="Calculus" id="fI7-e3-xZ2">
                         <barButtonItem key="backBarButtonItem" title=" " id="GEb-PS-UxB"/>
                     </navigationItem>
                     <connections>
@@ -711,7 +711,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5I-yT-Jko" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-901" y="243"/>
+            <point key="canvasLocation" x="-901" y="235"/>
         </scene>
         <!--Title-->
         <scene sceneID="pCk-uQ-Aa8">
