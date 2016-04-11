@@ -5,14 +5,20 @@
     }]
         }
 
+
+
         
         , {
             "Derivadas": [{
-                "image": "Tabela-Derivada"
-                          },{
-                          "text":"\n\n\n\n"
+                "image": "tabelaDer1"
+                          }, {
+                "image": "tabelaDer2"
+                          }, {
+                "image": "tabelaDer3"
                           }]
         }
+
+
 
         
         , {
@@ -20,6 +26,8 @@
                 "image": "Tabela-Integral"
     }]
         }
+
+
 
         
         , {

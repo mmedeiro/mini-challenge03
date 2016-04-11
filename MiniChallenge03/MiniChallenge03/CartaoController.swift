@@ -10,42 +10,15 @@ import UIKit
 
 class CartaoController: UICollectionViewController {
     
-
+    
     @IBOutlet var titulo: UINavigationItem!
     
-    var materia: String?
+    var materiaCod: String?
+    var materiaTitulo: String?
     var cards:[Card] = []
     
     var tap: UITapGestureRecognizer?
-    
-//    var conteudoPreCalculoA = Array<String>()
-//    var conteudoPreCalculoB = Array<String>()
-//    var conteudoLimitesA = Array<String>()
-//    var conteudoLimitesB = Array<String>()
-//    var conteudoDerivadasA = Array<String>()
-//    var conteudoDerivadasB = Array<String>()
-//    var conteudoIntegraisA = Array<String>()
-//    var conteudoIntegraisB = Array<String>()
-//    var conteudoCalculadoraA = Array<String>()
-//    var conteudoCalculadoraB = Array<String>()
-//    var conteudoTabsA = Array<String>()
-//    var conteudoTabsB = Array<String>()
-//
-//    
-//    var conteudoImagePreCalculo = Array<String>()
-//    var conteudoImageLimite = Array<String>()
-//    var conteudoImageDerivada = Array<String>()
-//    var conteudoImageIntegral = Array<String>()
-//    var conteudoImageCalculadora = Array<String>()
-//    var conteudoImageTabs = Array<String>()
-//    
-//    var cardsPreCalculo = Array<Card>()
-//    var cardsLimites = Array<Card>()
-//    var cardsDerivadas = Array<Card>()
-//    var cardsIntegrais = Array<Card>()
-//    var cardsCalculadora = Array<Card>()
-//    var cardsTabs = Array<Card>()
-    
+    var pinch: UIPinchGestureRecognizer?
     
     var stackedLayout = StackedLayout()
     var stackedContentOffset = CGPoint()
@@ -70,7 +43,7 @@ class CartaoController: UICollectionViewController {
             self.setExposedItemIndexPath(newVal)
         }
     }
- 
+    
     func setExposedItemIndexPath(exposedItemIndexPath: NSIndexPath?){
         
         if (exposedIndexPath == nil){
@@ -102,10 +75,10 @@ class CartaoController: UICollectionViewController {
         
     }
     
-//    override func viewDidAppear(animated: Bool) {
-//        self.navigationController?.navigationBarHidden = false
-//    }
-
+    //    override func viewDidAppear(animated: Bool) {
+    //        self.navigationController?.navigationBarHidden = false
+    //    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -114,9 +87,12 @@ class CartaoController: UICollectionViewController {
         tap = UITapGestureRecognizer(target: self , action: #selector(CartaoController.handleTap))
         tap?.numberOfTapsRequired = 2
         
-        self.collectionView?.addGestureRecognizer(tap!)
+        pinch = UIPinchGestureRecognizer(target: self, action: #selector(CartaoController.handlePinch))
         
-        self.titulo.title = materia!
+        self.collectionView?.addGestureRecognizer(tap!)
+        self.collectionView?.addGestureRecognizer(pinch!)
+        
+        self.titulo.title = materiaTitulo!
         
         
         if let font = UIFont(name: "Palatino", size: 25) {
@@ -124,23 +100,10 @@ class CartaoController: UICollectionViewController {
             nav?.titleTextAttributes = [NSFontAttributeName: font]
         }
         
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CartaoController.rotated), name: UIDeviceOrientationDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CartaoController.rotated), name: UIDeviceOrientationDidChangeNotification, object: nil)
         
         self.populaCards()
-        //self.populaConteudo()
         
-//        materias = [NSLocalizedString("precal",     comment: "pre calculo"),
-//                    NSLocalizedString("limite",     comment: "limites"),
-//                    NSLocalizedString("derivada",   comment: "derivada"),
-//                    NSLocalizedString("integral",   comment: "integral"),
-//                    NSLocalizedString("mais",       comment: "outro"),
-//                    NSLocalizedString("calc",       comment: "calculadora"),
-//                    ]
-        
-        
-//        cardsMateria = [materias[0] : cardsPreCalculo , materias[1] : cardsLimites , materias[2] : cardsDerivadas, materias[3] : cardsIntegrais, materias[4] : cardsTabs, materias[5] : cardsCalculadora]
-        
-
         self.collectionView?.collectionViewLayout = self.stackedLayout
         
     }
@@ -164,7 +127,7 @@ class CartaoController: UICollectionViewController {
         else{
             cell.textViewConteudo.hidden = true
         }
-
+        
         cell.backgroundColor = self.geraCorCards(indexPath,corInicial: 220)
         cell.layer.borderColor = self.geraCorCards(indexPath, corInicial: 200).CGColor
         
@@ -195,13 +158,11 @@ class CartaoController: UICollectionViewController {
         }
     }
     
-    func rotated()
-    {
+    func rotated(){
         self.collectionView!.reloadData()
-        //self.view.setNeedsLayout()
-        
+        self.view.setNeedsLayout()
     }
-
+    
     //MARK: Gesture
     
     @IBAction func handleTap() {
@@ -209,30 +170,53 @@ class CartaoController: UICollectionViewController {
         if self.exposedIndexPath != nil {
             self.collectionView(self.collectionView!, didSelectItemAtIndexPath: exposedIndexPath!)
         }
-
+        
+        
+    }
+    
+    func handlePinch(pinchRecognizer: UIPinchGestureRecognizer){
+        let scale: CGFloat = pinchRecognizer.scale;
+        
+        var aux = widthCard
+        
+        if scale>1 {
+            aux += 50
+        }
+        else if(scale<1){
+            aux -= 50
+        }
+        
+        if widthCard > 200 || (scale>1 && widthCard<1000){
+            widthCard = aux
+            cards = []
+            populaCards()
+        }
+        
+        self.collectionView?.reloadData()
     }
     
     //MARK: CARDS E CONTEUDO
     
+    var widthCard:CGFloat = 400
     
     private func populaCards(){
         let jsm = JsonManager.sharedInstance
-        let materiaCard = jsm.lerConteudo(materia!)
+        let materiaCard = jsm.lerConteudo(materiaCod!)
         for item in materiaCard{
             for conteudo in item{
-                cards.append(Card(titulo: conteudo.0, conteudo: conteudo.1))
+                cards.append(Card(titulo: conteudo.0, conteudoA: conteudo.1,width:widthCard))
             }
         }
     }
-
+    
     private func geraCorCards(index: NSIndexPath, corInicial: Int)->UIColor{
-
+        
         let red = CGFloat(corInicial - index.row*15)/255
         let green = CGFloat(corInicial - index.row*15)/255
         let blue = CGFloat(corInicial - index.row*15)/255
         return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
-  
+    
 }
 
 

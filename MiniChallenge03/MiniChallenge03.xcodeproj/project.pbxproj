@@ -10,7 +10,6 @@
 		4B0CB2641B18F52A00456D94 /* DesignableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CB2631B18F52A00456D94 /* DesignableViews.swift */; };
 		4B3CB0701B0511FC00F961B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CB06F1B0511FC00F961B3 /* AppDelegate.swift */; };
 		4B3CB0731B0511FC00F961B3 /* MiniChallenge03.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CB0711B0511FC00F961B3 /* MiniChallenge03.xcdatamodeld */; };
-		4B3CB07A1B0511FC00F961B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3CB0791B0511FC00F961B3 /* Images.xcassets */; };
 		4B3CB07D1B0511FC00F961B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3CB07B1B0511FC00F961B3 /* LaunchScreen.xib */; };
 		4B3CB0891B0511FC00F961B3 /* MiniChallenge03Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CB0881B0511FC00F961B3 /* MiniChallenge03Tests.swift */; };
 		4B6B28651CB44363009F4A3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6B28641CB44363009F4A3A /* Main.storyboard */; };
@@ -24,6 +23,7 @@
 		940F5C801CB6D65C00D1DB8C /* integrais.json in Resources */ = {isa = PBXBuildFile; fileRef = 940F5C7C1CB6D65C00D1DB8C /* integrais.json */; };
 		940F5C811CB6D65C00D1DB8C /* derivada.json in Resources */ = {isa = PBXBuildFile; fileRef = 940F5C7D1CB6D65C00D1DB8C /* derivada.json */; };
 		940F5C821CB6D65C00D1DB8C /* limites.json in Resources */ = {isa = PBXBuildFile; fileRef = 940F5C7E1CB6D65C00D1DB8C /* limites.json */; };
+		94562A091CB83F4D00F18730 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94562A081CB83F4D00F18730 /* Images.xcassets */; };
 		9481ECB61CB59AF900AD08B1 /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9481ECB51CB59AF900AD08B1 /* JsonManager.swift */; };
 		9481ECB81CB5A4CB00AD08B1 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9481ECB71CB5A4CB00AD08B1 /* CardCollectionViewCell.swift */; };
 		94F874841CB594EE000304ED /* Materias.json in Resources */ = {isa = PBXBuildFile; fileRef = 94F874821CB594EE000304ED /* Materias.json */; };
@@ -49,7 +49,6 @@
 		4B3CB06E1B0511FC00F961B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B3CB06F1B0511FC00F961B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B3CB0721B0511FC00F961B3 /* MiniChallenge03.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiniChallenge03.xcdatamodel; sourceTree = "<group>"; };
-		4B3CB0791B0511FC00F961B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4B3CB07C1B0511FC00F961B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4B3CB0821B0511FC00F961B3 /* MiniChallenge03Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniChallenge03Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3CB0871B0511FC00F961B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		940F5C7C1CB6D65C00D1DB8C /* integrais.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = integrais.json; sourceTree = "<group>"; };
 		940F5C7D1CB6D65C00D1DB8C /* derivada.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = derivada.json; sourceTree = "<group>"; };
 		940F5C7E1CB6D65C00D1DB8C /* limites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = limites.json; sourceTree = "<group>"; };
+		94562A081CB83F4D00F18730 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9481ECB51CB59AF900AD08B1 /* JsonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
 		9481ECB71CB5A4CB00AD08B1 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		94F874821CB594EE000304ED /* Materias.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Materias.json; sourceTree = "<group>"; };
@@ -121,9 +121,9 @@
 				4B3CB06F1B0511FC00F961B3 /* AppDelegate.swift */,
 				4B0CB2631B18F52A00456D94 /* DesignableViews.swift */,
 				4B6B28641CB44363009F4A3A /* Main.storyboard */,
-				4B3CB0791B0511FC00F961B3 /* Images.xcassets */,
 				4B3CB07B1B0511FC00F961B3 /* LaunchScreen.xib */,
 				4B3CB0711B0511FC00F961B3 /* MiniChallenge03.xcdatamodeld */,
+				94562A081CB83F4D00F18730 /* Images.xcassets */,
 				4B3CB06D1B0511FC00F961B3 /* Supporting Files */,
 				4BD4AC9B1B1399B6001FF646 /* Localizable.strings */,
 			);
@@ -284,9 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BD4AC991B1399B6001FF646 /* Localizable.strings in Resources */,
+				94562A091CB83F4D00F18730 /* Images.xcassets in Resources */,
 				4B3CB07D1B0511FC00F961B3 /* LaunchScreen.xib in Resources */,
 				94F874851CB594EE000304ED /* precalculo.json in Resources */,
-				4B3CB07A1B0511FC00F961B3 /* Images.xcassets in Resources */,
 				940F5C811CB6D65C00D1DB8C /* derivada.json in Resources */,
 				940F5C801CB6D65C00D1DB8C /* integrais.json in Resources */,
 				940F5C7F1CB6D65C00D1DB8C /* tabela.json in Resources */,

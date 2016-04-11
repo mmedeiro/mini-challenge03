@@ -7,7 +7,12 @@
                 "text": "\n\nOutras vezes, a função poderá estar definida em um certo ponto, mas poderá se aproximar de um limite diferente. São muitas as vezes nas quais o valor da função é o mesmo do limite em um ponto. De qualquer forma, este é um recurso muito útil conforme começamos a pensar sobre uma inclinação de uma reta tangente a uma curva."
     }]
         }
-    
+
+
+
+
+
+        
         , {
             "Definição": [{
                 "text": "Seja f uma função definida sobre um intervalo aberto que contém o número b, exceto possivelmente o próprio b. \nDizemos que o limite de f(x) quando x tende a b é L, e escrevemos: \n\n "
@@ -21,7 +26,12 @@
                 "text": "tal que\n\n 0<|x−a|<δ =⇒ |f(x)−L|<ε."
     }]
         }
-    
+
+
+
+
+
+        
         , {
             "Propiedades": [{
                 "text": "1) O limite da soma é a soma dos limites \n \n"
@@ -45,7 +55,12 @@
                 "text": "10) O limite do seno de uma função é equivalente ao seno do limite dessa função"
     }]
         }
-    
+
+
+
+
+
+        
         , {
             "Indeterminações": [{
                 "text": "1) 0 ÷ 0 \n \n"
@@ -63,25 +78,54 @@
                 "text": "7) ∞ ⁰ "
     }]
         }
-    
+
+
+
+
+
+        
         , {
             "Limites laterais e Continuidades": [{
                 "text": "Quando examinamos  estamos pensando que , isto é, x se aproxima de a, por valores maiores ou menores que a. Entretanto, podemos fazer x se aproximar de a apenas por valores maiores do que a. Nesse caso, dizemos que x tende a a pela direita e indicamos."
     }, {
                 "text": "\n\n De modo análogo, podemos fazer x se aproximar de a apenas por valores menores do que a. Nesse caso, dizemos que x tende a a pela esquerda e indicamos .Existe  se e somente se ambos os limites laterais são iguais."
+    }, {
+                "image": "limiteLat1"
+    }, {
+                "image": "limiteLat2"
+    }, {
+                "image": "limiteLat3"
+    }, {
+                "image": "limiteLat4"
     }]
         }
-    
+
+
+
+
+
+        
         , {
             "Limites Fundamentais": [{
-                "image": "Limites-Limites Fundamentais"
-    }]
+                "image": "limiteFundamental2"
+    }, ]
         }
-    
+
+
+
+
+
+        
         , {
             "Exercícios Resolvidos": [{
-                "image": "Limites-Exercicios"
-    }]
+                "text": "Exercício 1 : \n\n"
+            }, {
+                "image": "limitesEx1"
+                                      }, {
+                "text": "\n\n Exercício 2 : \n\n"
+                                      }, {
+                "image": "limitesEx2"
+                                      }]
         }
     ]
 

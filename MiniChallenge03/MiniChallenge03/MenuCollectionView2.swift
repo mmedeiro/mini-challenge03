@@ -130,7 +130,8 @@ class MenuCollectionView2: UIViewController,UICollectionViewDelegate,UICollectio
 
         if(segue.identifier == "cards"){
             let cards = segue.destinationViewController as! CartaoController
-            cards.materia = materias[index!.row]["codigo"] as? String
+            cards.materiaCod = materias[index!.row]["codigo"] as? String
+            cards.materiaTitulo = materias[index!.row]["nome"] as? String
         }
 
     }

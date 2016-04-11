@@ -746,7 +746,7 @@
                                                 <action selector="buttonTeste:" destination="QGd-QQ-E45" eventType="touchUpInside" id="Leo-eX-2mT"/>
                                             </connections>
                                         </button>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-OM-rvR">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-OM-rvR">
                                             <rect key="frame" x="8" y="89" width="584" height="481"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <attributedString key="attributedText"/>
