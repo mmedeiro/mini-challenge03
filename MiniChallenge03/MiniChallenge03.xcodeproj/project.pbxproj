@@ -13,7 +13,6 @@
 		4B3CB07D1B0511FC00F961B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3CB07B1B0511FC00F961B3 /* LaunchScreen.xib */; };
 		4B3CB0891B0511FC00F961B3 /* MiniChallenge03Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CB0881B0511FC00F961B3 /* MiniChallenge03Tests.swift */; };
 		4B6B28651CB44363009F4A3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6B28641CB44363009F4A3A /* Main.storyboard */; };
-		4BD4AC991B1399B6001FF646 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4AC9B1B1399B6001FF646 /* Localizable.strings */; };
 		6E9FF6251B14EB1100997649 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FF6241B14EB1100997649 /* Card.swift */; };
 		6EBAB1CB1B178B4B007087AF /* CalculadoraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBAB1CA1B178B4B007087AF /* CalculadoraViewController.swift */; };
 		6EBBA5671B0E77B000357E93 /* ExposedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBBA5661B0E77B000357E93 /* ExposedLayout.swift */; };
@@ -55,8 +54,6 @@
 		4B3CB0881B0511FC00F961B3 /* MiniChallenge03Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge03Tests.swift; sourceTree = "<group>"; };
 		4B6B28641CB44363009F4A3A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = MiniChallenge03/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		4BD4AC981B1399AC001FF646 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		4BD4AC9A1B1399B6001FF646 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4BD4AC9C1B1399BA001FF646 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6E9FF6241B14EB1100997649 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		6EBAB1CA1B178B4B007087AF /* CalculadoraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalculadoraViewController.swift; path = ../CalculadoraViewController.swift; sourceTree = "<group>"; };
 		6EBBA5661B0E77B000357E93 /* ExposedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExposedLayout.swift; sourceTree = "<group>"; };
@@ -125,7 +122,6 @@
 				4B3CB0711B0511FC00F961B3 /* MiniChallenge03.xcdatamodeld */,
 				94562A081CB83F4D00F18730 /* Images.xcassets */,
 				4B3CB06D1B0511FC00F961B3 /* Supporting Files */,
-				4BD4AC9B1B1399B6001FF646 /* Localizable.strings */,
 			);
 			path = MiniChallenge03;
 			sourceTree = "<group>";
@@ -283,7 +279,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BD4AC991B1399B6001FF646 /* Localizable.strings in Resources */,
 				94562A091CB83F4D00F18730 /* Images.xcassets in Resources */,
 				4B3CB07D1B0511FC00F961B3 /* LaunchScreen.xib in Resources */,
 				94F874851CB594EE000304ED /* precalculo.json in Resources */,
@@ -352,15 +347,6 @@
 				4BD4AC981B1399AC001FF646 /* pt */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		4BD4AC9B1B1399B6001FF646 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4BD4AC9A1B1399B6001FF646 /* pt */,
-				4BD4AC9C1B1399BA001FF646 /* en */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

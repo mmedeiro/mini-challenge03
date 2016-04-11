@@ -180,19 +180,19 @@ class CartaoController: UICollectionViewController {
         var aux = widthCard
         
         if scale>1 {
-            aux += 50
+            aux += 10
         }
         else if(scale<1){
-            aux -= 50
+            aux -= 10
         }
         
         if widthCard > 200 || (scale>1 && widthCard<1000){
             widthCard = aux
             cards = []
             populaCards()
+            self.collectionView?.reloadData()
         }
         
-        self.collectionView?.reloadData()
     }
     
     //MARK: CARDS E CONTEUDO
